@@ -1,0 +1,133 @@
+Your account's (hostmywe) INODE quota has been exceeded due to excessive disc consumption on the server.
+======
+[root@rin4-i-new hostmywe]# find . -maxdepth 1 -type d | while read line ; do echo "$( find "$line"| wc -l) $line" ; done | sort -rn
+218333 .
+206312 ./public_html
+3738 ./.trash
+3573 ./tmp
+3410 ./mail
+806 ./logs
+154 ./.cpanel
+83 ./cache
+57 ./ssl
+51 ./etc
+23 ./php
+16 ./.softaculous
+10 ./.cphorde
+10 ./cpanelbranding
+8 ./.razor
+7 ./var
+7 ./softaculous_backups
+7 ./perl5
+6 ./.sqmaildata
+6 ./.htpasswds
+4 ./spectra.hostmyweb.in
+3 ./hostmyweb.in
+3 ./cpanel3-skel
+2 ./.subaccounts
+2 ./.spamassassin
+2 ./public_ftp
+2 ./.pki
+1 ./.ssh
+1 ./.sqmailattach
+1 ./perl
+1 ./demo
+1 ./cpmove.psql.1387975679
+1 ./cpmove.psql
+1 ./.cpan
+1 ./bin
+1 ./.attracta
+=======
+
+Since there is no response from your end, we have disabled the account backup from the Cpanel backup system.
+
+Kindly have a look at our resource abuse policy [https://hostdime.in/resource_abuse_policy.html]
+
+HostDime India shall be available at your service at any time. Please feel free to contact us if you have further difficulties.
+
+Hi,
+
+Thank you for your reply.
+
+Could you please share the Cpanel account (hostmywe)credentials you have used so that we could verify the same from our end.
+
+Please note that the folder named "td-coats-brochure" uses 6.5 GB ,ensure you take a local backup for your future usage if needed.
+
+Also note that if we delete the folder "td-coats-brochure" from our end we wont be able to provide a backup for the same in future.If you still want to delete this from our end kindly reply us back with a confirmation for the same.
+
+Looking forward to hearing from you soon!
+Hello Deepa Shah,
+
+Thanks for contacting HostDime India. Please note that the public_html folder is using more number of inodes. When deleting files inside the public_html it will effect the working of website. So, we request you to communicate with the developer for deleting the unwanted files or cache.
+
+HostDime India shall be available at your service at any time. Please feel free to contact us if you have further difficulties.
+It is seen that "public_html" have more inode counts.Could you please bringing it down to the allowed limit(100000),so that I could check it again and re-enable your account globally?
+Looking forward to hearing from you very soon
+
+
+Hello Thoufeeq,
+
+During a recent audit on the server, we found that your account"speedsecuregcc" has exceeded our allowed INODE (file) quota. Please find the snippet below
+
+==========
+Detailed Inod usage for: /home/speedsecuregcc
+754270 ./public_html
+623 ./tmp
+369 ./.trash
+205 ./mail
+126 ./logs
+45 ./.cpanel
+12 ./ssl
+8 ./etc
+7 ./.cphorde
+6 ./.softaculous
+2 ./.subaccounts
+2 ./.spamassassin
+2 ./public_ftp
+1 ./.htpasswds
+1 ./cache
+TOTAL= 755691
+----------------------
+Detailed inode usage for : /home/speedsecuregcc/public_html
+753434 ./application
+536 ./assets
+230 ./system
+59 ./uploads
+3 ./.well-known
+1 ./demo
+1 ./cgi-bin
+TOTAL= 754270
+==========
+
+We are allowing you 24hr time to take action on this issue. If you don't take any action, we will be forced to disable the backup of this account.
+
+As per our Resource Abuse Policy [https://hostdime.in/resource_abuse_policy.html]
+
+Accounts on any shared hosting account may not have an excessive number of inodes. Any account found to have over 100,000 inodes may be removed from our backup system to prevent overload. Any account seen to be exceeding 250,000 inodes is at risk for suspension. A warning will be sent and if no action is taken to resolve the issue, the account may be suspended. Every file on the account is counted as 1 inode. This includes mail as well as webpage content.
+
+Kindly check the same and reduce the inode from your end and if you have any questions or concerns please let us know.
+
+
+DISABLE BACKUP
+-------------
+Hello Ujjal, 
+
+Since there is no response from your end, we have disabled the account backup from the Cpanel backup system.
+Please take immediate action to remove unwanted files within one week otherwise, we will be forced to suspend the account.
+Kindly have a look at our resource abuse policy [https://hostdime.in/resource_abuse_policy.html]
+Kindly check the same and reduce the inode from your end and if you have any questions or concerns please let us know.
+
+===
+Hello Ramkumar,
+
+We hope this email finds you well. However, we regret to inform you that we have not received any response from your end regarding the 'siliconhelix' account high inode usage. As a result, we have disabled the account backup from the Cpanel backup system.
+
+We kindly request you to take immediate action and review your account for any unwanted files or data within the next week. Failure to do so may result in the suspension of your account. We understand the importance of maintaining a clean and efficient hosting environment for all our clients, and your cooperation in this matter is greatly appreciated.
+
+In order to assist you in this process, we recommend reviewing our resource abuse policy, which can be found at [https://hostdime.in/resource_abuse_policy.html]. This policy provides guidelines on reducing unnecessary resource usage and ensuring compliance with our hosting terms and conditions.
+
+If you have any questions or concerns regarding the policy or need further clarification, please do not hesitate to reach out to us. Our support team is available to provide assistance and guide you through the necessary steps to resolve this matter.
+
+Thank you for choosing Hostdime India as your hosting provider. We greatly value your business and are committed to delivering a reliable and secure hosting experience.
+===
+

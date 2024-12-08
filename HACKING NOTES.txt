@@ -1,0 +1,73 @@
+HACKING NOTES
+--------------
+
+How the account has been hacked or comprised.?
+***************************************************************
+
+An account getting hacked or Malware/Script Injections on an account occur mostly due to the following reasons :
+
+1. Improper write permissions set for any of your files / directories on the web server.
+2. Your FTP details might be compromised.
+3. The Local System from where you connect to the Web Server might be infected.
+4. Known exploits in CMS applications, etc
+
+5. Other than this if initially, hacker might have gained access via snatched password using some kind of Trojan or by utilizing some kind of vulnerabilities in the website, then once the hacker got access to a website, he can hide a little piece of script some where in the website/server to get back in again.
+You should clean up your website as soon as possible since your website causes potential security threat to server.
+
+6. Also, if your website allows anonymous file uploads and you should ensure that such files are not getting uploaded again.
+
+7. Account passwords harvesting:
+In this method, hackers will try to collect website account passwords in large scale. We will call this process "account passwords harvesting". Details on how they do that are fuzzy. Use of password like 123456 or use of a spyware infected PCs at home are the main reasons. Actually the complexity of the password should be beefed up to at least 8 characters. But th is does not help if the user computer is infected with a key-logger.
+
+8. PHP vulnerabilities :
+PHP has got a lot of very vulnerable and potentially exploitable functions. Hackers have been enjoying these security lapses for a long time. In our servers, we are offering PHP after locking down most of the common security holes in PHP.
+
+Most of the PHP applications like Joomla, PhpBB, PhpNuke etc are community developed. These application may have potential security vulnerabilities and hackers may exploit them. Most of the website hacking are done using vulnerabilities in PHP applications.
+
+All community developed PHP applications are patched as & when new vulnerabilities are discovered. So you should upgrade/patch PHP applications in your website time to time. Failing to upgrade/patch PHP applications in your website is equal to opening a backdoor for hacker in your website.
+
+9. Mass modification of website files :
+Once the hacker discovered a backdoor in website either using an account password or using a vulnerable PHP application, he will try to modify your file. We will call this stage "mass modification of website files". It looks like this stage was automated and they use a special tool, called MPACK, to install malicious IFrames. Usually only main site index documents are targeted (i.e. index.php, index.html, index.shtml, etc.). Malicious IFrames are usually installed at the beginning or at the end of the document.
+
+
+To avoid hack issues in future you should follow the below precautions:
+1. Protect your files with passwords
+2. Don't leave e-mail addresses and password or login details anywhere.
+3. Secure your source code.
+4. Check the permissions you may have set for your uploaded files. Please make sure that none other than extremely required folders have write permissions for users.
+5. Use antivirus in the local machine and keep your anti virus software's up to date.
+6. Make your own backups regularly.
+7. Kindly change the passwords for your cPanel and FTP accounts after a period of time and do not grant full FTP access to all your users. Use strong passwords for any account.
+8. Avoid using unnecessary plugins and themes in your sites as, they might be vulnerable.
+9. Do not download scripts/plugins/themes etc from unauthorized sites as they mostly contains the loop holes.
+10. Update your CMS application versions/plugins/addons if any with the latest security patches provided by their developers.
+11. Do scan the site files periodically and remove the infected files or contents.
+
+Please get in touch with your site developer to check the issue. In case any changes are to be made from our end, please do not hesitate to contact us. We shall be glad to assist you in resolving the issue.
+
+Let us know if you still need any further assistance.
+
+
+Hacking:
+++++++++++
+After clearing the frozen emails and null routed the spamming script your website started to working fine. Please do check with the script and free from virus/malware while uploading it.
+
+If you check these files, you won't be able to see any valid contents in it, but binary scripts which exploits the vulnerabilities of your website. Generally hackers hacks the websites for the following main reasons:
+~~~~
+1) They want to use it to send out spam email.
+2) They want to gain access to your data, mailing list, credit card information, etc.
+3) They want to gain access to your site and cause it to download malicious software onto your end user’s machine or they want to install malicious software for use on your site.
+~~~~~
+
+This type of infected files are usually uploaded through code injection attack. Code injection is the exploitation of a computer bug that is caused by processing invalid data. Injection is used by an attacker to introduce (or "inject") code into a vulnerable computer program and change the course of execution.
+
+You can follow the below given steps to decrease the changes of getting hacked:
+~~~~
+1) Using uncommmon ways to access your admin interface. Like changing the admin folder name to 'siteman' or 'admin123' or your name etc.
+2) Using two step authentication.
+3) Restricting the access to admin are to certain IP addresses.
+4) Frequently changing the important passwords like, admin area password, FTP and cPanel passwords etc.
+5) White-list Allowed Actions, Blacklisting unwanted actions.
+6) Keep your Software/Plugins Up-to-date
+7) Using One Time Passwords or Two step authentication methods.
+8) Choosing a trusted and effective security plugins for your website.

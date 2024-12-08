@@ -1,0 +1,745 @@
+Google Sheet
+------------
+https://docs.google.com/spreadsheets/d/1a5uTOcjnbJWohD7JhLklD35oEDjAADmBtyHomeAEDqQ/edit#gid=0
+
+
+cpanel:
+-------
+
+log - /var/cpanel/accounting.log
+transport log - /usr/local/cpanel/logs/
+access logs - /var/cpanel/logs/accesslog
+error log - /usr/local/cpanel/logs/error_log
+update log - /var/cpanel/updatelogs/update.1550793601.log
+configuration : /var/cpanel/cpanel.config
+suspended accounts - /var/cpanel/suspended/
+privilage file path - /var/cpanel/reseller
+To Check Cpanel Version - cat /usr/local/cpanel/version
+which are the IPs are accessed the cPanel today -  cd /usr/local/cpanel/logs >> # cat access_log | grep 06/12/2023 | awk '{print $1}' | sort | uniq -c | sort -n
+
+spamd:
+------
+
+Checking current status of spamd - /scripts/restartsrv_spamd --status
+
+user creation:
+---------------
+
+/scripts/createacct hosttestingaccount.com hdtest2262458 test123
+
+Backup:
+--------
+
+/usr/local/cpanel/bin/backup --force
+log file : tail -f /usr/local/cpanel/logs/cpbackup/
+/scripts/pkgacct <username> /usr/local/src/ticket_3303770  >> to take backup of an account.
+configuration file : /var/cpanel/backup/config
+log file : /usr/local/cpanel/logs/cpbackup/ >> cpanel backup folder
+
+backup:
+-------
+/scripts/pkgacct rashi1001 /backup/rashid/
+/scripts/pkgacct rashi1001 
+tar -tf /backup/rashid/cpmove-rashi1001.tar.gz
+tar -tf /home/cpmove-rashi1001.tar.gz
+/scripts/pkgacct --skiphomedir rashi1001 /backup/rashid/
+
+
+
+Restore:
+--------
+
+/scripts/restorepkg <backup file>
+/scripts/restorepkg /backup/rashid/cpmove-rashi1001.tar.gz
+
+
+rsync:
+------
+rsync -avzp root@103.50.163.50:/home/magzoqtj/public_html -e "ssh -i /root/.ssh/id_rsa" /home4/magzosoc/public_html
+
+
+
+crontab:
+----------
+crontab -l
+
+
+storage full issue:
+-------------------
+df -h
+cat /etc/redhat-release
+nproc
+free -h
+php -v
+mysql -V
+du -sh /backup/
+du -h --max-depth=1 /backup/
+tail /usr/local/cpanel/logs/cpbackup/1546431399.log
+
+php:
+-----
+
+php -i | grep php.ini
+
+Login Failure:
+--------------
+
+log -/var/log/lfd.log >> lfd related service log(login failure daemon)
+
+processor:
+----------
+
+
+individual no of process: ps -eLf | awk '{print $10}' | sort | uniq -c | sort -n
+                        : ps -eLf | awk '{print $10}' | sort | uniq -c | sort -nr
+
+FTP:
+----
+
+ps faux | grep ftp
+/etc/pure-ftpd.conf
+/usr/local/cpanel/scripts/restartsrv_ftpserver
+/var/log/pureftpd.log
+/var/cpanel/conf/pureftpd/main //passive portrange adding
+sed -i '/^PassivePortRange/d' /var/cpanel/conf/pureftpd/main; echo "PassivePortRange: 30000 32000" >> /var/cpanel/conf/pureftpd/main
+/usr/local/cpanel/scripts/setupftpserver pure-ftpd --force
+
+
+CSF:
+----
+
+/etc/csf/csf.conf
+csf -s {start}
+csf -f {stop}
+csf -r [restart]
+csf -x /disable
+csf -e /enable
+csf -ra {reloaf firewall cofiguration}
+csf -l {status check]
+grep -i tcp_in '/etc/csf/csf.conf'
+
+csf -a <IP> {Allow an IP address:}
+csf -ar <IP> {Remove an IP address from the allow list:}
+csf -d <IP> {Block an IP address}
+csf -dr <IP> {Unblock an IP address:}
+csf -g <IP> {to check the given ip firewall configuration}
+
+service cfs status
+service lfd status
+ 
+ip address check:
+------------------
+https://www.hostdime.com/tools/ip/ 
+
+hostdime.in/ip
+
+inode:
+-------
+
+echo "Detailed Inode usage for: $(pwd)";for d in $(find -maxdepth 1 -type d | cut -d\/ -f2 | grep -xv . | sort); do c=$(find $d | wc -l);printf "$c\t\t- $d\n";done;printf "Total: \t\t$(find $(pwd) | wc -l)\n"
+
+ find . -maxdepth 1 -type d | while read line ; do echo "$( find "$line"| wc -l) $line" ; done | sort -rn  >> find the number of files in a directory
+
+screen:
+-------
+screen -ls
+screen -r <screen name> //enter detached screen 
+screen -S <screen name> //create a screen
+screen -x <screen name> //enter attached screen
+ctrl+a d // detaching
+ctl+A esc  // to scroll up and down
+ctl+D   // terminating
+
+core portal :
+--------------
+
+URL : https://core.surpasshosting.com/
+
+
+user and domains(Reseller or shared server):
+--------------------------------------------
+
+/etc/userdomains    {subdomains and priamary domains}
+/etc/trueuserdomains {priamry doamains}
+cat /etc/trueuserowners {we get the owners}
+grep rashi1001 /etc/trueuserdomains
+grep rashi1001 /etc/trueuserowners {we get the correct owner of the user (root)}
+grep root /etc/trueuserdomains
+
+
+DNS record:
+-----------
+/var/named/< domain name>.db
+PowerDNS Server:
+
+Main zone file directory: /var/named/
+Zone file for a domain: /var/named/<domain_name>.zone >> for checking user dns record
+
+Reboot:
+-------
+
+last | grep -i reboot
+
+grep:
+------
+
+grep -Rl rash /etc/
+grep -R rash /etc/
+
+Issue:
+------
+
+cat /etc/issue
+
+Release:
+---------
+
+cat /etc/redhat-release
+lsb_release -a
+
+du
+---
+du -sch * >> list the files size 
+du -sch /home/*
+du -sch
+du -sh
+du -sch /home/* | grep G
+du -ch --max-depth=1 /home/awashban
+
+
+
+MALDET 
+-------
+maldet -a <file path>
+maldet -a /home/?/public_html
+
+BASIC COMMANDS
+--------------
+ss -tlunp or netstat -tlunp  >> to check the spamming
+
+mpstat >> to see iowait
+iotop  >> what process going on a disk
+sar -q >> Load details
+sar -r >> Memory details
+sar    >> to get iowait
+iostat >> disk details, real time disk utilization
+vmstat >> Virtual Memory status
+netstat -ntlp >> networking 
+iftop  >> networking traffic in real life.
+lsof   >> list of process  Eg:- (lsof -p <pid>,lsof -u <username>)
+smartctl >> to check drive health  (Eg:- smartctl -A /dev/sda)
+badblocks -s /dev/sda  >> unreadable Disk
+dmidecode -q | less    >> All information of system
+cat /proc/cpuinfo      >> CPU information
+journalctl -xe         >> recent error logged
+route    >>   Routing tables
+route -n >>           ,,
+ifconfig >>   IP details
+cat /proc/meminfo >> memory details
+sar -u 2 (2 second) >> cpu usage
+
+
+scp -P 1157 /home/i3juq1pdzmzn/backup-5.9.2024_18-24-56_i3juq1pdzmzn.tar.gz root@109.73.161.202:/home:
+----
+
+scp localfile.txt /home/<user>/share/ {Copy local file in your CWD to new directory}
+scp rocky@arena51.net:/home/rocky/game/data.txt ./ {Copy remote file to you current working directory}
+scp mars@universe.org:/beacon/light/bitmap.conf jupiter@universe.org:/beacon/night/ {Copy file from one remote location to another remote location}
+scp -r user@192.168.0.4:~/project/* ./workspace/ {copy directory and sub-directories use '-r' recursive option to scp}
+
+Section 15.2: Basic Usage
+# Copy remote file to local dir
+scp user@remotehost.com:/remote/path/to/foobar.md /local/dest
+# Copy local file to remote dir
+scp foobar.md user@remotehost.com:/remote/dest
+# Key files can be used (just like ssh)
+scp -i my_key.pem foobar.md user@remotehost.com:/remote/des
+
+remote to local
+[root@backup-in2 daily]# scp -P 1891 zebalabs_backup_full_auto_remote_2023-11-28_17-30-18.tar.gz root@138.128.180.60:/root/
+
+Dig:
+-----
+dig A <sitename>+short
+
+JOURNALCTL:
+-----------
+journalctl
+journalctl -f -t sshd
+journalctl -p err -S yesterday
+journalctl -p err
+journalctl -xe {list last 100 logs}
+
+
+du -ch --max-depth=1 <username>   >> Find the file size of a user
+
+cat /var/named/<domainname>.db >>> for checking user DNS record
+
+
+TMPWATCH
+--------
+https://support.cpanel.net/hc/en-us/articles/360052677654-How-to-clean-your-tmp-directory-with-tmpwatch
+
+ll | grep sess | awk '{print $9}' | while read i;do rm -rf $i;done >>> TO DELETE THE FILE STARTING WITH SAME NAME.
+
+cat /etc/domainusers | awk -F: '{print $1}' | uniq |wc -l >>> NUMBER OF USERS IN A SERVER {COUNT}
+cat /etc/domainusers | awk -F: '{print $1}' | uniq        >>> LIST ALL USERS IN A SERVER
+
+TO FIND OWNER OF A USERS
+------------------------
+grep OWNER /var/cpanel/users/dinsadobe
+
+DNS:-
+-------
+cat /var/cpanel/users/getonewe | grep DNS
+
+QUICK SERVICE STATUS:-
+----------------------
+eval "$(curl -k -s https://codex.hostdime.com/scripts/download/QuickServiceCheck)"
+
+ls -lta >> to find recent upload files
+
+/scripts/suspendacct swanthanamcare "#3337484- Spam-sending bulk mails" 1  >>> to suspend account
+
+port speed:-
+------------
+ethtool eno1 | grep Speed
+
+All scripts path:-
+------------
+/usr/local/cpanel/scripts
+
+backup of a user
+----------------
+weekly
+-------
+cd /backup/weekly/<date>/account/
+
+#ll |grep <user>
+
+daily
+-----
+cd /backup/<date>
+
+#ll |grep <user>
+
+Backup disable using command
+-----------------------------
+whmapi1 modifyacct user=siliconhelix backup=0
+
+To see port is enabled or not(Eg:port 25)
+------------------------------------------
+#netstat -plan |grep :25
+
+to kill php-cgi
+----------------
+
+for ((  i = 0 ;  i <= 150;  i++  )); do kill -9 `pidof php`; done ; for ((  i = 0 ;  i <= 150;  i++  )); do kill -9 `pidof php-cgi`; done
+
+BOTS
+----
+csf -d <ip>   --> BLOCK IP
+
+BOTS are block in .htaccess file
+
+chattr +i .htaccess   >>>  set attribute to .htaccess file
+lsattr .htaccess      >>>  to confirm the attribute
+
+
+Tremination Google sheet: https://docs.google.com/spreadsheets/d/1a5uTOcjnbJWohD7JhLklD35oEDjAADmBtyHomeAEDqQ/edit#gid=0 
+
+Webuzo Backup location
+---------------------
+/var/webuzo/logs
+
+To check Domain in Webuzo
+-------------------------
+webuzo --domaininfo --domain=example.com
+
+Traceroute :- Trace all the network to reach the destination
+
+root@vps [/usr/local/cpanel/logs/cpbackup_transporter]#   ----> transport log
+
+Create backup link
+-------------------
+
+TICKET ID: https://admin.dimenoc.com/desk/ticket/3322376/
+
+/usr/local/src/ticket_****/ <backup file>
+
+change file permission to 644
+
+move backup file to /var/www/html     ------>  if it is move to public_html  call domain/file name
+
+call the file ip/<backup file>
+
+Download the file to check it working. copy the link
+eg: http://67.23.236.143/cpmove-indiafor.tar.gz
+
+
+TRANSFER BACKUP TO FTP SERVER
+------------------------------
+script to run a backup of the multiple account
+--------------------------------------
+for i in `cat usertechno.txt`; do /scripts/pkgacct $i /backup/ticket_3337633 >> backup.log; done
+
+root@server [~]#  lftp ftp.technobros.cloud
+lftp ftp.technobros.cloud:~> user  backup@technobros.cloud
+Password:
+lftp backup@technobros.cloud@ftp.technobros.cloud:~> set ssl:verify-certificate false
+lftp backup@technobros.cloud@ftp.technobros.cloud:~> cd backup_suspended
+lftp backup@technobros.cloud@ftp.technobros.cloud:/backup_suspended> lpwd
+/root
+lftp backup@technobros.cloud@ftp.technobros.cloud:/backup_suspended> 
+lftp backup@technobros.cloud@ftp.technobros.cloud:/backup_suspended> lcd /home2/technobr/backup/backup_suspended_accounts
+lcd ok, local cwd=/home/technobr/backup/backup_suspended_accounts
+lftp backup@technobros.cloud@ftp.technobros.cloud:/backup_suspended> lpwd
+/home/technobr/backup/backup_suspended_accounts
+lftp backup@technobros.cloud@ftp.technobros.cloud:/backup_suspended> mirror --only-missing -R
+`cpmove-shilanpa.tar.gz' at 1716023304 (41%) 2.09M/s eta:17m [Sending data]
+
+--------------
+Backup of suspended account to remote FTP
+
+https://admin.dimenoc.com/desk/ticket/3305796
+https://admin.dimenoc.com/desk/ticket/3351043/
+
+To take the suspended account backup, to set all the suspended account in userslist.txt
+for i in cat userslist.txt; do /scripts/pkgacct $i /backup2/ticket_3351043 >> backup.log; done
+
+root@server [~]# lftp ftp.technobros.cloud
+lftp ftp.technobros.cloud:~> user backup@technobros.cloud
+Password:
+lftp backup@technobros.cloud@ftp.technobros.cloud:~> set ssl:verify-certificate false
+
+lftp backup@technobros.cloud@ftp.technobros.cloud:~> ls
+drwxr-xr-x 3 technobr technobr 4096 Oct 13 19:47 .
+drwxr-xr-x 3 technobr technobr 4096 Oct 13 19:47 ..
+-rw------- 1 technobr technobr 15 Oct 7 04:10 .ftpquota
+drwxr-xr-x 2 technobr technobr 4096 Oct 13 18:37 starter-2023
+lftp backup@technobros.cloud@ftp.technobros.cloud:/> lpwd
+/root
+lftp backup@technobros.cloud@ftp.technobros.cloud:/> lcd /backup2/ticket_3351043
+lcd ok, local cwd=/backup2/ticket_3351043
+
+lftp backup@technobros.cloud@ftp.technobros.cloud:/> lpwd
+/backup2/ticket_3351043
+
+lftp backup@technobros.cloud@ftp.technobros.cloud:/> mirror --only-missing -R
+Total: 1 directory, 9 files, 0 symlinks
+New: 9 files, 0 symlinks
+3782574342 bytes transferred in 34 seconds (106.79M/s)
+To be removed: 0 directories, 1 file, 0 symlinks
+
+DDoS attack- IP 
+-----------
+netstat -anp |grep 'tcp\|udp' | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -n
+
+clear tmp in the server
+------------------------
+bash <(curl -ks https://codex.hostdime.com/scripts/download/clear_tmp) 
+
+disk usage complete report of files and folders size
+-----------------------------------------------------
+Hello Team,
+
+I'd like to introduce you to 'Top Disk Consumer Report Generator (topdiskconsumer),' which is an open-source utility designed to assist in identifying files, directories, and deleted files that may be occupying excessive storage on client servers. This tool can be a valuable resource when you encounter disparities between actual space consumption and what typical userland tools like 'df' and 'du' report.
+
+Installation : https://www.redhat.com/sysadmin/free-storage-space-linux
+
+Use cases: https://www.redhat.com/sysadmin/linux-disk-usage-diagnostics
+
+Creating backupfile to a tar files
+----------------------------------
+tar -czvf projects.tar.gz $HOME/projects/
+
+Untar a gz file
+---------------
+tar -xzvf filename
+
+root@public_html# tar -czvf projects.tar.gz /backup/2023-11-04/accounts/snctkollam
+
+You can follow the below steps to install WordPress from your end:
+------------------------------------------------------------------
+Move to cPanel >>> WordPress Manager by softaculous >>> Then click "Install" >>> Select the domain you would like to install WordPress >>> In Directory field you can specify the root folder for WordPress installation or you can leave it blank by removing wp_ >>>> Select the version of WordPress you want to install >>>> Then set username and Password >>> Save.
+
+Clearing php session file
+-------------------------
+/usr/local/cpanel/scripts/clean_user_php_sessions
+
+Files exceeds 200M in size.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+root@vps [/]# find / -type f -size +200M -exec du -ch {} + | sort -rh
+
+
+
+[root@backup-in2 daily]# scp -P 1891 zebalabs_backup_full_auto_remote_2023-11-28_17-30-18.tar.gz root@138.128.180.60:/root/
+
+Plesk
+-----
+
+Home directory
+
+/var/www/vhosts/<domain name>
+
+Backup config
+-------------
+
+cat /var/cpanel/backups/config
+
+To fix the permission of the files in public_html
+-------------------------------------------------
+find . -type d -exec chmod 755 {} \;
+
+find . -type f -exec chmod 644 {} \;
+
+Enabling Slow query
+-------------------
+[mysqld]
+
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql-slow.log
+long_query_time = 2
+log_error = /var/log/mysql/error.log
+
+Check Swappiness
+----------------
+$ cat /proc/sys/vm/swappiness
+
+Check available PHP in the server
+---------------------------------
+/usr/local/cpanel/bin/rebuild_phpconf --available
+
+Plesk process list
+------------------
+plesk db "SHOW PROCESSLIST"
+
+Entering Postgresql
+--------------------
+[root@server ~]# psql -U postgres -h localhost -W
+Password for user postgres:
+psql (9.2.24)
+Type "help" for help.
+
+postgres=# \l
+List of databases
+Name | Owner | Encoding | Collate | Ctype | Access privileges
+-----------+----------+----------+-------------+-------------+-----------------------
+postgres | postgres | UTF8 | en_US.UTF-8 | en_US.UTF-8 |
+template0 | postgres | UTF8 | en_US.UTF-8 | en_US.UTF-8 | =c/postgres +
+| | | | | postgres=CTc/postgres
+template1 | postgres | UTF8 | en_US.UTF-8 | en_US.UTF-8 | =c/postgres +
+| | | | | postgres=CTc/postgres
+(3 rows)
+
+ems user backup location
+-------------------------
+cat /home/explorer/public_html/ems/application/configs/application.ini
+
+Roundcube Database location
+----------------------------
+/home/wlsqrywh/etc/rpersonify.com
+
+Enable shell access for domains
+-------------------------------
+whmlogin >> enter whm >> manage shell access >> search user >> enable jailed shell access.
+URL:-https://admin.dimenoc.com/desk/ticket/3299379
+
+clear Buffer/cache 
+------------------
+ sync; echo 1 > /proc/sys/vm/drop_caches
+
+Detailed disk usage:
+--------------------
+du -h --max-depth=1 | sort -rh
+
+Cronjob for taking postgresql backup
+--------------------------------------
+
+[root@server1 ~]# cat /root/PostgreSQL/backup_script.sh
+#!/bin/bash
+
+# Set variables for database connection
+PGUSER=postgres
+PGDATABASE=ems
+
+# Set the path where you want to store the backup files
+BACKUP_DIR=/backup/PG_Backup/
+
+# Get current date and time
+datestamp=$(date +'%Y-%m-%d')
+timestamp=$(date +'%H%M')
+
+# Execute pg_dump command to dump the database
+pg_dump -U "$PGUSER" -d "$PGDATABASE" > "PG_Database_backup-EMS$BACKUP_DIR/$PGDATABASE"_"$datestamp"_"$timestamp".sql
+
+SSh2 Extension Installation
+---------------------------
+https://admin.dimenoc.com/desk/ticket/3417643   >>>>  SSH2 extension installation
+https://support.cpanel.net/hc/en-us/articles/360058567934-How-do-I-install-ssh2-for-php
+'''/opt/cpanel/ea-php72/root/usr/bin/pecl install ssh2-1.2
+
+Mysql dump
+----------
+mysqldump nipponbp_db > nipponbp_db_3410921.sql --> take backup
+mysql nipponbp_db < nipponbp_db.sql ----> Restore
+
+How to change the spamassassin value in webuzo-server wide
+----------------------------------------------------------
+
+vim /etc/mail/spamassassin/local.cf
+
+change the required_score
+
+
+TO suspend no.of accounts
+-------------------------
+Step -1
+
+Take the user name list for the domain name:
+
+for domain in $(cat domain.txt); do /scripts/whoowns "$domain"; done
+
+step -2
+
+add the output of the username to the file (e.g test.txt) and execute the below command to suspend the accounts.
+
+for domain in $(cat test.txt); do /scripts/suspendacct "$domain"; done
+
+Note: use the script with cautious.
+
+Restore backup
+--------------
+[root@rin5 backup]# wget broadlineconsulting.com/nnewew/cpmove-broadlin.tar.gz downloaded the backup
+[root@rin5 backup]# mkdir /usr/local/src/ticket_3322581 creted directory for the current account bckup
+[root@rin5 backup]# /scripts/pkgacct broadlin /usr/local/src/ticket_3322581/ created backup(current)
+[root@rin5 backup]# /scripts/restorepkg --force cpmove-broadlin.tar.gz restored
+
+SSL Certificate Installation,Domain base:-
+------------------------------------------
+1.open plesk >> go to domain >> select domain (booking.mukkolackalbhagavathy.org) >> select hosting & DNS >> security (add SSL/TLS support)
+2.open plesk >> go to domain >> select domain (booking.mukkolackalbhagavathy.org) >> dashboard >> SSL/TLS certificate >> lets encrypt
+after this check the domain with SSL CHECKER url:- https://www.sslshopper.com/ssl-checker.html
+
+To check all the VPS running under Node/KVM
+-------------------------------------------
+virsh list --all
+
+To check the status of all PHP-FPM 
+----------------------------------
+[root@hddeep php-fpm.d]# /usr/local/cpanel/scripts/restartsrv_apache_php_fpm --status
+
+PHP-FPM error log
+-----------------
+cat /opt/cpanel/ea-php56/root/usr/var/log/php-fpm/error.log
+
+How to change the Administrator in Task Scheduler
+-------------------------------------------------
+https://admin.dimenoc.com/desk/ticket/3112931
+Windows >> Task Scheduler >> SQL_Backup >> Right Click(Properties) >> write Administrator >> Change Names >> OK >> Enter New Password >> Save >> Run the Backup
+
+Mysql time
+----------
+MariaDB [(none)]> SELECT @@global.time_zone, @@session.time_zone, CURRENT_TIMESTAMP;
+
+To check the configuration OK
+-------------------------------
+[root@rin3 includes]# httpd -t
+Syntax OK
+
+move file older than 9 months
+------------------------------
+find . -type f -not -newermt "$(date -d '9 months ago' '+%Y-%m-%d')" | wc -l ---> To find the no.of files morethan 9 months.
+
+https://admin.dimenoc.com/desk/ticket/3460712
+	
+
+dd clone
+--------
+sudo dd if=/dev/sda | pv | sudo dd of=/dev/sdc bs=64K conv=noerror,
+
+dd if=/dev/sda | pv | dd of=/dev/sdc bs=1M conv=noerror,sync
+
+dd if=/dev/sdX  of =/dev/sdY bs=1G status=progress
+
+pv - monitor the progress
+
+
+Acronis
+-------
+scp -P 1891 "C:\Users\Abit Mon Rajan\Downloads\CyberProtect_AgentForLinux_x86_64.bin" root@103.13.242.149:/usr/local/src/
+
+Block SMTP PORT On Windows
+--------------------------
+PS C:\Users\Administrator> Get-NetFirewallRule -DisplayName "Block SMTP Port*"
+
+Stop puppet service permanently
+===============================
+systemctl stop puppet.service && systemctl disable puppet.service
+
+windows to Linux file copy
+==============================
+scp -P 1891 CyberProtect_AgentForLinux_x86_64.bin root@103.13.242.173:/usr/local/src/
+
+CSF test
+--------
+/etc/csf/csftest.pl
+
+to check Bots is blocked or not
+-------------------------------
+curl -IA "Bytespider" https://themes.zozothemes.com
+
+RAID status
+-----------
+megacli -PDList -aALL
+
+Slot(Always check the Slot device ID(4))
+----
+smartctl -a -d megaraid,4 /dev/sda
+https://admin.dimenoc.com/desk/ticket/2637108#note_5402817
+
+Speed Test- Download link
+----------------------------
+wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+
+Reseller status:
+-----------------
+whmapi1 --output=jsonpretty \
+resellerstats \
+user='username'
+
+Disk usage (backup)(Excluding symlinks)
+---------------------------------------
+du -sh
+
+symlink count
+-------------
+find /backup -type l | wc -l
+
+cPanel license
+-------------------
+/usr/local/cpanel/cpkeyclt
+
+find outdated services
+----------------------
+/scripts/find_outdated_services
+
+To check MySQL Sleep Query
+---------------------------
+mysql -e 'SHOW PROCESSLIST;' | grep "Sleep"
+
+Kill all process under the user
+-------------------------------
+pkill -9 -u eappsin
+
+How to check superblock in a drive:;
+-----------------------------------
+smartctl -t long /dev/sda
+
+DNS zone-checker
+----------------
+# named-checkzone haileresorts.com /var/named/haileresorts.com.db
+
+To rename a string in a file:
+-----------------------------
+sed -i 's/Text/Marine/g' /root/nautilus.xml (changing the string Text to Marine)

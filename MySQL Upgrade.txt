@@ -1,0 +1,21 @@
+While auditing the server, we have noticed that, the MariaDB update is available in the server. The current Database server version is (MySQL 5.6) and its EOL is February 5, 2021.To recommend MariaDB version is (10.3). Before proceeding with the MariaDB upgrade it is very important to make sure that all databases in the server support the newer version. Or else, after completing the upgrade it end up with site down. So I suggest you check with your website developer and confirm that your databases are compactible with the latest version to avoid the website down issues.
+We would like to have you check with all of your clients that their databases are compatible with the latest available version MariaDB 10.3.Once we perform the upgrade, we can not downgrade the version and the backup won't help you on such situation. Please have a check with all of your clients and get back to us with the confirmation, so that we can proceed.
+
+Hello,
+
+Thank you for the update.
+
+Kindly note that the current Database server version is (MariaDB 10.1) on the server and the latest stable version available on the server is (MariaDB 10.6).
+
+Please note that once the MariaDB is upgraded, downgrading is not possible. Hence it is very necessary to confirm that your website databases are compatible with the latest version MariaDB 10.6 which we are about to upgrade.
+
+Kindly check this with your developer and confirm with us.
+
+And also note that in order to perform the MySQL upgrade you may need to note below details:
+
+1. Downtime is present.
+2. We need to ensure that MySQL backup has been taken before performing this task.
+
+Since the downtime is present, I would like to recommend that we can perform this task during your off-peak hours. Please let me know your convenient time frame so that we can schedule accordingly.
+
+Awaiting your kind response.

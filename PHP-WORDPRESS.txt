@@ -1,0 +1,4 @@
+Kindly note that currently, your PHP version is 7.3.33 which is deprecated. We recommend that you update to a supported version of PHP. PHP has got a lot of very vulnerable and potentially exploitable functions. Hackers/spammers have been enjoying these security lapses for a long time. Most of the PHP applications like Joomla, PhpBB, PhpNuke, etc are community developed. These applications may have potential security vulnerabilities and hackers may exploit them.
+
+Also, Please be informed that the current version of WordPress being utilized is 5.9.2, and we kindly advise updating to the most recent version available
+

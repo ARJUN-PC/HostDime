@@ -1,0 +1,123 @@
+cPanel password change hd document :
+------------------------------------
+https://www.hostdime.com/kb/hd/core/how-to-change-your-cpanel-password-through-core
+
+Restricting Http Access :
+-------------------------
+https://kb.hostdime.com/pages/viewpage.action?spaceKey=ARTD&title=Restricting+HTTP+access
+
+https://hostdime.atlassian.net/wiki/spaces/ARTD/pages/51743298/Restricting+HTTP+access
+
+common Email issues:
+--------------------
+https://kb.hostdime.com/display/USICT/Common+Email+Issues
+
+suspend an email account outgoing mails:-
+---------------------------------------
+https://support.cpanel.net/hc/en-us/articles/360052575874-Managing-email-restrictions-via-the-command-line
+
+Mysql backups-with-mysqldump:-
+-----------------------------
+https://support.cpanel.net/hc/en-us/articles/360041291913-MySQL-backups-with-mysqldump
+
+Mysql/Mariabd upgrade:-
+----------------------
+https://docs.cpanel.net/whm/sql-services/mysql-or-mariadb-upgrade/
+
+MySQL/MariaDB Upgrade Detailed Procedure:-
+-----------------------------------------
+https://kb.hostdime.com/pages/viewpage.action?pageId=116138206
+
+LOAD INVESTIGATION:-
+-------------------
+https://kb.hostdime.com/display/USICT/Processor+Load+Is+Too+High
+https://kb.hostdime.com/display/ARTD/Load+Investigations
+
+TMPWATCH
+---------
+https://support.cpanel.net/hc/en-us/articles/360052677654-How-to-clean-your-tmp-directory-with-tmpwatch
+
+Precaution: /tmp full
+-----------
+https://support.cpanel.net/hc/en-us/articles/360052156294-How-To-move-the-mysql-tmpdir-out-tmp-and-into-home
+
+https://support.cpanel.net/hc/en-us/articles/360053638153--tmp-partition-reported-as-full
+
+TO CHANGE PRIMARY DOMIAN
+--------------------------
+https://www.liquidweb.com/kb/change-primary-domain-in-whm/
+
+To clear SWAP memory
+--------------------
+https://www.redhat.com/sysadmin/clear-swap-linux
+
+Roundcube DB rebulid
+--------------------
+https://docs.cpanel.net/knowledge-base/email/how-to-rebuild-the-roundcube-database/
+
+Almalinux 8 to Cloudlinux 8
+----------------------------
+https://docs.cloudlinux.com/legacy/cloudlinux_installation/#converting-existing-servers
+
+CentOS 7 to Almalinux 8
+-----------------------
+https://wiki.almalinux.org/elevate/ELevating-CentOS7-to-AlmaLinux-9.html#upgrade-centos-7-to-almalinux-8
+https://support.cpanel.net/hc/en-us/articles/5946421721623-How-to-upgrade-from-CentOS-7-to-AlmaLinux-8-or-CloudLinux-7-to-CloudLinux-8-with-cPanel-ELevate
+
+Build DMARC Record
+-------------------
+https://support.cpanel.net/hc/en-us/articles/360055638973-How-to-build-a-DMARC-record
+
+Enable event_scheduler in cPanel
+--------------------------------
+https://support.cpanel.net/hc/en-us/articles/4404396945559-How-do-I-enable-event-scheduler-by-default-in-MySQL
+
+Repair crashed database table
+-----------------------------
+https://support.cpanel.net/hc/en-us/articles/16718402355863-How-to-repair-a-crashed-database-table-in-cPanel
+
+Disable Wptoolkit email notification
+------------------------------------
+https://support.cpanel.net/hc/en-us/articles/360059457434-WP-Toolkit-Email-Notifications
+
+cPanel Installation:
+--------------------
+https://docs.cpanel.net/installation-guide/install/
+
+While installing cPanel in Almalinux we got the following errors:
+
+++++
+2024-08-07 09:24:59 451 [2423] (DEBUG): Error: GPG check FAILED
+2024-08-07 09:24:59 451 [2423] (ERROR): - ssystem [EXIT_CODE] '/usr/bin/yum' exited with 1
+2024-08-07 09:24:59 451 [2423] (DEBUG): - ssystem [END]
+2024-08-07 09:24:59 46 [2423] ( INFO): cPanel is here to help! Our technical KnowledgeBase and cPanel Community is just a click away at https://support.cpanel.net/
+2024-08-07 09:24:59 455 [2423] (FATAL): yum failed 6 times. The installation process cannot continue.
+
+...propagated at /home/cPanelInstall/selfgz2257/Installer.pm line 646.2024-08-07 09:24:59 46 [2313] ( INFO): cPanel is here to help! Our technical KnowledgeBase and cPanel Community is just a click away at https://support.cpanel.net/
+2024-08-07 09:24:59 569 [2313] (FATAL): ensure_pkgs_install failed: 256
+[root@server3 home]# ls
+++++
+
+then to fix it run: rpm --import https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux if any doubt collabed with anoop 
+
+Cloudlinux 7 to Cloudlinux 8
+-----------------------------
+https://docs.cloudlinux.com/legacy/elevate/#elevate-scenario-cloudlinux-7-with-cpanel
+
+Ticket ID: https://admin.dimenoc.com/desk/ticket/3430663
+https://support.cpanel.net/hc/en-us/articles/5946421721623-How-to-upgrade-from-CentOS-7-to-AlmaLinux-8-or-CloudLinux-7-to-CloudLinux-8-with-cPanel-ELevate
+
+NIC
+---
+https://hostdime.atlassian.net/wiki/spaces/DCOP/pages/66323279/CentOS+7+to+AlmaLinux8+AL8+or+CloudLinux8+CL8+OS+Elevate+Upgrade+-+DCO+Pre-Checks+and+Preparations
+
+https://hostdime.atlassian.net/wiki/spaces/DCOP/pages/66322954/How+to+Configure+Legacy+Device+Naming+on+CentOS+7#Update-Network-Scripts
+
+Softaculos installation:
+------------------------
+https://www.softaculous.com/docs/admin/installing-softaculous-in-cpanel/
+https://admin.dimenoc.com/desk/ticket/3574018
+Litespeed Installation:
+-----------------------
+https://support.cpanel.net/hc/en-us/articles/360048479214-How-to-install-LiteSpeed
+https://admin.dimenoc.com/desk/ticket/3574018

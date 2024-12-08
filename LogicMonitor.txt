@@ -1,0 +1,63 @@
+LogicMonitor:
+
+What is LogicMonitor?
+
+LogicMonitor evolved out of the unique monitoring needs of datacenters. LogicMonitor finds, intelligently queries, and begins monitoring virtually any datacenter resource. If you have a resource in your datacenter that is not immediately found and monitored, our professional services will investigate how to add it. LogicMonitor is an agentless solution, LogicMonitor is easier to set up than a traditional agent-based monitoring (because you only have one lightweight app to install), and takes fewer IT cycles to manage over time (e.g. because you don't have to worry about maintaining consistent versions across agents).
+
+Different Types of Monitoring Platform in LogicMonitor
+
+Infrastructure monitoring
+-------------------------
+Network monitoring
+Server monitoring
+Remote monitoring
+Virtual machine monitoring
+SD-WAN monitoring
+Database monitoring
+Storage monitoring
+Configuration monitoring
+
+Cloud monitoring
+-----------------
+Container monitoring
+AWS Monitoring
+GCP Monitoring
+Azure Monitoring
+
+Digital experience
+-------------------
+SaaS monitoring
+Website monitoring
+APM
+
+AIOPS(Artificial Intelligence for IT operations)
+-----
+Edwin AI
+
+We are focusing the Server Monitoring features from the Infrastructure Monitoring.
+
+Server Monitoring
+-----------------
+Monitor the health,performance, and utilization of your entire server infrastructure with LM Envision:
+
+LogicMonitor’s SaaS-based monitoring platform. Using LogicMonitor’s lightweight, agentless collector, LM Envision automatically detects, monitors, and alerts on: CPU, Memory, Network, and many other OS metrics for Windows, Linux, Solaris, AIX, and more.
+
+LogicMonitor offers comprehensive server monitoring requires more than simple CPU and memory alerting, but shouldn’t need a lot of configuration. With LM Envision, simply enter an IP address range – whether on-premise or in the cloud – and you’re done. LM Envision scans ports for popular services and applications, making onboarding easier than ever. Out-of-the-box dynamic threshold alerting intelligently measures predicted performance levels and alerts you when those thresholds are exceeded.
+
+
+Visibilities:
+-------------
+1. OS Metrics
+2. Server-based applications
+3. Containers
+
+# SQL server monitoring
+# VMware server monitoring
+# Apache performance monitoring
+# Exchange server monitoring(Eg: Microsoft Exchange Services)
+
+Pricing
+-------
+$22 Per resource/month and Volume discounts available
+
+

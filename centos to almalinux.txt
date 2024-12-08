@@ -1,0 +1,47 @@
+https://docs.ispsystem.com/vmmanager-admin/migration/migrating-from-centos-8-to-almalinux-8
+  
+ 24  [2023-10-04 19:53:50] - hostname -i
+   25  [2023-10-04 19:54:30] - timedatectl
+   26  [2023-10-04 19:55:51] - timedatectl set-timezone "Asia/Kolkata"
+   27  [2023-10-04 19:55:57] - timedatectl
+   28  [2023-10-04 19:56:08] - reboot
+   29  [2023-10-04 19:57:09] - w
+   30  [2023-10-04 19:57:13] - timedatectl
+   31  [2023-10-04 19:57:28] -  cat /etc/redhat-release
+   32  [2023-10-04 19:59:29] - sed -i -r 's|^(mirrorlist.+)$|#\1|g; s|^#baseurl=http://mirror.centos.org/\$contentdir/\$releasever/|baseurl=https://vault.centos.org/8.5.2111/|g' /etc/yum.repos.d/CentOS-*.repo
+   33  [2023-10-04 20:00:47] - yum search epel-release
+   34  [2023-10-04 20:02:02] - yum install screen -y
+   35  [2023-10-04 20:02:59] - yum info epel-release
+   36  [2023-10-04 20:03:27] - yum install epel-release
+   37  [2023-10-04 20:03:54] - rpm -qa | grep epel
+   38  [2023-10-04 20:04:16] - yum install screen -y
+   39  [2023-10-04 20:05:24] - screen -ls
+   40  [2023-10-04 20:06:27] - screen - S update
+                               
+   41  [2023-10-04 20:06:52] - screen -S update_os
+                 yum update
+   42  [2023-10-04 20:17:09] - w
+   43  [2023-10-04 20:17:43] - curl -O https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/almalinux-deploy.sh
+   44  [2023-10-04 20:18:22] - ls
+   45  [2023-10-04 20:18:39] - history
+[root@ind ~]#
+reboot
+
+new screen 
+
+bash almalinux-deploy.sh
+
+cat /etc/redhat-release
+
+
+Webuzo installation
+--------------------
+
+wget -N https://files.webuzo.com/install.sh
+
+chmod 0755 install.sh
+
+./install.sh --install=apache2,mariadb109,pureftpd,bind,exim,dovecot,php81,php80,php74,php56,php73
+
+
+iptables -A INPUT -s 67.23.236.200 -j ACCEPT

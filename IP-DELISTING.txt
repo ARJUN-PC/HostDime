@@ -1,0 +1,11 @@
+Hello,
+
+We have been closely monitoring the server over the past few days.
+
+Currently there is no spamming in this server. we have confirmed that no bulk and spam emails are sent from the server. We have scanned the server and could not find any malicious files.
+
+Customer is really frustrated as his business emails are blocked. We request you to consider this case once again and share us if you find any vulnerabilities found with this IP address"64.37.59.234 ".
+
+We kindly request you to delist the IP address"" at the earliest as the server is not detected with any malware/spamming issuses.
+
+https://support.microsoft.com/en-us/supportrequestform/8ad563e3-288e-2a61-8122-3ba03d6b8d75

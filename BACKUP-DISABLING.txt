@@ -1,0 +1,19 @@
+Hello Ujjal,
+
+Since there is no response from your end, we have disabled the account backup from the Cpanel backup system. 
+
+Please take immediate action to remove unwanted files within one week otherwise, we will be forced to suspend the account. Kindly have a look at our resource abuse policy [https://hostdime.in/resource_abuse _ policy.html
+
+Kindly check the same and reduce the inode from your end if you have any questions or concerns please let us know.
+
+Hello Ramkumar,
+
+We hope this email finds you well, However, we regret to inform you that we have not received any response from your end regarding the 'siliconhelid account high inode usage. As a result, we have disabled the account backup from the Cpanel backup system. 
+
+We kindly request you to take immediate action and review your account for any unwanted files or data within the next week. Failure to do so may result in the suspension of your account. We understand the importance of maintaining a clean and efficient hosting environment for all our clients, and your cooperation in this matter is greatly appreciated.
+
+In order to assist you in this process, we recommend reviewing our resource abuse policy, which can be found at [https://hostdime.in/resource_abuse_policy.html]. This policy provides guidelines for reducing unnecessary resource usage and ensuring compliance with our hosting terms and conditions.
+
+If you have any questions or concerns regarding the policy or need further clarification, please do not hesitate to reach out to us. Our support team is available ta provide assistance and guide you through the necessary steps to resolve this matter.
+
+Thank you for choosing Hostdime India as your hosting provider We greatly value your business and are committed to delivering a reliable and secure hosting experience.

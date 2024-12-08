@@ -1,0 +1,6 @@
+Hello Shanker,
+Please note, that the default grace period to clear an invoice is the 5th of the month. Any payment made after the 5th of the month will be calculated as a late payment and a late fee will applied to your next renewal invoice.
+Kindly make necessary arrangements to clear the invoice at the earliest to avoid late fees and interruption in service.
+
+The maximum grace period we could offer to clear all your invoices is till 5th Aug 23, This is an automated process so we cannot do anything about the payment date. Kindly make necessary arrangements in clearing the invoices on or before 5 Aug 23 to avoid interruption in services.
+https://admin.dimenoc.com/desk/ticket/3581649

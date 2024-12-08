@@ -1,0 +1,19 @@
+Hi Praksh,
+
+Greetings!!
+
+Thanks for contacting HostDime India. We have tweaked some email delivery settings. Now we see that emails are delivery from hdintest@vvhitechhoses.in to pramod.patil@losma.in
+
+=================
+2023-06-08 04:15:59 1q7AoJ-0002AE-1H <= hdintest@vvhitechhoses.in H=(server1.abileweb.com) [::1]:56704 P=esmtpa A=dovecot_login:hdintest@vvhitechhoses.in S=657 id=a855cd9aefb2019ecbf6b022952b635c@vvhitechhoses.in T="Second Email from support team" for pramod.patil@losma.in
+2023-06-08 04:15:59 1q7AoJ-0002AE-1H Sender identification U=vvhies D=vvhitechhoses.in S=hdintest@vvhitechhoses.in
+2023-06-08 04:15:59 1q7AoJ-0002AE-1H SMTP connection outbound 1686212159 1q7AoJ-0002AE-1H vvhitechhoses.in pramod.patil@losma.in
+2023-06-08 04:16:00 1q7AoJ-0002AE-1H => pramod.patil@losma.in R=dkim_lookuphost T=dkim_remote_smtp H=mx.kpnqwest.it [212.97.32.75] X=TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256 CV=yes C="250 2.0.0 Ok: queued as 6401D3E3727"
+2023-06-08 04:16:00 1q7AoJ-0002AE-1H Completed
+
+==================
+
+Now please try receiving emails from pramod.patil@losma.in and let's know if you receive any error messages . If you still face any issues, please update us the complete bounce back message to investigate further.
+
+If you have any further inquiries or require additional assistance, please don't hesitate to reach out to us. Thank you for selecting HostDime.in as your hosting provider of choice!
+https://admin.dimenoc.com/desk/ticket/3295431

@@ -1,0 +1,8 @@
+Hi Bhavik,
+
+Thank you for contacting HostDime India Technical support. We appreciate your ongoing patience in regard to this issue.
+
+In our investigation, we could see that the email authentication records (SPF,DKIM) of your domain is corrupted. We have repaired the same for solving the mentioned issue. We have tested the email functionality from your domain (hdintest@ambex.in) to our in-house Gmail ID and we could see that we are able to send/receive the mails properly. Kindly review the below logs for your reference.
+
+
+Kindly check the email routing from your end and feel free to get in touch with us if you need any more assistance.

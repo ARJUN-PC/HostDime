@@ -1,0 +1,60 @@
+Hello Artem,
+
+Please be aware that all the servers purchased are in suspended state due to non payment of the Invoice 3060150 (IN-22715) .
+
+Please complete the payment and get back to us so that we can lift the restriction on the servers.
+
+Awaiting your reply.
+
+-----------------------------------------------------------------
+
+
+Thank you for opening this ticket.
+
+While checking we could see that you have an open invoice IN-22773 under your profile for the renewal of the following 4 dedicated servers.
+
+===================
+HD30263 - server.258.com
+HD30495 - server.742.com
+HD30510 - server1.redpopo.com
+HD30514 - server3.redpopo.com
+===================
+
+We haven't received any payment for the open invoice until now. Kindly provide necessary [Payment method, transaction/reference number, exact amount] payment details or screenshots to verify the same from our end.
+
+Further, you have mentioned to have made payment just for 2 out of 4 dedicated servers. Kindly provide a clarity on your payment status for the remaining 2 servers as well.
+
+Awaiting your reply.
+-------------------------------------------------------------------------------------
+
+
+Hello,
+
+We accept international transactions only through Paypal or direct transfer to our SBI current account in India as of now. Currently, we are facing some issues with the CCAvenue payment gateway to accept payment via international debit/credit cards. The same has already been notified to the CCAvenue team and unfortunately, it may take some time (weeks) to resolve. In the meantime, we request you to make payment directly to our PayPal account at 'paypal@hostdime.in'(do mention the Invoice ID) or via direct transfer to our following bank account in India.
+
+Bank Name: State Bank of India
+Account Name: HOSTDIME DATA CENTRE SERVICES PRIVATE LIMITED
+Account Number: 31732700432
+Branch: Technopark
+Branch Code: 7617
+Address: UTILITY BLDG.TECHNOPARK CAMPUS, KARIAVATTAM,THIRUVANANTHAPURAM,695581
+Swift Code / BIC code: SBININBBT67
+IFSC Code: SBIN0007617
+
+Once the transaction is made directly to our SBI current account, please update us with the transaction details via the same ticket so that we could verify the same and apply it manually to the open invoice.
+
+**Note: While initiating a direct transfer to our bank account, kindly bear both side bank service charges from you side and the total amount to be reflected in our bank account should be equivalent to the invoice amount.
+
+Regards,
+Hello.
+
+The allowed grace period to clear your open invoice had expired and all your servers are in suspended status and now at the risk of termination. Kindly make necessary arrangements in clearing the invoice at the earliest to avoid interruption in services.
+
+
+Hello,
+
+Please note that the maximum grace period we can offer for payment is till 5th March. We kindly request you to make payment on or before 5th March 2024 to avoid interruption of services.
+
+If there is anything else we can help you with, please feel free to contact us. Thank you for choosing HostDime.in for all of your hosting needs!
+
+The maximum grace period we could offer to clear all your invoices is till 5th Aug 23, This is an automated process so we cannot do anything about the payment date. Kindly make necessary arrangements in clearing the invoices on or before 5 Aug 23 to avoid interruption in services.

@@ -1,0 +1,17 @@
+Hello,
+
+As per your request, we have set the RDNS for the IPs.
+
+===
+
+===
+
+Kindly note that it takes few hours for the DNS propagation to complete globally.
+
+Please check the same and get back to us if you need any further assistance.
+Please note that DNS propagation may take 24 -48 hours to reflect globally.
+138-128-182-77.static.hostdime.com
+
+Hello Valerii,
+
+As per your request, we have removed the RDNS for the mentioned IPs. Please check the same from your end.

@@ -1,0 +1,29 @@
+Hello,
+
+Greetings!!
+
+Please share the header and content of the mail you are trying to send that are receiving in spam folder to analyze the issue further. Please find the steps below to how to get email header of a SPAM email in Roundcube and Horde Webmail .
+
+====
+Roundcube:
+
+1. Log in to your Roundcube webmail account.
+2. Open the spam email you want to retrieve the header for.
+3. Look for an option or icon that allows you to view the full message or display the email source. It is usually denoted by an icon with brackets or a dropdown menu.
+4. Click on the option to view the email source or header.
+5. A new window or tab will open, displaying the complete email header. You can copy the header information from this window for further analysis or reporting.
+
+
+Horde:
+
+1. Log in to your Horde webmail account.
+2. Open the spam email you want to extract the header from.
+3. Look for an option or link that allows you to view the full headers or source of the email. It may be labeled as "View Headers" or "Show Original."
+4. Click on the option to display the full email headers.
+5. A new window or tab will open, showing the complete email header information. You can copy the header details from this window for analysis or reporting purposes.
+
+
+Please note that the exact steps may vary slightly depending on the specific version and configuration of Roundcube or Horde webmail you are using.
+====
+
+If there is anything else we can help you with, please feel free to contact us. Thank you for choosing HostDime.in for all of your hosting needs!

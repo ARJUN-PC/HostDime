@@ -1,0 +1,49 @@
+Hello,
+
+Greetings...!
+
+This is a gentle reminder that during the recent server audit, we see that remote FTP backup is not working for the accounts on the server. We see that you have been provided with 20 GB of free Remote FTP space, but as per your data size [19G] , it is insufficient to keep the data backup with one retention.
+
+The 20 GB remote FTP space is a free FTP promotional offer space and the customers can purchase additional Remote FTP Storage Space according to their server data size.
+
+We see that your accounts are using 19 G of space and for a proper running of backup with one retention, minimum of 50 GB of FTP space is required.
+
+As you have 19 Gb of usage, either please purchase additional FTP storage space to keep the backup or else please let us know the specific domains to enable the backup. Please let us know whether you have disabled it intentionally or else, please confirm us the specific users, that we can enable for the FTP backup on the server.
+===
+[root@vps ~]# hostname
+vps.technocuz.com
+===
+Disk usage
+===
+[root@vps ~]# df -hT
+Filesystem Type Size Used Avail Use% Mounted on
+devtmpfs devtmpfs 1.4G 0 1.4G 0% /dev
+tmpfs tmpfs 1.4G 0 1.4G 0% /dev/shm
+tmpfs tmpfs 1.4G 145M 1.3G 11% /run
+tmpfs tmpfs 1.4G 0 1.4G 0% /sys/fs/cgroup
+/dev/sda3 ext4 58G 28G 30G 49% /
+/dev/sda1 ext3 479M 125M 354M 27% /boot
+tmpfs tmpfs 285M 0 285M 0% /run/user/0
+tmpfs tmpfs 285M 0 285M 0% /run/user/250
+===
+===
+[root@vps home]# du -sch *
+61M agmiglobal
+2.6G assistbay
+155M bhoumaco
+259M delightb
+1.7G innocuz
+0 interworx
+8.7G nsscnilamel
+159M promptenterprise
+2.1G rapidcorpindia
+496M rapidcorpindia-bkp-23-nov
+2.6G technoc
+188M technocuzcom
+0 vpopmail
+19G total
+===
+
+A backup ftp space will always easy to store the data in a restorable format. If any unexpected drive failures occur or any hack issue happened, it will be helpful to restore the data from the available backups. We highly suggest you purchase additional FTP Space for data safety or you need to keep a backup system at your end. Please note that cPanel Backup system only keeps the backup of data created via cPanel and not the data created via the backend. Please make sure that you have a custom setup to back up your data at your local end.
+
+https://admin.dimenoc.com/desk/ticket/3311862

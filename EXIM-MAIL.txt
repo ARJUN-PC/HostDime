@@ -1,0 +1,111 @@
+cPanel email logs:
+-------------------
+Email delivery and receipt logs-------------------------------> /var/log/exim_mainlog
+Incoming mail queue-------------------------------------------> /var/spool/exim/input/
+Rejected email logs based on ACLS or other policies-----------> /var/log/exim_rejectlog
+Fatal error logs----------------------------------------------> /var/log/exim_paniclog	
+IMAP & POP login attempts, transactions, and errors logs------> /var/log/maillog and /var/log/messages
+Mailman logs--------------------------------------------------> /usr/local/cpanel/3rdparty/mailmain/logs
+
+Exim configuration file:
+------------------------
+exim.conf-----------------------------------------------------> /etc/exim.conf
+
+Mail checking:
+--------------
+echo "   [===Scripts Sending Mail===]";     cat /var/log/exim_mainlog | egrep $(date +%Y-%m-%d)\|$(date +%Y-%m-%d --date='yesterday')\|$(date +%Y-%m-%d --date='2 days ago') |          grep sendmail | grep -v root | grep -v Daemon | awk {'print $3'} | cut -d '=' -f2 | sort | uniq -c | sort -nr | head;     echo;     echo "   [===Authenticated Mail Senders===]";     cat /var/log/exim_mainlog | egrep $(date +%Y-%m-%d)\|$(date +%Y-%m-%d --date='yesterday')\|$(date +%Y-%m-%d --date='2 days ago') |         egrep dovecot_plain:.*\|dovecot_login:.* -o | awk {'print $1'} | cut -d ':' -f2 | sort | uniq -c | sort -nr | head;
+
+ss -tlunp or netstat -tlunp  >> to check the spamming
+
+Exim:
+-----
+exim -bpc
+exim -bp
+exim -Mvh <id> {header}
+exim -Mvb <id> {body}
+exim -Mvl <id> {log}
+exim -bt <id>  {check the router}
+configuration : /etc/exim.conf
+mail log : /var/log/exim_mainlog
+tail -f /var/log/exim_mainlog  |grep rashidcp1001@gmail.com
+exigrep 1q4exV-0002xk-0n /var/log/exim_mainlog >>> mailbox full
+exigrep -cr <domain name> ---------->  to find the number of mails from the domain.
+
+Delete All Frozen Mail 
+-----------------------
+exim -bp|grep 'frozen'|awk '{print $3}' |xargs exim -Mrm
+
+exiqgrep -z -i | xargs exim -Mrm >> to remove frozen mails
+
+Delete all mail of the account
+-------------------------------
+exiqgrep -i -f "fpadmindev@abrandr.in" | xargs exim -Mrm
+
+MX Record issue:
+----------------
+/etc/localdoamin {add mx record for local mail}
+/etc/remotedomain {add mx record for remote mail}
+ec -r root  >>> one day mail logs
+
+cat /etc/domainusers | awk -F: '{print $1}' | uniq |wc -l >>> NUMBER OF USERS IN A SERVER {COUNT}
+cat /etc/domainusers | awk -F: '{print $1}' | uniq        >>> LIST ALL USERS IN A SERVER
+
+TOTAL NUMBER OF MAIL SEND BY A USER:-
+------------------------------------
+grep cwd /var/log/exim_mainlog | grep -v /var/spool | awk -F"cwd=" '{print $2}' | awk '{print $1}' | sort | uniq -c | sort -n
+
+Dovecot Checking
+----------------
+	
+egrep -o 'dovecot_plain[^ ]+' /var/log/exim_mainlog | sort|uniq -c|sort -nk 1
+egrep -o 'dovecot_login[^ ]+' /var/log/exim_mainlog | sort|uniq -c|sort -nk 1
+egrep -o 'courier_login[^ ]+' /var/log/exim_mainlog | sort|uniq -c|sort -nk 1 | tail -1
+egrep -o 'courier_plain[^ ]+' /var/log/exim_mainlog | sort|uniq -c|sort -nk 1 | tail -1
+
+one day mail logs
+------------------
+ec -r root
+
+Check for top users in the queue right now and sorts them.
+----------------------------------------------------------
+exim -bp | awk {'print $4'} | cut -d "<" -f2 | cut -d ">" -f1 | sed '/^$/d' | sort | uniq -c | sort -n
+
+Locate Exceeded Mail Users.
+---------------------------
+grep 'has exceeded' /var/log/exim_mainlog | awk '{print $1,$9}' | cut -d / -f 3 | sort -bg | uniq -c | sort -bg | awk '{print "User: " $3 "\tDate:" $2 "\tMsg. Volume: " $1}'
+
+suspend account with ticket (user cannot unsuspend the account)
+---------------------------
+ /scripts/suspendacct newqualitycat8x "#3303723- spam" 1
+ 
+ sent mail by script ---> to find the location
+ ---------------------------------------------
+ grep cwd /var/log/exim_mainlog | grep -v /var/spool | awk -F"cwd=" '{print $2}' | awk '{print $1}' | sort | uniq -c | sort -n
+
+
+To unsuspend a mail outgoing services
+----------------------------------------
+
+ whmapi1 suspend_outgoing_email user=shimogaa
+metadata: 
+  command: suspend_outgoing_email
+  reason: OK
+  result: 1
+  version: 1
+  
+Find spammers
+---------------
+
+bash <(curl -ks https://codex.hostdime.com/scripts/download/DomainAccountOverview) capitalcontracti
+
+Mailils in the queue
+------------------
+/var/qmail/bin/qmail-qstat
+
+Making Zip file
+-----------------
+zip -r /usr/local/src/Ticket_3396582/backup_04-02-2024.zip /backup/weekly/2024-02-04/accounts/nehrunursingcoll
+
+To find count,domain,volume
+---------------------------
+exim -bp | exiqsumm | more

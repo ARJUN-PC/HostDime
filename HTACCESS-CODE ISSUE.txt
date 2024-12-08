@@ -1,0 +1,5 @@
+Hello Techno,
+
+Please note that we found there is some issue with the .htaccess file restricting the wp-admin access. We renamed the .htaccess file and checked the website https://jfapfe.org/wp-admin/, it works fine. We have reverted the file to its original form after checking. Please check the .htaccess code with your developer and find out the error in the .htaccess code.
+
+Do revert us if you need any other assistance.

@@ -1,0 +1,10 @@
+
+Elevate centos to almalinux-8
+https://docs.ispsystem.com/vmmanager-admin/migration/migrating-from-centos-8-to-almalinux-8
+
+Then install all services in the new(destination) server
+./install.sh --install=apache2,mariadb108,pureftpd,bind,exim,dovecot,php81,php80,php74
+
+migration --> webuzo ---> import --> IP,username,password --> select the domains --> start migration
+
+Import logs location ---> tail -f /var/webuzo/logs/webuzo_import.log

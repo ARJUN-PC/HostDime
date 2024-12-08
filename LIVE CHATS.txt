@@ -1,0 +1,44 @@
+LIVE CHAT
+ 
+Hello
+Welcome to HostDime India.	 Could you please let me know your Primary email ID and support PIN?
+Thank you for providing the details.
+How can I help you.
+
+I will create one ticket and will update the <CONTENT>
+Thank you for being on hold. we will open a ticket on behalf of you from our end and give you an update very soon
+Kindly await the ticket update.
+You are welcome.
+Is there anything else I can help you with?
+How may I assist you today?
+
+Hello
+
+Welcome to HostDime India..!
+
+May I know your support PIN Number and Primary Email ID for verification ?
+
+Thank you for completing the verification Process.
+
+I am NAME at your assistance. How may I help you ?
+
+Unfortunately, we have limitations in holding chats for a long duration. Rest assured, our team is diligently working on resolving the issue.
+
+Thank you for contacting HostDime India Support team. Have a great day..!
+
+Have a great day..!
+
+ Your server would not get affected by this. However, for a precautionary measure, We would suggest you to pause the ads during the maintenance time.
+
+TICKET CREATED:-
+----------------
+
+Hi Swapnil,
+
+	During the conversation, you have updated that the domain "simplidistance.com" is not working.
+
+On checking, we see that the server is not responding to Ping and SSH. We are proceeding with a server reboot and update you the details as early as possible.
+
+>> As per the chat we had earlier today on our chat platform, I'm opening this ticket on behalf of you. We have received your issue regarding "Server Down".
+
+As per the recent live chat session, we are opening this ticket on behalf of you. During the conversation, you mentioned that you wish to make an advance payment for one year.

@@ -1,0 +1,21 @@
+Hi,
+
+Thank you for contacting HostDime Support.
+
+We have tested your website from our end.Please note that we have tweaked the server PHP setting "max_execution_time" from 30 to 60 for your domain.Currently your domain :https://dtu.edu.et/ is loading faster than earlier.Please find the attached screenshot for your reference.
+
+Kindly note that you are using the deprecated version of PHP version (7.4),we always recommend to use the latest PHP version 8.* version for better performance
+
+Please reachout in-case you need any further assistance
+
+
+
+Hello Rakesh,
+
+Thank you for contacting HostDime India.
+
+As per your request we have tweaked the mail quota  from 300 MB to 500 MB  for your account 'info@rjcraftinterior.com'.
+
+Please remove the unwanted mails from inbox and trash folders from this account
+
+If there is anything else we can help you with, please feel free to contact us. Thank you for choosing HostDime.in for all of your hosting needs!

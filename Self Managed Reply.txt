@@ -1,0 +1,30 @@
+Hello,
+
+Since your server falls under self managed category we are not entitled to provide any support in this case. please note that self managed server issues must be taken care from your side except for any hardware failure, network issues and reboot requirement. Please cooperate with us on this.
+
+You can access the server via IPMI: kindly check the issue from your side and take a proper action on this issue.
+
+login details
+#######
+Url:http://199.168.188.246/
+Username:hdview
+password:FiEx6jBEfy
+#########
+
+You can refer the hostdime document: https://www.hostdime.com/kb/hd/core/how-to-access-ipmi-via-your-hostdime-core-account
+########
+$ ping 199.168.188.246
+PING 199.168.188.246 (199.168.188.246) 56(84) bytes of data.
+64 bytes from 199.168.188.246: icmp_seq=1 ttl=62 time=0.844 ms
+64 bytes from 199.168.188.246: icmp_seq=2 ttl=62 time=0.940 ms
+64 bytes from 199.168.188.246: icmp_seq=3 ttl=62 time=1.00 ms
+64 bytes from 199.168.188.246: icmp_seq=4 ttl=62 time=0.998 ms
+^C
+--- 199.168.188.246 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3003ms
+rtt min/avg/max/mdev = 0.844/0.946/1.004/0.071 ms
+#######
+If you wish to reboot the server, Please inform us. Please feel free to contact us if you have further difficulties.
+
+
+Thanks and Regards

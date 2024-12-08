@@ -1,0 +1,78 @@
+Hardware config in newly deployed servers ( added as note)
+
+[root@z ~]# hostname
+z.server1.com
+
+[root@z ~]# hostname -i
+107.161.180.98
+
+[root@z ~]# df -h
+Filesystem Size Used Avail Use% Mounted on
+devtmpfs 7.8G 0 7.8G 0% /dev
+tmpfs 7.9G 0 7.9G 0% /dev/shm
+tmpfs 7.9G 17M 7.9G 1% /run
+tmpfs 7.9G 0 7.9G 0% /sys/fs/cgroup
+/dev/sda4 435G 1.9G 434G 1% /
+/dev/sda1 454M 100M 351M 23% /boot
+/dev/sda2 2.7G 4.3M 2.7G 1% /tmp
+tmpfs 1.6G 0 1.6G 0% /run/user/0
+
+[root@z ~]# free -gh
+total used free shared buff/cache available
+Mem: 15G 182M 15G 16M 377M 15G
+Swap: 1.9G 0B 1.9G
+
+[root@z ~]# cat /etc/redhat-release
+CentOS Linux release 7.8.2003 (Core)
+
+[root@z ~]# csf -v
+csf: v14.18 (generic)
+
+[root@z ~]# lscpu
+Architecture: x86_64
+CPU op-mode(s): 32-bit, 64-bit
+Byte Order: Little Endian
+CPU(s): 8
+On-line CPU(s) list: 0-7
+Thread(s) per core: 2
+Core(s) per socket: 4
+Socket(s): 1
+NUMA node(s): 1
+Vendor ID: GenuineIntel
+CPU family: 6
+Model: 58
+Model name: Intel(R) Xeon(R) CPU E3-1230 V2 @ 3.30GHz
+Stepping: 9
+CPU MHz: 1600.048
+CPU max MHz: 3700.0000
+CPU min MHz: 1600.0000
+BogoMIPS: 6600.02
+Virtualization: VT-x
+L1d cache: 32K
+L1i cache: 32K
+L2 cache: 256K
+L3 cache: 8192K
+NUMA node0 CPU(s): 0-7
+Flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c rdrand lahf_lm epb ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+
+[root@z ~]# lsblk
+NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda 8:0 0 447.1G 0 disk
+├─sda1 8:1 0 476.9M 0 part /boot
+├─sda2 8:2 0 2.8G 0 part /tmp
+├─sda3 8:3 0 1.9G 0 part [SWAP]
+├─sda4 8:4 0 442G 0 part /
+└─sda5 8:5 0 1M 0 part
+[root@server ~]# ethtool eth1 | grep Speed
+        Speed: 1000Mb/s
+
+Hello,
+
+Greetings...
+
+We have completed the server deployment and a welcome email containing login credentials of the server has been sent to your primary email address.
+
+Kindly have a check from your end and update us if you need any further assistance.
+
+Free CPU Upgrade
+Further, we would like to let you know that we have provided you with a FREE CPU upgrade to the next level 'E3-1270 v2' processor due to the unavailability of the ordered CPU in our inventory while processing your order.

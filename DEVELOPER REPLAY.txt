@@ -1,0 +1,10 @@
+Hello,
+
+Thanks for contacting HostDime India. Please note that the public_html folder is using more number of inodes. When deleting files inside the public_html it will effect the working of the website. So, we request you to communicate with the developer to delete the unwanted files or cache.
+
+
+Please note that clearing those files will affect the working of the website and will break the connection string. we would recommend you to check the scan result with the help of a web developer and clear the infected files.
+
+Kindly check with the help of a web developer and clear the infected content.
+
+Kindly check the infected file with the help of your developer and take the appropriate action from your end.

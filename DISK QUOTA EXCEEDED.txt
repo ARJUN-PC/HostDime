@@ -1,0 +1,7 @@
+Hello Johnson,
+
+While checking the issue we found that your account "csitirun" disk quota has exceeded its limit, the maximum quota of the account is currently set as 5000MB and the current disk usage is 5022MB, Check the screenshot attached.
+
+Kindly upgrade the disk quota of the account.
+
+If there is anything else we can help you with, please feel free to contact us. Thank you for choosing HostDime India for all of your hosting needs!

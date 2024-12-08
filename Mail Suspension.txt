@@ -1,0 +1,24 @@
+Hello,
+
+During our recent server audit we found that the account “sinceres” was potentially compromised as it was seen sending bulk/spam and also with the presence of malware infected files.
+
+We disabled all the email accounts from sending outbound email as a precuationay measure to secure the server and IP from getting blacklisted. To re-enable, please change the email account password within cPanel to a new, secure password.
+
+Please find the below malewre hits :
+===
+PATH: /home/sinceres/public_html
+TOTAL FILES: 164562
+TOTAL HITS: 4
+TOTAL CLEANED: 0
+
+WARNING: Automatic quarantine is currently disabled, detected threats are still accessible to users!
+To enable, set quarantine_hits=1 and/or to quarantine hits from this scan run:
+/usr/local/sbin/maldet -q 230701-0426.6718
+
+FILE HIT LIST:
+{CAV}Sanesecurity.Foxhole.Zip_bat : /home/sinceres/public_html/phpMyAdmin-4.0.10.15-english.zip
+{CAV}Php.Trojan.Webshell-9993081-0 : /home/sinceres/public_html/inceptionsystem.us/em/index.php
+{CAV}Sanesecurity.Foxhole.JS_Zip_24 : /home/sinceres/public_html/inceptionsystem.us/zuber12/report/Divi.zip
+{CAV}20211011-095420-YWPRjBz0wPzqd.sigs.InterServer.net.SHA256.28460 : /home/sinceres/public_html/inceptionsystem.us/gstapp/vendor/sebastian/global-state/src/atomlib.php-kkk
+
+We are allowing you 48hrs time to take action on this issue. If you don't take any action, we will be forced to suspend the account.Kindly check the files infected with the help of your developer and take the appropriate action from your end. Please consider this and work on it.

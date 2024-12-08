@@ -1,0 +1,62 @@
+Hello,
+
+As mentioned previously the website is loading from our end. We have checked the server log and we could not notice anything abnormal in the server, the “This site can’t be reached” error can be annoying, the error comes from problems that may be with the internet connection.
+
+We request you to check the website again after doing the following steps:
+
+=====
+1. Restart Your Internet Connection (restart the modem)
+2. Disable Your Firewall and Antivirus in your system.
+3. Clear Your Browser Cache
+=====
+
+If you are still getting the error, please try accessing the website from other ISPs also and update us the status. You may also reach us back with the Trace Route Result:
+
+How to perform trace-route from your system:
+
+=============
+If you have a system with WINDOWS OS : :
+1. Click Start, then Run, type cmd and click OK.
+2. Type pathping YOURDOMAIN.COM/IP and hit enter.
+3. The protocol will generate a series of hops.
+4. After the hops are generated, depending on the number of hops, it will say, "Analyzing for the next XXX seconds," where XXX refers to the number of seconds the analysis will take, usually over 100.
+5. Please wait for the analysis to complete before pasting the results, as the analysis is the most important part of the pathping.
+=============
+If you have a system with MACINTOSH OS:
+1. Open Finder, go to the Applications folder, then the Utilities Folder.
+2. In the Utilities folder, launch the Terminal application.
+3. Type traceroute -P icmp YOURDOMAIN.COM/IP and hit enter.
+==============
+If you have a system with LINUX OS:
+1. Open Terminal from the PC.
+2. Type traceroute YOURDOMAIN.COM/IP and hit enter.
+================
+
+Once the results are shown please copy and paste the same or provide us the screenshot.
+
+Kindly provide us the IP address of your machine that you are getting the error by visiting the link: https://hostdime.in/ip.html
+
+We wait for your reply.
+Hello,
+
+We do not see the IP address 103.166.109.133 is blocked in your dedicated server.
+
+Could you please share the ping and traceroute report using below command with us from which location (103.166.109.133) you are unable to access website.
+
+We request you provide us few details with below steps.
+
+*For Windows Operating System - Ping Report*
+----
+Please Open *CMD* > type *ping yourdomain.com* without http:// or https:// and press enter, Once process get complete take screen shot and send screen shot to us via this same ticket.
+
+*For Mac Operating System - Ping Report*
+----
+Please Open *Terminal* > type *ping yourdomain.com* without http:// or https:// and press enter, Once process get complete take screen shot and send screen shot to us via this same ticket.
+
+*For Windows Operating System - Trace Route Report*
+----
+Please Open *CMD* > type *tracert yourdomain.com* without http:// or https:// and press enter, Once process get complete take screen shot and send screen shot to us via this same ticket.
+
+*For Mac Operating System - Trace Route Report*
+----
+Please Open *Terminal* > type *traceroute yourdomain.com* without http:// or https:// and press enter, Once process get complete take screen shot and send screen shot to us via this same ticket.

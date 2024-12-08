@@ -1,0 +1,82 @@
+SCAN:-
+-----
+
+
+MALDET:-
+-------
+1. Download & Install Maldet -
+
+   #cd /usr/local/src
+   
+   #wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
+   
+   #tar -xzvf maldetect-current.tar.gz
+
+2. Go to the maldetect directory and run the installer script 'install.sh' as root:
+   
+   #cd maldetect-1.5 
+   
+   #./install.sh
+   
+3. Scan a file file using maldet 
+
+   #maldet -a <PATH> 
+   
+maldet location :- /usr/local/maldetect/sess/<maldet id>
+-----------------
+To scan all accounts in a domian
+--------------------------------
+
+for i in `cat userlist.txt`; do maldet -a /home/$i/public_html >> /usr/local/src/scanresult.txt; done
+
+   
+BIVALVE SCAN:-
+-------------
+alias bivalve='bash <(curl -ks https://codex.hostdime.com/scripts/download/bivalve)'
+bivalve -u cinifoi
+
+
+AI-Bolit:-
+---------
+Please take a look at the AI-Bolit scanning procedure for effective and easy to understand scanning.
+
+Steps
+=====
+Step 1 : wget https://github.com/KashifHK123/AI-Bolit/raw/master/ai-bolit/AIBOLIT-WHITELIST.db && wget https://github.com/KashifHK123/AI-Bolit/raw/master/ai-bolit/ai-bolit.php && php ai-bolit.php
+
+Note: Please note that you have to be in a particular path in which you want to perform scan. For example if you want to scan the public_html folder of a user then first you have to be in /home/$user/public_html folder and then perform Step 1.
+
+Step 2 : mv AI-BOLIT-REPORT-*.html result.html && chown $(pwd | cut -d '/' -f3). result.html
+
+Step 3 : rm -vfr ai-bolit-en.zip ai-bolit ai-bolit.php AI-BOLIT-QUEUE-2f9e6aae8fd8c52301916c2fd2285829-4375.txt AIBOLIT-WHITELIST.db readme.txt changelog.txt
+=====
+
+Breakdown
+=========
+Step 1 : wget's the code from github and execute php script ai-bolit.php
+
+Step 2 : We move the generated result from AI-BOLIT-REPORT-* to result.html
+
+Step 3 : Removing the extra supportive file we have downloaded.
+=========
+
+Pros
+====
+Light weight and than maldet.
+Doesn't consume much server resource.
+Doesn't spike load in the server.
+====
+
+Crons
+=====
+Skips large size files.
+Skips if the user's size is large (Suppose if the user's public_html folder exceeds more than 60+GB)
+=====
+
+Note : The result can be provided to the client as domain_name/result.html (as the result.html file would be in user's public_html) or if the domain is suspended/http access is denied, then move the result.html file to /var/www/html/ and change the ownership to root.root and call the result as IP/result.html
+
+PYSCAN
+------
+python2 <(curl -k -s "https://codesilo.dimenoc.com/abuse/pyscan/raw/master/pyscan.py")
+
+python <(curl -k -s "https://codesilo.dimenoc.com/abuse/pyscan/raw/master/pyscan.py") "$@" --exclude .trash/ --exclude etc/ --exclude logs/ --exclude tmp/ --exclude mail/

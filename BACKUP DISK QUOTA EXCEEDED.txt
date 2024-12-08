@@ -1,0 +1,16 @@
+Hello,
+
+During our recent server audit, we found that the disk usage of the cPanel account "eastern" is 36GB. Note that you have been given a 206B remote FTP space for free along with your VPS package to store the cPanel backups. Since the account size(36GB) exceeds 20GB, it is not possible to run and store the
+cPanel backups in the remote FTP space.
+Considering the importance of keeping backups in a remote system, we advise you to download cPanel backup in your local. We also suggest you to upgrade your remote FTP backup size from 2068 to more depends on the number of backups you want to keep in the remote FTP.
+
+Disk usage of "eastern":
+
+===
+/home/eastern# du -sch *
+===
+
+For upgrading the remote FTP space, please reach out to our sales team.
+
+Hostdime India shall be available at your services at any time. Please feel free to contact us if you have further difficulties.
+

@@ -1,0 +1,133 @@
+Hello,
+
+Thank you for your action.
+
+We have again scanned the account "todschool" and noticed that presently it's free of malicious files. So we enabled the site globally and the site is now loading fine from our end. Review the below screenshot for your reference.
+
+````````````````
+URL : https://prnt.sc/kMgRJ13_Mhcv
+````````````````
+
+Please be informed that the current version of WordPress being utilized is 5.7.6, and we kindly advise updating to the most recent version available.
+
+If you have any further inquiries or require additional assistance, please don't hesitate to reach out to us. Thank you for selecting HostDime.in as your hosting provider of choice!
+----------------------------------------------------------------------------------------------------------------
+
+Hello Techno Bros,
+
+Please note that we have completed scan on '/home2/dtueduet' and couldn't find the presence of malicious files, please find the snippet below for reference.
+
+========
+HOST: pro.technobros.net.au
+SCAN ID: 230613-0519.727527
+STARTED: Jun 13 2023 05:19:41 +1000
+COMPLETED: Jun 13 2023 05:26:23 +1000
+ELAPSED: 402s [find: 7s]
+
+PATH: /home2/dtueduet/
+TOTAL FILES: 17718
+TOTAL HITS: 0
+TOTAL CLEANED: 0
+========
+
+
+Please be aware that no one single anti-malware application will catch 100% of all malware on-the-wild, so scans with two or more reputable malware scanners are recommended.
+
+If you have any further inquiries or require additional assistance, please don't hesitate to reach out to us. Thank you for selecting HostDime.in as your hosting provider of choice!
+
+
+Hello,
+
+Please note that the scan result came with the suspicious contents , please find the snippet below.
+
+Hello,
+
+Please note that we have completed scan on the account 'sgam' and couldn't find the presence of malicious files, please find the snippet below for reference.
+Hello,
+
+Greetings..!!
+
+During our recent server audit, we found that the account "emperonelmsexim" was compromised and had the presence of malicious files. Please refer to the snippet below.
+
+_________________________________________________________________
+FILE HIT LIST:
+{CAV}Sanesecurity.Jurlbl.e89212 : /home/emperonelmsexim/mail/new/1685331778.M807744P26037.rin6.dizinc.com,S=3204,W=3280
+{CAV}Sanesecurity.Jurlbl.e89212 : /home/emperonelmsexim/mail/new/1685479161.M573015P25145.rin6.dizinc.com,S=7714,W=7856
+{CAV}Sanesecurity.Blurl.a5ea29 : /home/emperonelmsexim/mail/new/1685123604.M591592P29004.rin6.dizinc.com,S=7442,W=7582
+{CAV}Sanesecurity.Jurlbl.fd7351 : /home/emperonelmsexim/mail/new/1685123807.M953746P2780.rin6.dizinc.com,S=7404,W=7544
+{CAV}Sanesecurity.Jurlbl.c77a16 : /home/emperonelmsexim/mail/new/1685215054.M70413P13397.rin6.dizinc.com,S=3027,W=3103
+{CAV}Sanesecurity.Blurl.7896da : /home/emperonelmsexim/mail/new/1685286158.M428375P669.rin6.dizinc.com,S=3054,W=3130
+{CAV}Sanesecurity.Jurlbl.0efade : /home/emperonelmsexim/mail/new/1685393929.M311450P12930.rin6.dizinc.com,S=3072,W=3148
+{CAV}Sanesecurity.Jurlbl.92429f : /home/emperonelmsexim/mail/new/1685123512.M30915P16402.rin6.dizinc.com,S=7037,W=7158
+
+__________________________________________________________________
+
+Kindly check the files infected with the help of your developer and take the appropriate action from your end. Please consider this and work on it.
+
+We are allowing you 24hr time to take action on this issue. If you don't take any action, we will be forced to suspend the account.
+
+Please feel free to get back to us for further assistance.
+Hello Amrita,
+
+Please note that the scan result came with the presence of malicious files. Please find the snippet below:
+___________
+FILE HIT LIST:
+sigs.InterServer.net.HEX.Topline.eval.gzuncompress.base64.decode.733 : /home/wwwposac/public_html/omkarpathar.com/wp-content/plugins/so-widgets-bundle/base/i$
+sigs.InterServer.net.HEX.Topline.eval.gzuncompress.base64.decode.733 : /home/wwwposac/public_html/omkarpathar.com/wp-content/plugins/so-widgets-bundle/base/i$
+{CAV}20210914-045948-YT_0BNGPLp42qm.sigs.InterServer.net.SHA256.28449 : /home/wwwposac/public_html/omkarpathar.com/wp-content/plugins/colorbox-panels/assets/$
+___________
+
+Kindly check the infected files with the help of your developer and take immediate action on the same.
+
+If you have any questions or concerns please let us know.
+
+URL:- https://admin.dimenoc.com/desk/ticket/3302772
+Hello Swapnil,
+I hope this message finds you well.
+We wanted to reach out regarding the account "zipoweb" as we have not received a response from your end. Due to the reported issue of Malware Detected, we have temporarily suspended the account. Please get back to us with the action taken to resolve the reported Malware issue so that we can lift the account suspension.
+To ensure compliance, we recommend reviewing our acceptable use policy, which can be found at the following URL: https://hostdime.in/acceptable_use_policy.html
+If you require any further assistance or have any other concerns, please do not hesitate to contact us.
+Hello,
+
+Greetings..!!
+During our recent server audit, we found that the account "paithruk" was affected by malicious files. Please refer to the snippet below.
+________________
+FILE HIT LIST:
+sigs.InterServer.net.HEX.Topline.hidden.base.64.9.24.18.41 : /home/paithruk/public_html/wp-includes/header.php
+sigs.InterServer.net.HEX.Topline.hidden.base.64.9.24.18.41 : /home/paithruk/public_html/wp-content/themes/twentytwentyone/functions.php
+sigs.InterServer.net.HEX.Topline.hidden.base.64.9.24.18.41 : /home/paithruk/public_html/wp-content/themes/shop-elite/functions.php
+________________
+
+Kindly check the files infected with the help of your developer and take the appropriate action from your end. Please consider this and work on it.
+
+We are allowing you 24hr time to take action on this issue. If you don't take any action, we will be forced to suspend the account.
+
+Please feel free to get back to us for further assistance.
+_______________________________________________________________________________________________________
+Hello,
+We appreciate your action. We have completed the scan on the account "paithruk" and found no hits.
+Recent scan report of the account "paithruk":
+======
+PATH: /home/paithruk/public_html
+TOTAL FILES: 23014
+TOTAL HITS: 0
+TOTAL CLEANED: 0
+======
+We have activated the account. Please reach out in case you need any further assistance.
+
+Hello Johnson,
+
+Thank you for your response today.
+
+We will not remove files directly; they may include website-related code, so check with your developer for removing the file.
+
+Please ensure that the computer that administers this account is trojan/malware free. Malware is commonly used to compromise passwords in cases such as this.
+If unsure on which program to use to scan for malware, we have found the following programs to be effective:
+======
+HouseCall: http://housecall.trendmicro.com/
+MBAM: http://www.malwarebytes.org/mbam.php
+Microsoft Security Essentials: http://www.microsoft.com/Security_Essentials/
+Spybot S&amp;D: http://www.safer-networking.org/index2.html
+SUPERAntiSpyware: http://www.superantispyware.com/superantispyware.html
+======
+No one single anti-malware application will catch 100% of all malware on-the-wild, so scans with two or more reputable malware scanners is recommended.

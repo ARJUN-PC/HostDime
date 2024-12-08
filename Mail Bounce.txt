@@ -1,0 +1,47 @@
+Hello Ibrahim Valapra,
+
+We have checked the reported issue and confirmed that still the emails are not delivering to Hotmail IDs. I have sent a sample email from hr@4bizinternational.com to hdintechs@hotmail.com to re-create the issue.
+Please find the below snippet for your reference.
+================
+2023-06-08 11:22:53 1q79yv-0000Kr-1c <= hr@4bizinternational.com H=(server.4bizglobal.com) [::1]:44056 P=esmtpa A=dovecot_login:hr@4bizinternational.com S=622 id=8574ee4ebd450bafccda16b251f080e0@4bizinternational.com T="test mail" for hdintechs@hotmail.com
+2023-06-08 11:22:53 1q79yv-0000Kr-1c Sender identification U=bizinter D=4bizinternational.com S=hr@4bizinternational.com
+2023-06-08 11:22:53 1q79yv-0000Kr-1c SMTP connection outbound 1686208973 1q79yv-0000Kr-1c 4bizinternational.com hdintechs@hotmail.com
+2023-06-08 11:22:54 1q79yv-0000Kr-1c ** hdintechs@hotmail.com R=dkim_lookuphost T=dkim_remote_smtp H=hotmail-com.olc.protection.outlook.com [104.47.18.225] X=TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256 CV=yes: SMTP error from remote mail server after pipelined MAIL FROM:<hr@4bizinternational.com> SIZE=1664: 550 5.7.1 Unfortunately, messages from [64.37.59.234] weren't sent. Please contact your Internet service provider since part of their network is on our block list (S3150). You can also refer your provider to http://mail.live.com/mail/troubleshooting.aspx#errors. [VI1EUR06FT019.eop-eur06.prod.protection.outlook.com 2023-06-08T07:22:54.465Z 08DB678BD1ABED0F]
+2023-06-08 11:22:54 1q79yv-0000Kr-1c Completed
+=================
+
+By analyzing the logs, we see that your server IP address is blocked in remote Hotmail server. Inroder to proceed with the delisting process, we need to make sure that the server is clean enough.
+
+It's possible that your IP address got blocked due to the presence of malware, suspicious or malicious activity originating from the server.
+
+We highly recommend you to take necessary actions on the malware details we have shared.
+
+https://support.microsoft.com/en-us/supportrequestform/8ad563e3-288e-2a61-8122-3ba03d6b8d75
+
+However we requested to delist the IP address from microsoft.
+
+*HostDime India shall be available at your service at any time. Please feel free to contact us if you have further difficulties.
+*Kindly check the same and feel free to get in touch with us if you need any more assistance.
+
+REPLY:-  Yes, please suspend the account and let me know so that we can perform the delist request.
+ 
+STEPS :-
+
+Analysis : -- What is the current situation?
+- Client e-mail delivering issue ( Mail Bounce)
+
+Actions : -- What did you do in order to address the current situation?
+- checking client exim mainlog
+#exigrep ibruv@hotmail.com /var/log/exim_mainlog
+- check the 4bzinternational MX record 
+# dig MX 4bzinternational.com
+- I have sent a sample email from hr@4bizinternational.com to hdintechs@hotmail.com to re-create the issue.
+#exigrep hr@4bizinternational.com /var/log/exim_mainlog
+- face same issue as client 
+- we requested to delist the IP address from microsoft
+https://support.microsoft.com/en-us/supportrequestform/8ad563e3-288e-2a61-8122-3ba03d6b8d75
+Status : -- What steps need to be taken moving forward?
+- Waiting for response from microsoft support.
+
+We have tested your domain by creating a test mail account (hdintest@shreedurgasyntex.com) and able to send and receive the email properly to our test Gmail accounts.On the mail routing process we could not seen any error message that you mentioned.Kindly review the below logs and screenshot for your reference.
+Kindly avoid sending emails to multiple recipients (CC) at a time and try to check the same from your end. If any issue persists, kindly share the email header details, so that we can analyse it in detail.

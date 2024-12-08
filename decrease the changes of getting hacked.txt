@@ -1,0 +1,34 @@
+You can follow the below given steps to decrease the changes of getting hacked:
+~~~~
+1) Using uncommmon ways to access your admin interface. Like changing the admin folder name to 'siteman' or 'admin123' or your name etc.
+2) Using two step authentication.
+3) Restricting the access to admin are to certain IP addresses.
+4) Frequently changing the important passwords like, admin area password, FTP and cPanel passwords etc.
+5) White-list Allowed Actions, Blacklisting unwanted actions.
+6) Keep your Software/Plugins Up-to-date
+7) Using One Time Passwords or Two step authentication methods.
+😎 Choosing a trusted and effective security plugins for your website.
+Hacking:
+++++++++++
+After clearing the frozen emails and null routed the spamming script your website started to working fine. Please do check with the script and free from virus/malware while uploading it.
+
+If you check these files, you won't be able to see any valid contents in it, but binary scripts which exploits the vulnerabilities of your website. Generally hackers hacks the websites for the following main reasons:
+~~~~
+1) They want to use it to send out spam email.
+2) They want to gain access to your data, mailing list, credit card information, etc.
+3) They want to gain access to your site and cause it to download malicious software onto your end user’s machine or they want to install malicious software for use on your site.
+~~~~~
+
+This type of infected files are usually uploaded through code injection attack. Code injection is the exploitation of a computer bug that is caused by processing invalid data. Injection is used by an attacker to introduce (or "inject") code into a vulnerable computer program and change the course of execution.
+
+You can follow the below given steps to decrease the changes of getting hacked:
+~~~~
+1) Using uncommmon ways to access your admin interface. Like changing the admin folder name to 'siteman' or 'admin123' or your name etc.
+2) Using two step authentication.
+3) Restricting the access to admin are to certain IP addresses.
+4) Frequently changing the important passwords like, admin area password, FTP and cPanel passwords etc.
+5) White-list Allowed Actions, Blacklisting unwanted actions.
+6) Keep your Software/Plugins Up-to-date
+7) Using One Time Passwords or Two step authentication methods.
+😎 Choosing a trusted and effective security plugins for your website.
+

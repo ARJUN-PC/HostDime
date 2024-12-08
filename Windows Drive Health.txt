@@ -1,0 +1,130 @@
+C:\Users\Administrator>wmic diskdrive get status
+Status
+OK
+OK
+
+C:\Users\Administrator>wmic /namespace:\\root\wmi path MSStorageDriver_FailurePredictStatus
+Active  InstanceName                                                PredictFailure  Reason
+TRUE    SCSI\Disk&Ven_&Prod_KINGSTON_SEDC500\4&29f22c66&0&000000_0  FALSE           0
+TRUE    SCSI\Disk&Ven_&Prod_ST1000NM0033-9ZM\4&29f22c66&0&010000_0  FALSE           0
+
+
+-------------------
+
+
+PS C:\Users\Administrator> $(Get-PhysicalDisk | Select *)[0]
+ClassName                        : MSFT_PhysicalDisk
+Usage                            : Auto-Select
+OperationalStatus                : OK
+UniqueIdFormat                   : FCPH Name
+HealthStatus                     : Healthy
+BusType                          : SATA
+CannotPoolReason                 : Insufficient Capacity
+SupportedUsages                  : {Auto-Select, Manual-Select, Hot Spare, Retired...}
+MediaType                        : HDD
+SpindleSpeed                     : Unknown
+ObjectId                         : {1}\\IMAGEMGMT\root/Microsoft/Windows/Storage/Providers_v2\SPACES_PhysicalDisk.Objec
+                                   tId="{677f99d5-53f8-11ec-891a-806e6f6e6963}:PD:{c6aebf32-8802-db21-9958-1b26d6ac9d36
+                                   }"
+PassThroughClass                 :
+PassThroughIds                   :
+PassThroughNamespace             :
+PassThroughServer                :
+UniqueId                         : 5000C50067044C05
+Description                      :
+FriendlyName                     : ST1000NM0033-9ZM173
+Manufacturer                     :
+Model                            : ST1000NM0033-9ZM173
+OperationalDetails               :
+PhysicalLocation                 : Integrated : Adapter 0 : Port 1
+SerialNumber                     : Z1W24S07
+AdapterSerialNumber              :
+AllocatedSize                    : 998059499520
+CanPool                          : False
+DeviceId                         : 1
+EnclosureNumber                  :
+FirmwareVersion                  : SN03
+IsIndicationEnabled              :
+IsPartial                        : True
+LogicalSectorSize                : 512
+OtherCannotPoolReasonDescription :
+PartNumber                       :
+PhysicalSectorSize               : 512
+Size                             : 1000204886016
+SlotNumber                       :
+SoftwareVersion                  :
+StoragePoolUniqueId              :
+VirtualDiskFootprint             : 0
+PSComputerName                   :
+CimClass                         : root/microsoft/windows/storage:MSFT_PhysicalDisk
+CimInstanceProperties            : {ObjectId, PassThroughClass, PassThroughIds, PassThroughNamespace...}
+CimSystemProperties              : Microsoft.Management.Infrastructure.CimSystemProperties
+
+--------------------------------
+
+PS C:\Users\Administrator> Get-Disk | foreach { $_ | Get-StorageReliabilityCounter | Format-List }
+
+
+ObjectId                : {1}\\IMAGEMGMT\root/Microsoft/Windows/Storage/Providers_v2\SPACES_StorageReliabilityCounter.O
+                          bjectId="{677f99d5-53f8-11ec-891a-806e6f6e6963}:RC:\\?\scsi#disk&ven_&prod_kingston_sedc500#4
+                          &29f22c66&0&000000#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}"
+PassThroughClass        :
+PassThroughIds          :
+PassThroughNamespace    :
+PassThroughServer       :
+UniqueId                : {677f99d5-53f8-11ec-891a-806e6f6e6963}:RC:\\?\scsi#disk&ven_&prod_kingston_sedc500#4&29f22c66
+                          &0&000000#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}
+DeviceId                : 0
+FlushLatencyMax         : 460
+LoadUnloadCycleCount    : 0
+LoadUnloadCycleCountMax :
+ManufactureDate         :
+PowerOnHours            : 16817
+ReadErrorsCorrected     :
+ReadErrorsTotal         :
+ReadErrorsUncorrected   :
+ReadLatencyMax          : 236
+StartStopCycleCount     :
+StartStopCycleCountMax  :
+Temperature             : 30
+TemperatureMax          : 0
+Wear                    : 0
+WriteErrorsCorrected    :
+WriteErrorsTotal        :
+WriteErrorsUncorrected  :
+WriteLatencyMax         : 823
+PSComputerName          :
+
+
+
+
+
+ObjectId                : {1}\\IMAGEMGMT\root/Microsoft/Windows/Storage/Providers_v2\SPACES_StorageReliabilityCounter.O
+                          bjectId="{677f99d5-53f8-11ec-891a-806e6f6e6963}:RC:\\?\scsi#disk&ven_&prod_st1000nm0033-9zm#4
+                          &29f22c66&0&010000#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}"
+PassThroughClass        :
+PassThroughIds          :
+PassThroughNamespace    :
+PassThroughServer       :
+UniqueId                : {677f99d5-53f8-11ec-891a-806e6f6e6963}:RC:\\?\scsi#disk&ven_&prod_st1000nm0033-9zm#4&29f22c66
+                          &0&010000#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}
+DeviceId                : 1
+FlushLatencyMax         : 342
+LoadUnloadCycleCount    : 3366
+LoadUnloadCycleCountMax :
+ManufactureDate         :
+PowerOnHours            : 1144
+ReadErrorsCorrected     : 0
+ReadErrorsTotal         : 0
+ReadErrorsUncorrected   : 0
+ReadLatencyMax          : 612
+StartStopCycleCount     : 15
+StartStopCycleCountMax  :
+Temperature             : 28
+TemperatureMax          : 0
+Wear                    : 0
+WriteErrorsCorrected    :
+WriteErrorsTotal        :
+WriteErrorsUncorrected  :
+WriteLatencyMax         : 859
+PSComputerName          :

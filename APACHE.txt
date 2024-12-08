@@ -1,0 +1,146 @@
+
+Apache:
+-------------
+configuration : /usr/local/apache/conf/httpd.conf
+
+cPanel apache logs:
+--------------------
+Apache restart logs-------------------------------------------> /usr/local/cpanel/logs/safeapcherestart_log
+Domain access logs--------------------------------------------> /usr/local/apache/domlogs/{DOMAIN}
+suPHP audit logs----------------------------------------------> /usr/local/apache/logs/suphp_log
+Web server and CGI application error logs---------------------> /usr/local/apache/logs/error_log
+
+.htaccess:
+-----------
+/home/rashi1001/public_html/.htaccess
+url - https://httpd.apache.org/docs/current/howto/htaccess.html
+
+Site Blocking :
+----------------
+vi /usr/local/apache/conf/includes/pre_virtualhost_global.conf
+
+#<Directory "/home/seminart/public_html">
+#    AllowOverride none
+#    order deny,allow
+#    deny from all
+#    allow from 157.46.216.44
+#    errordocument 403 "Temporarily closed for maintenance.
+    #" ~ Binu. on 2023-06-3  for Ticket 3292580 -outdated CMS
+#</Directory>
+
+root@host [/home/ftest6/public_html]# EMPNAME="Yoshi Q."
+root@host [/home/ftest6/public_html]# eval "$(curl -s https://codesilo.dimenoc.com/abuse/SharedAliases/raw/master/aliases.sh)"
+root@host [/home/ftest6/public_html]# restrict_http "CMS installation needs to be updated - Ticket 123456"
+
+URL :- https://admin.dimenoc.com/desk/ticket/3292580
+
+Checking the access log of the user account:-
+-------------------------------------------
+cat /usr/local/apache/logs/domlogs/<USER>/dtu.edu.et-ssl_log | grep "13/Jun/2023"  | grep bot 
+
+Domlogs
+-------
+/usr/local/apache/domlog/
+  or
+/home/user/domlog/
+
+ find /usr/local/apache/domlogs/poultryindiaco/* -type f | egrep -v 'ftp.|bytes_log|ssl_log' | xargs cat |grep '21/Jun/2023' |awk '{print$1}' |sort |uniq -c |sort -n
+1 1.169.103.19
+1 17.241.219.123
+1 172.83.53.58
+1 197.41.59.132
+1 37.139.53.179
+1 45.55.64.217
+1 79.142.76.181
+3 207.46.13.209
+4 40.77.167.99
+
+To get IP address only
+----------------------
+find /usr/local/apache/domlogs/*/ -type f -mtime -1| grep -v -E 'ftp.|bytes_log|ssl_log' | xargs cat | grep date +%d/%b/%Y | awk '{print "times --> "$1,$7}' | sort | uniq -c | sort -n | tail -n 50
+1 times --> 1.169.103.19 /
+1 times --> 157.90.177.169 /
+1 times --> 17.241.219.123 /wp-content/uploads/resized/3b7734df4caa04675663d9d343651296/9.jpg
+1 times --> 17.241.75.108 /wp-content/uploads/2017/08/abera-e1535806486659.png
+1 times --> 17.241.75.56 /wp-content/uploads/2017/08/13-1.jpg
+1 times --> 192.241.142.6 /
+1 times --> 194.163.35.166 /wp-login.php
+1 times --> 203.75.213.3 /
+1 times --> 23.129.64.224 /
+1 times --> 35.210.151.25 /
+1 times --> 40.77.167.235 /
+1 times --> 40.77.167.99 /
+1 times --> 45.8.227.175 /wp-content/plugins/td-cloud-library/assets/css/tdb_wp_admin_taxonomies.css
+1 times --> 51.222.253.10 /robots.txt
+1 times --> 51.222.253.20 /robots.txt
+1 times --> 51.222.253.9 /robots.txt
+1 times --> 5.3.221.44 /
+1 times --> 54.36.148.110 /robots.txt
+1 times --> 64.62.219.91 /
+1 times --> 65.154.226.168 /
+1 times --> 66.249.66.160 /ads.txt
+1 times --> 77.222.116.18 /
+1 times --> 89.38.97.35 /
+2 times --> 176.124.215.5 /
+3 times --> 65.49.68.45 /
+4 times --> 52.167.144.142 /
+6 times --> 207.46.13.209 /
+
+TO REMOVE BOTS:- (robot.txt)
+----------------
+User-agent: MJ12bot
+Disallow: /
+
+Blocking Bots:-
+---------------
+vi /usr/local/apache/conf/includes/pre_main_global.conf
+
+---> SetEnvIfNoCase User-Agent "AhrefsBot" bad_bot
+
+Block Bots in .htaccess file
+-----------------------------
+order deny,allow
+deny from 66.249.66.78
+deny from 66.249.66.79
+deny from 66.249.66.6
+deny from 66.249.66.37
+deny from 66.249.66.131
+deny from 66.249.66.195
+deny from 66.249.66.163
+deny from 66.249.66.80
+deny from 160.251.77.164
+allow from all
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^bingbot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Baiduspider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^PetalBot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Sogou
+RewriteRule ^(.*)$ http://go.away/
+</IfModule>
+
+
+Domlogs-Bot access
+-------------------
+
+root@server [/home/awashban/access-logs] # cat ahada.org* | grep "bot" | awk {'print $6,$14'} | sort | uniq -c | sort -n
+                                         # grep -s $(date +"%d/%b/%Y:") awashbank.com* | grep "KHTML" | grep bot | tail
+
+URL:- https://admin.dimenoc.com/desk/ticket/3307753 ---> BOT
+
+website failure issue:
+----------------------
+hostname; uptime; bash <(curl -ks https://codex.hostdime.com/scripts/download/QuickServiceCheck)
+
+Apache connection:
+------------------
+netstat -plan |grep :80
+
+NGNIX
+-----
+TICKE URL :- https://admin.dimenoc.com/desk/ticket/3304823
+Reference:-
+https://forums.cpanel.net/threads/mod_remoteip-and-correct-ip-in-vhost-access-logs.466331/
+https://docs.cpanel.net/knowledge-base/web-services/nginx-with-reverse-proxy/?_ga=2.47542887.1312763927.1687838567-777610223.1680843146#requirements
+
+

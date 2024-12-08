@@ -1,0 +1,46 @@
+	
+----
+configuration file - /etc/my.cnf
+data directory - /var/lib/mysql
+error log - /var/lib/mysql/hostname.err
+
+mysqladmin pr  [list process]
+      or
+mysqladmin proc
+mysqladmin proc stat
+
+
+
+SQL Backup:
+----------
+
+mysqldumb <database name> > <database_name>.sql
+mysqldumb -u username -p password <database name > > <database_name>.sql
+
+SQL Restore:
+------------
+mysql <database name> < <database_name>.sql
+
+Script to take all mysql backups:
+=================================
+
+mkdir /root/mysql-bak ; cd /root/mysql-bak
+find /var/lib/mysql -maxdepth 1 -type d | awk -F\/ '{print $NF}' > db_name.list
+for db in $(cat db_name.list) ; do echo "dumping $db" ; mysqldump $db > $db.sql ; done
+                      or
+mysql <database name> < /home/<database_name>.sql
+
+mysql version:- mysql -V
+
+MySQL configuration file:
+--------------------------
+my.cnf--------------------------------------------------------> /etc/my.cnf
+
+MySQL logs:
+-----------
+MySQL error logs----------------------------------------------> /var/lib/mysql/{SERVER_NAME}.err
+MySQL slow query logs when enabled----------------------------> /var/log/slowqueries
+
+MySQL configuration file:
+--------------------------
+my.cnf--------------------------------------------------------> /etc/my.cnf

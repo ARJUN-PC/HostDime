@@ -1,0 +1,54 @@
+Hello ARUN,
+
+How big is the newest image file that was uploaded? so after uploading what is the size of image.
+
+Below are the details of your PHP version as of right now:
+===
+https://www.v10realestate.com/phpinfo.php
+===
+
+We need to knew previously which php version used and below mentioned values used for the current php settings.
+
+===
+upload_max_filesize 1024M
+max_file_uploads 20
+post_max_size 1025M
+===
+
+kindly note this is a shared server so we cannot increase much, so please check with developer and which php values used.
+
+URL :-  https://admin.dimenoc.com/desk/ticket/3292321/
+
+STEPS :- #cat /etc/userdatadomains |grep v10realestate.com
+ #cd /home/v10realestate/public_html
+ #ll
+ #cat .user.ini
+ [PHP]
+display_errors = On
+max_execution_time = 90
+max_input_time = 90
+max_input_vars = 1000
+memory_limit = -1
+post_max_size = 1025M
+session.gc_maxlifetime = 1440
+session.save_path = "/var/cpanel/php/sessions/ea-php80"
+upload_max_filesize = 1024M
+
+#cat php.ini
+
+ allow_url_fopen = On
+allow_url_include = Off
+asp_tags = Off
+display_errors = On
+enable_dl = Off
+file_uploads = On
+max_execution_time = 90
+max_input_time = 90
+max_input_vars = 1000
+memory_limit = -1
+post_max_size = 1025M
+session.gc_maxlifetime = 1440
+session.save_path = "/var/cpanel/php/sessions/ea-php80"
+upload_max_filesize = 1024M
+ 
+ Browser :-https://www.v10realestate.com/phpinfo.php

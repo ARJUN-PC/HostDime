@@ -1,0 +1,28 @@
+Hello,
+
+Greetings!!..
+
+During our recent server audit, we noticed that you have not enabled a captcha on the "Request a quote" and "Contact us" forms of your domain (http://grandsouthernpackers.com) making it vulnerable to bad bot attacks. We suggest you enable the captcha on the required field of the domain to resolve the issue permanently. Kindly check this with your developer and take the appropriate action at earliest.
+
+Here are the locations of the insecure form(s):
+===
+http://grandsouthernpackers.com/contactus.php
+requestform.php
+===
+Return-path: <grandsouthernpac@rin5.dizinc.com>
+Received: from grandsouthernpac by rin5.dizinc.com with local (Exim 4.95)
+(envelope-from <grandsouthernpac@rin5.dizinc.com>)
+id 1qGNAh-0005Tf-R9
+for grandsouthernpackers@gmail.com;
+Mon, 03 Jul 2023 13:17:07 -0400
+To: grandsouthernpackers@gmail.com
+Subject: REQUEST A QUOTE
+X-PHP-Script: grandsouthernpackers.com/requestform.php for 8.219.76.117
+X-PHP-Originating-Script: 1721:requestform.php
+MIME-Version: 1.0
+Content-type:text/html;charset=UTF-8
+From: <grandsouthernpackers@grandsouthernpackers.com>
+Message-Id: <E1qGNAh-0005Tf-R9@rin5.dizinc.com>
+Date: Mon, 03 Jul 2023 13:17:07 -0400
+===
+https://admin.dimenoc.com/desk/ticket/3306419

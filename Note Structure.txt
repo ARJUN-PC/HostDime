@@ -1,0 +1,37 @@
+Analysis :-->> What is the current situation?
+- Client unsuspended the user 'artismc'
+Actions :-->> What did you do in order to address the current situation?
+- Installed maldet scanner in the server
+- Scanned the user 'artismc' and there is no hits
+- Asked the client how they take the action through ticket
+- Created a follow-up to this ticket
+Status :-->> What steps need to be taken moving forward?
+- Await for client to respond to question
+
+
+
+Initial Analysis:
+HDIN Questions regarding the elevate process/availability for almalinux or other deployment/OS upgrade procedure
+Is the client managed and is this issue/request covered under management:
+Managed; OS upgrade questions
+Preliminary Checks Performed:-
+Currently we are in the upgrade period/window (1 year left) on CentOS 7 and have been reviewing processes for viable upgrade paths for CentOS 7
+Unfortunately, there's a bit of undeterminate feature due to RedHat recently (June 22nd) changing how they are providing their source packages and long term support/flux for OS availability for RHEL derivatives/clones
+https://www.redhat.com/en/blog/red-hats-commitment-open-source-response-gitcentosorg-changes
+https://www.redhat.com/en/blog/furthering-evolution-centos-stream
+https://almalinux.org/blog/impact-of-rhel-changes/
+While the current beliefs and convictions align with supporting it in the ongoing future we do not have too much information for the long term
+CloudLinux actually briefly went over this and has even thought of offerring at least a CloudLinux distro (none of CloudLinux's feature set just the base os) which would be supported long term by them for 2029 for CloudLinux 8 and 2032 for CloudLinux 9
+https://blog.cloudlinux.com/cloudlinux-os-8-and-9-in-post-redhat-world
+This is not confirmed just yet as they want to see how things play out but have committed to supporting their distros for the long term
+The elevate script is reportedly working and we have done some tests and have a procedure laid out but not quite ready yet
+https://kb.hostdime.com/display/USICT/CentOS+7+to+EL8+cPanel+OS+Upgrade
+I personally would want to hold off with moving to Almalinux 8 given the in flux nature of how packages and updates are going to be moving forward or more details (this we may get an update in the coming weeks)
+cPanel themselves are currently in wait and see mode as well for what Alamlinux is going to respond or be able to determine is viable
+https://forums.cpanel.net/threads/redhat-announcing-to-limit-source-code-availability-affecting-rhel-based-distros-almalinux-rockylinux-and-cloudlinux.711881/
+Actions Taken
+Looked over current landscape and concerns with EL8 right now
+Next Steps
+Open; Leaving for comments with rest of team given the in flux nature want to know more weigh ins here
+
+

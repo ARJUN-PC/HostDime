@@ -1,0 +1,26 @@
+Hello Techno,
+
+Greetings..!
+
+We are still monitoring the SATA Cable timeout, please find the current status.
+
+====
+sdb:
+Serial Number: Z1W5APZS
+Drive is healthy.
+Command Timeout (SATA Cable) - 4295032833
+Active: 2 years and 349 days
+====
+
+We will monitor the same and if we notice the SATA timeout value change, we will update you.
+
+checked the drive health status by running the below script
+[root@starter ~]# bash <(curl -ks https://codex.hostdime.com/scripts/download/CheckDriveHealth)
+sdb:
+Serial Number: Z1W5APZS
+Drive is healthy.
+Command Timeout (SATA Cable) - 4295032833
+Active: 2 years and 348 days
+Found that the drive sdb timeout value is not changed
+Informed the client through Ticket
+https://admin.dimenoc.com/desk/ticket/3294016

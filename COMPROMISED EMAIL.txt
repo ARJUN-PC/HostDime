@@ -1,0 +1,13 @@
+Hello,
+
+Greetings from HostDime India..!
+
+During our recent server audit, we observed that the email address " yunnda12344@jeyakumarmaternityandchildrenhospital.com" under the account " jeyakumarmaterni" was used for suspected spamming by compromising the account. Please refer to the details below:
+
+===
+8119 dovecot_login:yunnda12344@jeyakumarmaternityandchildrenhospital.com
+===
+
+We suspect this should have happened due to weak email account passwords. As a result, we have scrambled the password of the email account "yunnda12344@jeyakumarmaternityandchildrenhospital.com". You are requested to reset it from your side from the control panel for further use.
+
+We disabled this email account. To re-enable, Kindly reset the password from your end. If still you are facing any further difficulties(Once after resetting the password), kindly get back to us, so that we can assist you further.

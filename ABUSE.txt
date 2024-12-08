@@ -1,0 +1,215 @@
+Hello Team,
+  As discussed with Sudhish sir, please follow below pattern of 
+Abuse/spam server suspensions.
+
+===
+1. After Reporting an Abuse/Phishing issue, give 24 hours time to 
+address the issue. If no response with in 24 hours, suspend the server.
+
+Policy URL :  https://hostdime.in/acceptable_use_policy.html
+
+while suspending the server, please update in the  Google sheet 
+https://docs.google.com/spreadsheets/d/1a5uTOcjnbJWohD7JhLklD35oEDjAADmBtyHomeAEDqQ/edit#gid=0 
+for  analysis.
+
+2.Give 3 suspension follow ups- daily once.
+
+3. After 3 suspension follow ups, still there is no response, give 
+Termination notice and follow up in alternative days.
+
+4. Starting from the reporting date, once it is reached 14 days of 
+follow ups, update the customer that we are terminating the server and 
+move to Accounting India Queue for further Termination of the server.
+
+5. Update the Google sheet, if you unsuspend/Termination scheduled for 
+the server..
+
+====
+
+===
+Policy URL :  https://hostdime.in/acceptable_use_policy.html
+Spam: Point : 2. Unsolicited Commerce Email & Material - SPAM
+Abuse Point  :12. Other Abuse
+====
+
+----------------------------------------------------------------------
+Hello,
+
+Greetings!!
+
+Please note that we have suspended the server as there isn't any response to the abuse reported. Please get backup to us with the action taken to resolve the abuse so that we can lift the server suspension.
+
+If there is anything else we can help you with, please feel free to contact us. Thank you for choosing HostDime.in for all of your hosting needs!
+-----------------------------------------------------------
+Hello,
+
+Greetings!!
+
+This is to inform you that the user astralcreations is in suspended state as there isn't any action taken on the abuse report. Please get back to us with the action taken to unsuspend the user in the server.
+
+If there is anything else we can help you with, please feel free to contact us. Thank you for choosing HostDime.in for all of your hosting needs!
+
+--------------------------------------------------------------------
+
+https://admin.dimenoc.com/desk/ticket/3293723
+
+
+
+
+
+Hello,
+
+Greetings!!
+
+We have noticed that the user 'artismc' is currently in unsuspended status.
+
+Could you please provide us the actions that you have taken to address the reported issue?
+
+Kindly share the details so that we can proceed accordingly with the abuse complaint.
+
+If you have any further inquiries or require additional assistance, please don't hesitate to reach out to us. Thank you for selecting HostDime.in as your hosting provider of choice!
+
+
+
+
+https://admin.dimenoc.com/desk/ticket/3293593/
+
+
+
+
+Hello,
+
+Please be aware that the server has been un-suspended for 24 hours , also make sure to review the server and make appropriate actions to resolve the abuse mentioned .
+
+Also please note that the server will get suspended again after 24 hours.
+
+We are waiting for your reply.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Hello,
+
+We hope that you are doing well today.
+
+We have received an abuse notice concerning suspicious hits from your IP.
+===============================================================
+Type of Report: Malware
+
+IP Address: 199.168.190.10
+
+URL: http://iitndt.in/resources/words/it.php
+
+Malicious Files:
+---
+File name: Factura_Retiro_XXXX.html
+
+MD5: E903B37B1E42D0B8BF0514CB13A46233
+
+File name: Factura_Deuda_423534.cmd
+
+MD5: E5967A8274D40E0573C28B664670857E
+
+Dropped File: jordan.exe (autoit)
+
+MD5: 0ADB9B817F1DF7807576C2D7068DD931
+
+Dropped File: Factura_Deuda_423534.a3x
+
+MD5: 2858CDF0B9FB6DDD18709909DF612063
+
+Dropped File: DriverAudio.lnk
+
+MD5: 3FB45296ABDC78792FB609C187B4A89D
+
+File name: brb.txt (v1)
+
+MD5: AB80D005BCC4641D5D1AE75FBB2723B9
+
+File name: brb.txt (v2)
+
+MD5: 0D8D82E1810F549F8645535C836D7AFD
+
+File name: brb.exe
+
+MD5: 293B9621798EE17005D1EFFE463A8989
+
+File name: Ran.exe (Rust loader)
+
+MD5: 618A60899AAE66EA55E5DC8374C7B828
+
+File name: Backdoor.exe
+
+MD5: B41E2B88FFF36FF4937DC19F2677EE84
+
+File: CFDI www.sat.gob.mx.cmd
+
+Hash: 72e83b133a9e4cecd21fdb47334672f6
+
+File: DeudaAutopistas_267266.html
+
+Hash: a96125294afa1c3f92ab7be615dc1cbe
+https://www.zairtaz[.]com/wp-content/plugins/license/inc/hydra/do/it.php?f=9&w=Windows%2010
+https://imberform[.]com/img/?dew98fy348erf7i
+http://vasuk[i].in/wp-content/img/do/it.php?f=9&w=Windows%207
+http://luzca[.]com/img/do/it.php?f=2&w=Windows%207
+http://nbviajesacapulco[.]com/pruc/it.php?f=9&w=Windows%207
+http://nbviajesacapulco[.]com/pixel/it.php?f=2&w=Windows%207
+http://www.castleblack[.]online/cfr/it.php?f=2&w=Windows%207
+https://dicktres.com[.]br/pontecom/wp-content/img/do/it.php
+https://bdadvisors[.]ma/img/do/it[.]php?f=2&w=Windows%2010
+http://blog.traveldealsbd[.]com/images/arrow/do/it.php?b1=1&v1=1033&v2=1033&v3=Windows%207&v4=User&v5=X64
+http://tripsapata[.]com/assets/images/swan/do/it.php
+https://blablamap[.]net/images/arrow/do/it.php
+http://facturacion.sat[.]gob.educationalwriters.com/do/it.php?f=2&w=Windows 7
+http://aguiasoft.com[.]br/blog/hydra/do/it.php?b1=1&v1=3082&v2=2058&v3=windows%207&v4=admin&v5=x64
+http://explanada2023[.]com/wp-includes/stylish/it.php?f=2&w=Windows%207
+http://vaadiandkoh[.]com/ue/app/do/it.php?f=9&w=Windows%207
+http://websylvania[.]com/psj/do/it.php?b1=1&v1=3082&v2=1034&v3=windows%207&v4=admin&v5=x64
+http://publicpressmagazine[.]com/images/swan/do/it.php?b1=1&v1=1033&v2=1033&v3=Windows%207&v4=User&v5=X86
+https://factura61[.]click/2/?CQ9OCKlYIQOSZqMxY43B80jdDceyL69GLzh6HNkZ
+https://sxconstructions[.]com[.]au/wp-content/img/do/it.php?b1&v1=1033&v2=1033&v3=&v4=Windows%207&v5=User&v6=X%2086&v7=
+https://kh7jv[.]store/?JDCE8IFt3QZJ2Ms4FQv8bp5q9KM6bFvMKUeE7QOLg7z4Kl9Oa48sMGRJDCE8IFt3QZJ2Ms4FQv8bp5q9KM6bFvMKUeE7QOLg7z4Kl9Oa48sMGR
+https://sxconstructions[.]com.au/wp-content/img/do/it.php?f=2&w=Windows!0
+https://sxconstructions[.]com.au/wp-content/img/do/it.php?info2=DATOS
+http://highlineadsl[.]com/ddd/it.php?f=3&w=Windows%207
+http://germogenborya[.]top/rest/?h=CODE
+http://vaadiandkoh[.]com/ue/app/do/it.php?f=9&w=Windows%207
+http://grintour[.]newdestuner[.]xyz/g1
+http://grintour.newdestuner[.]xyz/dhyhsh3a.php
+https://facturaciones[.]click/?7kqhhbEE9Y1FiEBZ0Uc7izRLyJ2TWdZFK0qnXvXU
+http://russk22[.]icu/brbr.txt
+https://bola.com[.]au/images/hh/cfdi/do/it.php?f=2&w=Windows%2010
+https://splendidgifts.com[.]my/hiway/ap2/do/it.php?b1&v1=1033&v2=1033&v3=&v4=Windows%2010&v5=User&v6=X64
+https://tequilamisorpresa[.]com/ytweshdg.php?id=
+http://formas-mexico[.]com/formas.xls
+germogenborya[.]top
+germogenborya[.]at
+grintour[.]newdestuner[.]xyz
+russk22[.]icu
+https://retiro10[.]click/
+https://facturaciones[.]click
+https://facturasnet[.]store
+https://facturaciones3[.]click/
+https://retiro10[.]store/
+104.238.182.44 – Port: 4000
+104.238.182.44 – Port: 4001
+140.82.47.181 – Port: 4000
+140.82.47.181 – Port: 4001
+%AppData%\Roaming\herman\a3x\herndon\Factura_Deuda_423534.cmd
+%AppData%\Roaming\herman\exe\vayala\jordan.exe
+%AppData%\Roaming\herman\a3x\Factura_Deuda_423534.a3x
+%AppData%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\DriverAudio.lnk
+%USER%\Downloads\sastreria.xls.exe
+%PUBLIC%\gnVzjGd.vbs
+---
+
+Additional Information:
+---
+Domain classified with MISPADU malware
+
+the following link shows the VT report: https://www.virustotal.com/gui/url/a4f68c70907d4526bc5108e3cfe47f0af2082abf8a779cb5115118af943b3fe5
+---
+
+Please note as per our Acceptable Usage Policy at https://hostdime.in/acceptable_use_policy.html, we have zero percent tolerance for malware from our network. Kindly take the action immediately else we will be suspending the server from our end.
+
+If you have any questions or concerns please let us know.

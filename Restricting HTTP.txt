@@ -1,0 +1,9 @@
+Hello,
+
+Please note that we have not received any update from your end. We found that the account "bamcoltd" have the presence of malicious files.
+
+As there was no update from your end, HTTP access of the account has been disabled.
+
+You need to share with us your public IP by using the following link : (https://hostdime.in/ip.html) So that we can allow HTTP access for that particular IP to take the necessary action for your account.
+
+Kindly check the infected files with the help of your developer and take the appropriate action from your end.

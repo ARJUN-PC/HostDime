@@ -1,0 +1,54 @@
+Hello,
+
+We can see that the server is in active status.
+
+=====
+ping -c10 198.136.58.250
+PING 198.136.58.250 (198.136.58.250) 56(84) bytes of data.
+64 bytes from 198.136.58.250: icmp_seq=1 ttl=62 time=0.874 ms
+64 bytes from 198.136.58.250: icmp_seq=2 ttl=62 time=0.814 ms
+64 bytes from 198.136.58.250: icmp_seq=3 ttl=62 time=0.709 ms
+64 bytes from 198.136.58.250: icmp_seq=4 ttl=62 time=0.739 ms
+64 bytes from 198.136.58.250: icmp_seq=5 ttl=62 time=0.676 ms
+64 bytes from 198.136.58.250: icmp_seq=6 ttl=62 time=0.632 ms
+64 bytes from 198.136.58.250: icmp_seq=7 ttl=62 time=0.746 ms
+64 bytes from 198.136.58.250: icmp_seq=8 ttl=62 time=0.753 ms
+64 bytes from 198.136.58.250: icmp_seq=9 ttl=62 time=0.725 ms
+64 bytes from 198.136.58.250: icmp_seq=10 ttl=62 time=0.718 ms
+
+--- 198.136.58.250 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9001ms
+rtt min/avg/max/mdev = 0.632/0.738/0.874/0.070 ms
+====
+
+Since your server falls under the self-managed category we are not entitled to provide any support in this case. Please note that self-managed server issues must be taken care of from your side except for any hardware failure, network issues, and reboot requirements. Please cooperate with us on this.
+
+You can access the server via IPMI: kindly check the issue from your side and take proper action on this issue.
+
+login details
+#######
+IPMI IP: 198.136.58.254
+HDView Password: voOJsVttEl
+#######
+
+You can refer to the hostdime document: https://www.hostdime.com/kb/hd/core/how-to-access-ipmi-via-your-hostdime-core-account
+
+
+
+Hello,
+
+Greetings..!!
+
+As per checking, we could see that we have IPMI access on the server, Since you are coming under the Self-Managed category, our support spectrum is limited on Reboot, Network and Hardware related issues/requests.
+
+Kindly note that you can login to the server by using IPMI IP. Review the below credential for your reference
+
+````````````
+IP: 98.142.102.38
+Username: hdview
+Password: Ma2lStzVxL
+`````````````
+
+Please check the same from your end. And let us know if u need any further assistance.
+
+Please note that upon checking, the server is now accessible, and we are able to successfully SSH into it and ping it as well. Kindly review the below snippet for your reference:

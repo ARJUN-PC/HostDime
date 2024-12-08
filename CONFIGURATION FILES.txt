@@ -1,0 +1,94 @@
+cPanel apache logs:
+--------------------
+
+Apache restart logs-------------------------------------------> /usr/local/cpanel/logs/safeapcherestart_log
+Domain access logs--------------------------------------------> /usr/local/apache/domlogs/{DOMAIN}
+suPHP audit logs----------------------------------------------> /usr/local/apache/logs/suphp_log
+Web server and CGI application error logs---------------------> /usr/local/apache/logs/error_log
+cPanel access logs and user actions---------------------------> /usr/local/cpanel/logs/access_log
+cPanel account transfers and other----------------------------> logs /var/cpanel/logs
+Audit logs for account creation, deletion, etc.---------------> /var/cpanel/accounting.log
+cPanel backup logs--------------------------------------------> /usr/local/cpanel/logs/cpbackup
+Brute force protection (cphulkd) logs-------------------------> /usr/local/cpanel/logs/cphulkd.log
+EasyApache build logs-----------------------------------------> /usr/local/cpanel/logs/easy/apache/
+cPanel error logs---------------------------------------------> /usr/local/cpanel/logs/error_log
+Installation logs---------------------------------------------> /var/log/cpanel
+cPanel license update and error logs--------------------------> /usr/local/cpanel/logs/license_log
+cPanel login errors-------------------------------------------> /usr/local/cpanel/logs/login_log
+Horde logs----------------------------------------------------> /var/cpanel/horde/log/
+RoundCube logs------------------------------------------------> /var/cpanel/roundcube/log/
+SquirrelMail logs---------------------------------------------> /var/cpanel/squirrelmail/
+cPanel panic logs---------------------------------------------> /usr/local/cpanel/logs/panic_log
+Bandwidth history per cPanel account (Cached)-----------------> /var/cpanel/bandwidth.cache/{USERNAME}
+Bandwidth history per cPanel account (Human Readable)---------> /var/cpanel/bandwidth/{USERNAME}
+Service status logs ------------------------------------------> /var/log/chkservd.log
+Tailwatch driver tailwatchd logs------------------------------> /usr/local/cpanel/logs/tailwatch_log
+Update (UPCP) logs--------------------------------------------> /var/cpanel/updatelogs/updated.{TIMESTAMP}.log
+Website statistics logs---------------------------------------> /usr/local/cpanel/logs/stats_log
+
+cPanel email logs:
+-------------------
+Email delivery and receipt logs-------------------------------> /var/log/exim_mainlog
+Incoming mail queue-------------------------------------------> /var/spool/exim/input/
+Rejected email logs based on ACLS or other policies-----------> /var/log/exim_rejectlog
+Fatal error logs----------------------------------------------> /var/log/exim_paniclog	
+IMAP & POP login attempts, transactions, and errors logs------> /var/log/maillog and /var/log/messages
+Mailman logs--------------------------------------------------> /usr/local/cpanel/3rdparty/mailmain/logs
+
+MySQL logs:
+-----------
+
+MySQL error logs----------------------------------------------> /var/lib/mysql/{SERVER_NAME}.err
+MySQL slow query logs when enabled----------------------------> /var/log/slowqueries
+
+cPanel service configuration file location
+cPanel configuration file:
+-----------------------------------------
+
+cpanel.config-------------------------------------------------> /var/cpanel/cpanel.config
+
+Apache configuration file:
+---------------------------
+
+httpd.conf----------------------------------------------------> /etc/httpd/conf/httpd.conf OR usr/local/apache/conf/httpd.conf
+
+Bind configuration file:
+-------------------------
+
+named.conf----------------------------------------------------> /etc/named.conf
+
+Exim configuration file:
+------------------------
+exim.conf-----------------------------------------------------> /etc/exim.conf
+
+Proftp FTP server configuration file:
+-------------------------------------
+
+proftpd.conf--------------------------------------------------> /etc/proftpd.conf
+
+Pureftp FTP server configuration file:
+----------------------------------------
+
+pure-ftpd.conf------------------------------------------------> /etc/pure-ftpd.conf
+
+MySQL configuration file:
+--------------------------
+
+my.cnf--------------------------------------------------------> /etc/my.cnf
+
+PHP configuration file:
+--------------------------
+
+php.ini-------------------------------------------------------> /usr/local/lib/php.ini
+
+Networking configuration file:
+--------------------------------
+
+Host entries--------------------------------------------------> /etc/hosts
+Resolver Configuration----------------------------------------> /etc/resolv.conf
+Nameserver IPs------------------------------------------------> /etc/nameserverips
+
+ClamAV configuration file:
+--------------------------
+
+clamav.conf---------------------------------------------------> /etc/clamav.conf
