@@ -97,9 +97,13 @@ FIND SPAMMING:-
 ---------------
 bash <(curl -s https://codesilo.dimenoc.com/thomasb/findspammers/-/raw/master/findspammers.sh)
 
+Domain Overview
+---------------
+bash <(curl -ks https://codex.hostdime.com/scripts/download/DomainAccountOverview) bilimori
+
 ACCOUNT ABUSE CHECK:- 
 -------------------
-bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) poultryindiaco
+bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) awashban
 
 QUICK SERVICE STATUS:-
 ----------------------
@@ -115,7 +119,7 @@ cat access_log | awk '{print $1}' | sort | uniq -c | sort -n
 
 Server-wide domlogs Ips
 -----------------------
-grep -r `date '+%d/%b/%Y'` /usr/local/apache/logs/access.log  | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n
+grep -r `date '+%d/%b/%Y'` /usr/local/apache/logs/access_log  | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n
 
 grep -r `date '+%d/%b/%Y'` haileresorts.com-ssl_log | grep "wp-login.php" | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n
 

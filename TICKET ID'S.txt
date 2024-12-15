@@ -92,6 +92,7 @@ https://admin.dimenoc.com/desk/ticket/2637108   >>>>  RAID
 https://admin.dimenoc.com/desk/ticket/3495860   >>>>  Denied all other IPs (.htaccess)
 https://admin.dimenoc.com/desk/ticket/3469065   >>>>  wordpress import issue
 https://admin.dimenoc.com/desk/ticket/3476801   >>>>  Unblock IP (cPanel)
+https://admin.dimenoc.com/desk/ticket/3585341   >>>>  Enabling mfilter(ICT)
 https://admin.dimenoc.com/desk/ticket/3474224   >>>>  To disable wordpress email notification	
 https://admin.dimenoc.com/desk/ticket/3475777   >>>>  Installed and enable AWStats on Webuzo Server
 https://admin.dimenoc.com/desk/ticket/3476189   >>>>  Windows server remote login issue
@@ -646,7 +647,7 @@ November 04-2024
 https://admin.dimenoc.com/desk/ticket/3561939/ --> Informed the client we suspect that the 503 error is due to ioncube loader version conflict.(while comparing to Webuzo)
 https://admin.dimenoc.com/desk/ticket/3509236/ --> Contacted the client over phone and requested him to update his confirmation to delete old backups from the server. After his confirmation, deleted old backups and initiated  a fresh backup.
 https://admin.dimenoc.com/desk/ticket/3563306/ --> Share the status of server inode count usage checks.
-https://admin.dimenoc.com/desk/ticket/3563517/ --> As per the call conversation, client shared his IP for checking block. While checking we noticed that the client is blocked in the CSF firewall. Whitelisted the IP afddress.
+https://admin.dimenoc.com/desk/ticket/3563517/ --> As per the call conversation, client shared his IP for checking block. While checking we noticed that the client IP is blocked in the CSF firewall. Whitelisted the IP afddress.
 
 November 05-2024
 ----------------
@@ -656,7 +657,7 @@ https://admin.dimenoc.com/desk/ticket/3563306/ --> shared the account inode coun
 https://admin.dimenoc.com/desk/ticket/3564361/ --> Server load increased and all websites went down. Afetr some times load decrase checked the logas nad informed the client.
 https://admin.dimenoc.com/desk/ticket/3564104/ --> While accessing the WHM showing a warning in the top of the page. Performed a upcp and but the issue still persist. contacted the cPanel checked the issue. A file missed in the server "/var/cpanel/installed_version". created the file and upfdate the latest cpanel version and perfomred the upcp, issue fixed.
 https://admin.dimenoc.com/desk/ticket/3506472/ --> Follow-up High inode count.
-https://admin.dimenoc.com/desk/ticket/3564220/ --> Client request to remove a folder. While checking the folder it was not foun. Informed the same.
+https://admin.dimenoc.com/desk/ticket/3564220/ --> Client request to remove a folder. While checking the folder it was not found. Informed the same.
 https://admin.dimenoc.com/desk/ticket/3561664/ --> Client request to redeploy the OS. Upon checking the server is morw than 14 days old. so informed client that free OS redeployment is not avaialble.
 
 November 07-2024
@@ -773,4 +774,62 @@ https://admin.dimenoc.com/desk/ticket/3581649/ --> Contacted Mr. Ameen regarding
 https://admin.dimenoc.com/desk/ticket/3581641/ --> Server Down, While checking both main IP and IPMI IP is not pinging, initiated a reboot request.
 https://admin.dimenoc.com/desk/ticket/3579646/ --> Contact form SPAM, Since there is no response from the client end, restricted the HTTP access of the domain.
 https://admin.dimenoc.com/desk/ticket/3581566/ --> Mail Issue when sending a mail it goes to spam. While checking the domain DNS pointed to the remote server.
-	
+
+December 05-2024
+----------------
+https://admin.dimenoc.com/desk/ticket/3582385/ --> Server went Down, created a ticket to Rebooted the server.
+
+December 06-2024
+----------------
+https://admin.dimenoc.com/desk/ticket/3583405/ --> Client request to extended the grace period.
+https://admin.dimenoc.com/desk/ticket/3583307/ --> Client request to set RDNS.
+https://admin.dimenoc.com/desk/ticket/3583197/ --> Client requested to remove RDNS.
+https://admin.dimenoc.com/desk/ticket/3579602/ --> Client informed us server went down, Upon checking server has a load spike and one of the account has high CPU usage. Blocked Suspicious IPs. Informed the same to client.
+
+December 07-2024
+----------------
+https://admin.dimenoc.com/desk/ticket/3581885/ --> Client informed the server went down. Upon checking we could not find any downtime. the site "simplidistance.com" have timeout error. infomred the same to client.
+https://admin.dimenoc.com/desk/ticket/3578869/ --> Follow-up, abnormal memory usage and malware hits.
+https://admin.dimenoc.com/desk/ticket/3577241/ --> Server monitoring, and informed the client to provide a convenient time for server rebooted.
+
+December 09-2024
+----------------
+https://admin.dimenoc.com/desk/ticket/3583449/ --> Abuse phishing, given a final reminder.
+https://admin.dimenoc.com/desk/ticket/3583177/ --> Given a follow-up, server performance issue.
+https://admin.dimenoc.com/desk/ticket/3584439/ --> Changed the PHP version from 8.3 to 7.3 and site working fine,provided the steps to the client to change the domain PHP version.
+https://admin.dimenoc.com/desk/ticket/3507218/ --> Sales team enabled the overselling option in DirectAdmin server for the reseller. Informed the same to the client.
+https://admin.dimenoc.com/desk/ticket/3574295/ --> Client request to provide the source for the infected file.But the infected file already deleted by the client.'
+https://admin.dimenoc.com/desk/ticket/3427628/ --> Client request to enable the SQL service Agent. While checking noticed that the SQL service agent is not available in Microsoft SQL Express Edition. Informed the same to the client.
+https://admin.dimenoc.com/desk/ticket/3573581/ --> Given a follow-up, centos to Almalinux elevation.
+
+December 10-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3585386/ --> New server order, Move the ticket to Sales department.
+https://admin.dimenoc.com/desk/ticket/3580643/ --> Load spike, power cycle the server vis IPMI. While checking found many suspicious IP, blocked the suspicioud IP in the server firewall and load become normal.
+https://admin.dimenoc.com/desk/ticket/3584708/ --> Client requested for mfilter in directadmin server. Created a internel ticket to ICT and they enabked mfilter for the rin7 server.
+https://admin.dimenoc.com/desk/ticket/3585216/ --> Zabbix alert, while checking the server, the load was increased due to the account "ferventechnologi" high CPU usage. suspended the account.Completed a scan and informed the client.
+https://admin.dimenoc.com/desk/ticket/3585270/ --> While checking the nameserver is not added in the Basic Webhost manager. Added the nameserver and update the client.
+https://admin.dimenoc.com/desk/ticket/3585259/ --> RDNS setup
+https://admin.dimenoc.com/desk/ticket/3584443/ --> While checking the DMARC has problem for the account, so fixed the DMARC issue and tested the mail functionality.
+https://admin.dimenoc.com/desk/ticket/3559083/ --> Excessive Inode suspended the account again.
+https://admin.dimenoc.com/desk/ticket/3585052/ --> Given a initial response.
+https://admin.dimenoc.com/desk/ticket/3585180/ --> Client raise concern regarding Does laravel application supported in rin7?. yes, it supported in rin7 server nd update the client.
+
+December 11-2024
+----------------  
+https://admin.dimenoc.com/desk/ticket/3585763/ --> Changed the modsecurity from OWSAP to COMODO.
+https://admin.dimenoc.com/desk/ticket/3466123/ --> While checking the Php-fpm logs found an executing too slow log.Tweaked the php-fpm and php.ini settings.
+
+December 12-2024
+----------------
+https://admin.dimenoc.com/desk/ticket/3586270/ --> Client informed the site site is down and showing imagick error in the logs. I have fixed the imagick and issue, but still the site is not working, while checking the index.php is corrupted. Checked the backup file and that also corrupted. informed the same to the client.
+https://admin.dimenoc.com/desk/ticket/3585216/ --> Due to malicious files the account is suspended again. Client contacted via Live chat and requested to allow access to a IP address, Requested him to update in the ticket.
+https://admin.dimenoc.com/desk/ticket/3585171/ --> Informed the client that we are checking the issue with the DA team.
+https://admin.dimenoc.com/desk/ticket/3586399/ --> Client contacted via live chat and request to increase the bandwidth of the website. Requested him to created a ticket. Client created a ticket and increased the bandwidth of the account.
+https://admin.dimenoc.com/desk/ticket/3586322/ --> Client request to change the primary domain from "win2influence.com" to "win2influence.in". While changing got an error following error: Domain DNS entry already exist. Hashed the domain "win2influence.in" entry in named.conf file. Then changed the primary domain name.
+  
+December 13-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3586964/ --> Server Down, rebooted the server via IPMI and now the server is up and update the client.
+Live Chat: Client informed that unable to add a domain in his shared hosting. Enabled "Allow Remote Domian" option from tweak settings fro 1 hour.
+https://admin.dimenoc.com/desk/ticket/3586270/ --> Client request to block .htaccess and index.php file from others modification. Completed a scan and found malicious files, so not blocked the files from others modification. Informed the same to the client.

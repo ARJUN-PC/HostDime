@@ -1,0 +1,7 @@
+Hello Swapnil,
+
+Greetings from HostDime India
+
+Please note that we will support only changing the domain name from win2influence.com to win2influence.in and you need to take care about the coding/DB part where the domain name has been referenced. When changing the primary domain name will also update usernames for any Email, FTP, or Web Disk accounts that use the primary domain. The account’s files and home directories for FTP and Web Disk service accounts will not change. Also, for the safety purpose, Please take out the backup from your end before the domain name change.
+
+If you would like to proceed with changing the primary domain name from 'win2influence.com' to 'win2influence.in,' please provide us confirmation, so that we could do it from our end.

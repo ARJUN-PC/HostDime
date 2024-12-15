@@ -117,7 +117,7 @@ csf -e /enable
 csf -ra {reloaf firewall cofiguration}
 csf -l {status check]
 grep -i tcp_in '/etc/csf/csf.conf'
-
+csf -ta <IP> --> temporary allow
 csf -a <IP> {Allow an IP address:}
 csf -ar <IP> {Remove an IP address from the allow list:}
 csf -d <IP> {Block an IP address}

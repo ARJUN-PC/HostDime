@@ -146,3 +146,11 @@ Password: GRjx6myg+w1u
 
 Track Path: track.hostdime.com
 
+DirectAdmin Details
+-------------------
+Primary Email : hdinsales@hostdime.in
+User ID : 137866
+Password : i70uqaEXIZ
+To log in now, follow this link:
+https://www.directadmin.com/clients
+
