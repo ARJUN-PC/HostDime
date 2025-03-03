@@ -704,9 +704,10 @@ wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/mast
 
 Reseller status:
 -----------------
-whmapi1 --output=jsonpretty \
-resellerstats \
-user='username'
+whmapi1 --output=jsonpretty resellerstats user='username'
+
+whmapi1 resellerstats user='orangedi'
+
 
 Disk usage (backup)(Excluding symlinks)
 ---------------------------------------
@@ -743,3 +744,11 @@ DNS zone-checker
 To rename a string in a file:
 -----------------------------
 sed -i 's/Text/Marine/g' /root/nautilus.xml (changing the string Text to Marine)
+
+Process detailed check
+----------------------
+ps -fp $(pgrep -u totalsec)
+
+PHP modules for a specific domain
+---------------------------------
+/opt/cpanel/ea-php56/root/usr/bin/php-cgi -m

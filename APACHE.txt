@@ -119,6 +119,16 @@ RewriteCond %{HTTP_USER_AGENT} ^Sogou
 RewriteRule ^(.*)$ http://go.away/
 </IfModule>
 
+------------------------------
+
+
+# Block bad bots based on User-Agent
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} ^.*(AhrefsBot|Bytespider|MJ12bot|Baiduspider|YandexBot|DuckDuckBot|facebookexternalhit).*$ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
 
 Domlogs-Bot access
 -------------------

@@ -99,11 +99,11 @@ bash <(curl -s https://codesilo.dimenoc.com/thomasb/findspammers/-/raw/master/fi
 
 Domain Overview
 ---------------
-bash <(curl -ks https://codex.hostdime.com/scripts/download/DomainAccountOverview) bilimori
+bash <(curl -ks https://codex.hostdime.com/scripts/download/DomainAccountOverview) maxpayss
 
 ACCOUNT ABUSE CHECK:- 
 -------------------
-bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) awashban
+bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) tzozothemes
 
 QUICK SERVICE STATUS:-
 ----------------------
@@ -126,9 +126,9 @@ grep -r `date '+%d/%b/%Y'` haileresorts.com-ssl_log | grep "wp-login.php" | awk 
 cat /usr/local/cpanel/logs/access_log  | grep haileres | grep GET | awk {'print $1'} | cut -d ":" -f2 | sort | uniq -c | sort -n
 BOT COUNT
 ---------
-cat zozothemes.com-bytes_log | awk '{print $1}' | sort | uniq -c | sort -n
+cat temasme.com-ssl_log | awk '{print $1}' | sort | uniq -c | sort -n
 
-cat expresskerala.com-ssl_log | grep "bot\|spider\|crawl" | awk {'print $6,$14'} | sort | uniq -c | sort -n | tail -25
+cat temasme.com-ssl_log | grep "bot\|spider\|crawl" | awk {'print $6,$14'} | sort | uniq -c | sort -n | tail -25
 
 cat bombaysamachar.com.log | grep xmlrpc | awk {'print $1,$6,$7'} | sort | uniq -c | sort -n
 
@@ -144,6 +144,8 @@ find /home/trancehome -type f -iwholename "*/wp-includes/version.php" -exec grep
 find /home/ -type f -iwholename "*/wp-includes/version.php" -exec grep -H "\$wp_version =" {} \;
 
 bash <(curl -ks https://codesilo.dimenoc.com/thomasb/cmscheck/raw/master/cmscheck.sh) "$@"  --> Given latest version of WP
+
+for i in `grep OWNER /var/cpanel/users/* | awk -F/ '{print $5}' | awk -F: '{print $1}'`; do find /home/$i/public_html/ -type f -iwholename "*/wp-includes/version.php" -exec grep -H "\$wp_version =" {} \; | grep -v "6.7.2" ; done
 
 
 TO DELETE SESSION FILES
@@ -167,6 +169,8 @@ grep orangedi /etc/trueuserowners |cut -d ":" -f1 |while read i; do du -sh /home
 Wordpress Login access count
 --------------------------------
 grep -r date '+%d/%b/%Y' /usr/local/apache/domlogs/ | grep "wp-login.php" | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n
+
+for i in `grep OWNER /var/cpanel/users/*  | awk -F/ '{print $5}' | awk -F: '{print $1}'`;  do find /home/$i/public_html/ -type f -iwholename "*/wp-includes/version.php" -exec grep -H "\$wp_version =" {} \; | grep -v "6.7.2" ; done
 
 Progress Check- Backup
 ----------------------

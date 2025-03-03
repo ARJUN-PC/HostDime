@@ -33,7 +33,7 @@ for i in `cat userlist.txt`; do maldet -a /home/$i/public_html >> /usr/local/src
 BIVALVE SCAN:-
 -------------
 alias bivalve='bash <(curl -ks https://codex.hostdime.com/scripts/download/bivalve)'
-bivalve -u cinifoi
+bivalve -u tzozothemes
 
 
 AI-Bolit:-

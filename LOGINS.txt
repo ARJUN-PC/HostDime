@@ -18,7 +18,10 @@ GMAIL: hostdimetestmail@gmail.com
 PASSWORD: Test@123456
 
 HOTMAIL: hdintechs@hotmail.com
-Password: (howyJmx.vn28G0
+Password: Testmail@1234567
+
+Yahoo: hostdimetestmail@yahoo.com
+Password: Testmail@123456
 
 hostdimetest@outlook.com
 Dimenoc@123456
@@ -41,7 +44,7 @@ Please find the ZIMBRA - Admin new password details below :
 Login to Admin URL
 Admin Panel URL : admin.hdinmail.in
 User id : admin@hdinmail.in
-Password: Ic@z9!gY1Ic@z9!gY1
+Password: Ic@z9!gY1Ic@z9!gY12
 
 Test Cpanel Account - Tony
 -------------------
@@ -49,6 +52,19 @@ URL: https://staff.hostdime.in:2083/
 Domain: just4study.tech
 Username: just4study
 Password: @JUst4study@
+------
+AWS:
+database-1
+
+master: admin
+password: cE8UOyiXdKCatx6esyxG
+database-1.cn8oagkucw32.ap-south-1.rds.amazonaws.com
+
+
+Wordpress
+--------
+2OmJ%84TBC2p6SISrO
+admin
 
 Interworx KB
 -------------
@@ -100,8 +116,12 @@ Logix
 ------
 https://supportdesk.logix.in
 user: admin51170
-password: Tech#2024!Z
+password: Tech#2025!Z
 Customer ID : 51170
+-----
+Admin Panel URL : admin.hdinmail.in
+User id : admin@hdinmail.in
+Password: Ic@z9!gY1Ic@z9!gY12
 
 Repo
 -----
@@ -138,11 +158,11 @@ Logic Monitor
 Name: Arjun
 Password: Bdg8zuwUhN|C3Ga
 
-CloudZr/Virtualizor Node Credentilas
+CloudZor/Virtualizor Node Credentilas
 -------------------------------------
 http://103.13.242.105:4084/
 User: root
-Password: GRjx6myg+w1u
+Password: tpSU(boF2akG3yg
 
 Track Path: track.hostdime.com
 
@@ -154,3 +174,13 @@ Password : i70uqaEXIZ
 To log in now, follow this link:
 https://www.directadmin.com/clients
 
+Call forward
+------------
+https://125.22.13.94:8086/
+Password: Dimenoc@0918,Dimenoc@0919
+              
+Spanel
+------
+https://my.spanel.io/index.php?rp=/login
+username: hdintechs@hostdime.in
+password: 6I5HxYt~4QRRw7

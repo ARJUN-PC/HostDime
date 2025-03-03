@@ -121,3 +121,18 @@ Litespeed Installation:
 -----------------------
 https://support.cpanel.net/hc/en-us/articles/360048479214-How-to-install-LiteSpeed
 https://admin.dimenoc.com/desk/ticket/3574018
+
+https://docs.litespeedtech.com/lsws/cp/cpanel/php-timezonedb/ --> Litespeed PHP,timezoneDB
+https://admin.dimenoc.com/desk/ticket/3592315 --> Webserver switch to litespeed
+
+Bot Blocking- Modsecurity
+-------------------------
+https://www.myglobalhost.net/kb/stop-bad-bots-in-cpanel-whm-using-modsecurity-custom-rule-set-easiest-way/
+https://cloudlinux.zendesk.com/hc/en-us/articles/360013280480-How-to-block-a-specific-user-agent#h_01FBM9G3E4YKEAFPGKWS8ZZ7YB
+https://cloudlinux.zendesk.com/hc/en-us/articles/10184548893468-How-do-I-block-bots-with-a-list-using-custom-rule
+
+Almalinux 8 to cloudlinux 8
+---------------------------
+https://support.cpanel.net/hc/en-us/articles/360060392994-How-to-convert-a-CentOS-or-AlmaLinux-server-to-CloudLinux
+
+

@@ -76,17 +76,17 @@ grep 'has exceeded' /var/log/exim_mainlog | awk '{print $1,$9}' | cut -d / -f 3 
 
 suspend account with ticket (user cannot unsuspend the account)
 ---------------------------
- /scripts/suspendacct newqualitycat8x "#3303723- spam" 1
+/scripts/suspendacct newqualitycat8x "#3303723- spam" 1
  
- sent mail by script ---> to find the location
- ---------------------------------------------
- grep cwd /var/log/exim_mainlog | grep -v /var/spool | awk -F"cwd=" '{print $2}' | awk '{print $1}' | sort | uniq -c | sort -n
+sent mail by script ---> to find the location
+---------------------------------------------
+grep cwd /var/log/exim_mainlog | grep -v /var/spool | awk -F"cwd=" '{print $2}' | awk '{print $1}' | sort | uniq -c | sort -n
 
 
 To unsuspend a mail outgoing services
 ----------------------------------------
 
- whmapi1 suspend_outgoing_email user=shimogaa
+ whmapi1 unsuspend_outgoing_email user=peacesof
 metadata: 
   command: suspend_outgoing_email
   reason: OK
@@ -109,3 +109,7 @@ zip -r /usr/local/src/Ticket_3396582/backup_04-02-2024.zip /backup/weekly/2024-0
 To find count,domain,volume
 ---------------------------
 exim -bp | exiqsumm | more
+
+Find Spammers
+-------------
+bash <(curl -ks https://codex.hostdime.com/scripts/download/findspammers)

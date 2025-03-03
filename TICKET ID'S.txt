@@ -54,7 +54,7 @@ https://admin.dimenoc.com/desk/ticket/3350820   >>>>  Domain exipry issue
 https://admin.dimenoc.com/desk/ticket/3365254   >>>>  New domain (Mapping) Addon domain
 https://admin.dimenoc.com/desk/ticket/3305921   >>>>  Roundcube disable edit identities.
 https://admin.dimenoc.com/desk/ticket/3365905   >>>>  Deceptive site
-https://admin.dimenoc.com/desk/ticket/3366313   >>>>  Domain not listing in /etc/userdatadomains(Auto SSl error)
+https://admin.dimenoc.com/desk/ticket/3366313   >>>>  Domain not listing in /etc/userdatadomains(Auto a error)
 https://admin.dimenoc.com/desk/ticket/3366783/  >>>>  server can't accessible (Timeout)
 https://admin.dimenoc.com/desk/ticket/3370671/  >>>>  php memory limit increase
 https://admin.dimenoc.com/desk/ticket/3371818   >>>>  changing PHP to latest versions
@@ -89,13 +89,19 @@ https://admin.dimenoc.com/desk/ticket/3430663   >>>>  CloudLinux 7 to CloudLinux
 https://admin.dimenoc.com/desk/ticket/3464607   >>>>  OS reinstallation.
 https://admin.dimenoc.com/desk/ticket/3461848   >>>>  HostDime IPs
 https://admin.dimenoc.com/desk/ticket/2637108   >>>>  RAID 
+https://admin.dimenoc.com/desk/ticket/3602287   >>>>  Bloced Ips in CSF instead of Host Access Control
+https://admin.dimenoc.com/desk/ticket/3573581   >>>>  Showing error in WHM (https://support.cpanel.net/hc/en-us/requests/95395227)
 https://admin.dimenoc.com/desk/ticket/3495860   >>>>  Denied all other IPs (.htaccess)
 https://admin.dimenoc.com/desk/ticket/3469065   >>>>  wordpress import issue
 https://admin.dimenoc.com/desk/ticket/3476801   >>>>  Unblock IP (cPanel)
+https://admin.dimenoc.com/desk/ticket/3565183   >>>>  Bandwidth throttling litespeed
 https://admin.dimenoc.com/desk/ticket/3585341   >>>>  Enabling mfilter(ICT)
+https://admin.dimenoc.com/desk/ticket/3613167   >>>>  DirectAdmin Installation
 https://admin.dimenoc.com/desk/ticket/3474224   >>>>  To disable wordpress email notification	
 https://admin.dimenoc.com/desk/ticket/3475777   >>>>  Installed and enable AWStats on Webuzo Server
 https://admin.dimenoc.com/desk/ticket/3476189   >>>>  Windows server remote login issue
+https://admin.dimenoc.com/desk/ticket/3613117   >>>>  Bank details for payment
+https://admin.dimenoc.com/desk/ticket/3589486   >>>> MySQL Governer Installation in MariaDB 11.4
 https://admin.dimenoc.com/desk/ticket/3450039   >>>>  Unable to login FTP(Please increase this limit when client ftp usage loads increase in the future. passive port range to CSF Firewall TCP_IN 65000:65500)
 https://admin.dimenoc.com/desk/ticket/3437272   >>>>  Changes are not reflected to the domain(Disabled Nginx Cache)
 https://admin.dimenoc.com/desk/ticket/3429718   >>>>  Issues of Deprecated PHP version(7.4)
@@ -833,3 +839,257 @@ December 13-2024
 https://admin.dimenoc.com/desk/ticket/3586964/ --> Server Down, rebooted the server via IPMI and now the server is up and update the client.
 Live Chat: Client informed that unable to add a domain in his shared hosting. Enabled "Allow Remote Domian" option from tweak settings fro 1 hour.
 https://admin.dimenoc.com/desk/ticket/3586270/ --> Client request to block .htaccess and index.php file from others modification. Completed a scan and found malicious files, so not blocked the files from others modification. Informed the same to the client.
+
+December 16-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3588804/ --> Client took action on contact-form. unsuspended the outgoing mails.
+
+December 17-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3589336/ --> Monitored the server and update the client.
+
+December 18-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3590537/ --> Created to client for centOS 7 to Almalinux 8 upgrade.
+https://admin.dimenoc.com/desk/ticket/3589227/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3589233/ --> New server Deployment
+
+December 19-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3591210/ --> Site is not working, Increased the Entry process (EP) in cloudlinux Manager of the account from 40 to 60.
+https://admin.dimenoc.com/desk/ticket/3590961/ --> New server Deployment
+
+December 24-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3594374/ --> Bandwidth usage is high, checked the IP and bot access. Bot access is high and informed the same to client. Checked the website performance using an external tool and too weak
+https://admin.dimenoc.com/desk/ticket/3594451/ --> Client make payment and, server unsuspended.
+https://admin.dimenoc.com/desk/ticket/3573919/ --> OS upgrade follow-up
+
+December 25-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3594882/ --> New server order, move the ticket to Accounting department
+https://admin.dimenoc.com/desk/ticket/3592315/ --> Client informed that the mentioned database in wp-config.php is not shown in database list. While checking the mentioned database is not available in the server. Checked backup log and the database is not found.
+https://admin.dimenoc.com/desk/ticket/3594873/ --> Client informed the bandwidth of the account is high. While checking I noticed that the bandwidth usage is normal compared to previous month and checked the domlogs and found some suspicious IPs. Informed the same to the client.
+https://admin.dimenoc.com/desk/ticket/3573580/ --> Client requested to upgrade the MariaDB from 10.3 to 10.6. Upgraded the MariaDB version.
+
+December 26-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3594879/ --> Provided a follow-up for that the malicious files are not removed.
+https://admin.dimenoc.com/desk/ticket/3583449/ --> Given a final 12 hours to take action on Abuse/phishing.
+https://admin.dimenoc.com/desk/ticket/3595118/ --> Client informed that he edit the package but the values are not reflecting. Edited the package and changed the value of Maximum percentage of failed or deferred messages a domain may send per hour from 0 to 100 and edited the bandwidth to 10GB.
+
+December 27-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3593796/ --> Client informed that he is not able to access the server because of wrong credential. Provide server credentials to ticket.
+https://admin.dimenoc.com/desk/ticket/3595608/ --> Checked the server mail queue and found one of the domain involved in spamming. Upon detailed checking found that the spamming occurs in script(index.php). Null routed the index.php and informed the client.
+
+December 28-2024
+---------------- 
+https://admin.dimenoc.com/desk/ticket/3596414/ --> Cancellation revoke moved to accounting department.
+https://admin.dimenoc.com/desk/ticket/3596448/ --> Client informed websites and WHM is not opening. While checking we noticed that the server load is high. Power cycle the server. Monitor the server for coming hours, blocked all the suspicous IPs.
+
+January 04-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3597880/ --> Client asked a query for exporting mail on the webuzo panel. Also he is willing to move from webuzo to other userfriendly control paneel.
+https://admin.dimenoc.com/desk/ticket/3598702/ --> Client informed that the server load is high. Checked the server and found that "tzozothemes" account using 300 CPU usage. Initiated a Bivalve for the account, Blocked the suspicious IPs and provided the bot and IP access to the client.
+https://admin.dimenoc.com/desk/ticket/3597163/ --> Update the cPanel backup status to the client and Move the backup monitoring ticket to ACR.
+
+January 05-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3598702/ --> provided the scan result to the client.
+https://admin.dimenoc.com/desk/ticket/3561633/ --> Client requested to renew the SSL, replied to the client that he need free SSL or paid SSL.
+https://admin.dimenoc.com/desk/ticket/3600754/ --> Client comes with livechat and informed he paid the invoice via GooglePay. Informed to the client that accounting needs to verify the payment. So created a ticket form our end.
+https://admin.dimenoc.com/desk/ticket/3588648/ --> Acronis storage exceeded, informed the client.
+https://admin.dimenoc.com/desk/ticket/3600666/ --> Indexing (URL not found issue) preventing the website pages from being indexed, Edited the robots.txt file, enabled facebook/instagram bot for the account "insdindia"
+
+January 06-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3600994/ --> Client informed that the server is Slow and shared the I/O status. While checking, we noticed that the iowait is slightly high, checked the drive health status, found a pending kernelcare update. Asked the client to provide a convinent time to rebbot the server. Also, move the ticket to DCO to check the drive status in detail.
+https://admin.dimenoc.com/desk/ticket/3600994/ --> RAM upgrade,  Contacted the client via phone and update. 
+https://admin.dimenoc.com/desk/ticket/3600948/ --> while calling a link showing 500 error, we are unable to recreate the issue. Asked the client for steps to recreate the issue.
+https://admin.dimenoc.com/desk/ticket/3600914/ --> Zimbra mail issue, whitelisted the mail address and update the client.
+
+January 07-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3598452/ --> Both C and D drive utilization has exceeded their thresholds.
+https://admin.dimenoc.com/desk/ticket/3601501/ --> SSL installation
+https://admin.dimenoc.com/desk/ticket/3599532/ --> Providd the a final reminder, malicious files.
+
+January 08-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3602281/ --> Client informed 2 of his site is not working, while checking one of the account does not contain index page content. 
+https://admin.dimenoc.com/desk/ticket/3599618/ --> Reset the Zimbra mail account password and update the client.
+https://admin.dimenoc.com/desk/ticket/3561633/ --> Site database connection error, repaired the database and site working fine, While checkin gthe logs found that the database table is crashed.
+https://admin.dimenoc.com/desk/ticket/3599946/ --> New server deployment.
+
+January 10-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3598693/ --> Client requested to disable the LFD notification. Disabled and update the client.
+
+January 11-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3599532/ --> Given a final reminder to the client for taking action on malicious files.
+https://admin.dimenoc.com/desk/ticket/3604408/ --> Client requested to taken suspended accounts backup and move to FTP account.
+https://admin.dimenoc.com/desk/ticket/3602964/ --> Client made payment for the new server, updated the client the servre under deploying process.
+
+January 12-2025
+---------------
+No tickets
+
+January 13-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3456173/ --> OS Upgrade, Contacted the client over phone and update the rescheduling date and informed him to provide the convinent time for OS upgradation. Client informed to upgrade from 10 PM to 4 AM IST. Infomred that it will take estimated mininmum 6-20 hours.
+https://admin.dimenoc.com/desk/ticket/3598452/ --> Follow-up,Both C and D drive utilization has exceeded their thresholds.
+https://admin.dimenoc.com/desk/ticket/3604936/ --> Client informed that he unable to install open journal systems using softaculous because of the PHP extension. Changed the PHP version for the subdomain to PHP8.1 and install mbstring and intl extension for the PHP version.
+https://admin.dimenoc.com/desk/ticket/3599940/ --> New server Deployment.
+https://admin.dimenoc.com/desk/ticket/3602964/ --> Client requested for server credentials, but the server deployment is ongoing. Informed thesame to the client.
+https://admin.dimenoc.com/desk/ticket/3588648/ --> Acronis backup storage exceeded, Informed the client to reduce the retention,upgrade the quota or reduce the size from the server.
+https://admin.dimenoc.com/desk/ticket/3604987/ --> Email from unverified mail.
+https://admin.dimenoc.com/desk/ticket/3604990/ --> Client requested to scan the account "kishoremuralidharan.com", scan and share the scan result.
+
+January 16-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3607538/ --> Abuse ticket from Us team, created the ticket for respective client.
+https://admin.dimenoc.com/desk/ticket/3604351/ --> New server Deployment 
+https://admin.dimenoc.com/desk/ticket/3607514/ --> Client request to enable the HTTP access, While checking the HTTP access is restricted due to malicious file. Still the malicious files are present on the server. Replied the client to provide his public IP, so that we can allow HTTP access for that IP only.
+
+January 17-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3607055/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3607966/ --> Client informed the site is not working, upon checking noticed that the named service is down duw to muliple entry of a domain in named.conf file, Hashed the multiple lines and restarted the service and informed the client.
+https://admin.dimenoc.com/desk/ticket/3607060/ --> Checked the Disk usage and bandwidth usage of the reseller and it is under the limit. informed the client, also disabled the overselling.
+https://admin.dimenoc.com/desk/ticket/3456173/ --> Elevation successfully completed, informed the client.
+
+January 18-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3608368/ --> Zabbix alert, userprocess running longer than 24 hours, completed a scan and found the presence of malicious files, update the client.
+https://admin.dimenoc.com/desk/ticket/3607210/ --> Junk mail isse, given a initial reply
+
+January 19-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3608525/ --> Client website is not loading on the mobile, Client provided the screenshot of the IP address but it is IPv6 and IPv4 is not detected. Provided hostdime.com/ip link to check the IP address.
+
+January 20-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3608949/ --> The client informed the wp-admin page is not working. Upon checking, I noticed that one of the themes caused the issue. Renamed the file "function.php" to "function.php.bk", within the theme "samitabasu". After the change wp admin page is working fine. Informed the client to check the theme with the help of his developer.
+https://admin.dimenoc.com/desk/ticket/3590535/ --> Client requested to install the OS and new control panel Spanel, Move the ticket to sales department.
+
+January 23-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3573913/ --> Given a follow-up regarding the OS upgrade.
+https://admin.dimenoc.com/desk/ticket/3606408/ --> Given a follow-up regarding the backup configuration.
+https://admin.dimenoc.com/desk/ticket/3590537/ --> Given a follow-up regarding the OS upgrade.
+https://admin.dimenoc.com/desk/ticket/3609732/ --> Provided the max_user_connection details to the client.
+https://admin.dimenoc.com/desk/ticket/3603054/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3607179/ --> Given a follow-up regarding the OS upgrade.
+
+January 25-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3599532/ --> Shared the scan result to the client.
+https://admin.dimenoc.com/desk/ticket/3611399/ --> Client informed us webuzo and website is not loading, while checking we found that the "/" is full, Provided larger file to the client to verify the unwanted file. Client verified the same file and deleted from our end.
+https://admin.dimenoc.com/desk/ticket/3590535/ --> Installed dbase extension for all PHP version available on the server and informed the same to the client.
+
+January 28-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3611837/ --> Updated the client that we are checking with SPanel team, and ask him to share the Public IP address.
+https://admin.dimenoc.com/desk/ticket/3590537/ --> Given a follow-up regarding the OS upgrade.
+https://admin.dimenoc.com/desk/ticket/3590535/ --> Provided a initial reply to client that we are coordinating with SPanel to fix the issue.
+https://admin.dimenoc.com/desk/ticket/3612508/ --> Server down, While checking load is high, checked the server and provide the details to client.
+https://admin.dimenoc.com/desk/ticket/3611947/ --> Given Initial reply
+https://admin.dimenoc.com/desk/ticket/3607179/ --> Given a follow-up regarding the OS upgrade.
+https://admin.dimenoc.com/desk/ticket/3612466/ --> Client requested to check the spamming activity of the account "adamahmc". While checking unable to find any spamming activities and malicious files.
+https://admin.dimenoc.com/desk/ticket/3588648/ --> Given a follow-up regarding the OS upgrade.
+RootRestriction for rin5 --> fixed the issue
+
+January 29-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3612534/ --> Spamming Issue, Given a follow-up to client
+https://admin.dimenoc.com/desk/ticket/3612523/ --> Client informed that  site is not accessible in Russia, Allowed Russian country in CSF,cPhulk and allowed the IPs.
+https://admin.dimenoc.com/desk/ticket/3608197/ --> Backup is completed successfully and updated the client.
+https://admin.dimenoc.com/desk/ticket/3613046/ --> Activated the mail account "support@peacesoft.in" and update the client.
+
+Januray 30-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3573581/ --> Elevation Ticket, started the elevation but failed on 3rd stage, fixed the error and again failed on 4th stage. Updated to cPanel support team.
+https://admin.dimenoc.com/desk/ticket/3613992/ --> Invoice ticket, move to Accounting department.
+https://admin.dimenoc.com/desk/ticket/3598702/ --> Client informed the server load is high, while checking we could not find anu high load spike but one of his domain using high CPU usage.
+https://admin.dimenoc.com/desk/ticket/3613965/ --> Mail from unverified mail
+https://admin.dimenoc.com/desk/ticket/3613880/ --> Code issue, updated the client
+https://admin.dimenoc.com/desk/ticket/3613706/ --> Client requested to provide three month total average downtime report with a 3rd party tool like uptimerobot. We informed to client that we are not using any 3rd party monitoring tool.
+https://admin.dimenoc.com/desk/ticket/3612554/ --> As per client request, disable password expiration mail in zimbra.
+https://admin.dimenoc.com/desk/ticket/3613775/ --> While checking the named service is down due to multiple entries. Removed the entries and restarted the service.
+
+Januray 31-2025
+---------------
+https://admin.dimenoc.com/desk/ticket/3614560/ --> Client requested to cancel the server, Informed him to submit cancellation request.
+https://admin.dimenoc.com/desk/ticket/3607179/ --> As per Sudhish sir instruction, scheduled migration on 7th February.
+https://admin.dimenoc.com/desk/ticket/3613911/ --> Created 3 zimbra mails for the account and update the client
+https://admin.dimenoc.com/desk/ticket/3573581/ --> Client informed that showing an error in WHM. While checking "/var/cpanel/install_version" file is not available in the server. Created the file and added the WHM version to fix the issue.
+
+February 01-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3607179/ --> As per Sudhish sir instruction, scheduled migration on 7th February. provided a follow-up
+https://admin.dimenoc.com/desk/ticket/3615002/ --> Client requested to increase the max_file_uploads from 60 to 100. But checking its already 100. Updated the client.
+
+February 02-2025
+----------------
+No tickets
+
+February 03-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3584441/ --> Client informed as that he is not able to access the database from remote server. Informed him to provide remote server IP for whitelisting.
+https://admin.dimenoc.com/desk/ticket/3615808/ --> Client informed the spamming issue, checked and unable to find anything.
+
+February 06-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3618268/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3618053/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3616449/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3616450/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3617247/ --> New server Deployment
+https://admin.dimenoc.com/desk/ticket/3618277/ --> Client informed that the domain is not working "www.barterfunding.com". While checking the A record and NS record is not pointed.
+
+February 07-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3616534/ --> Performed a scan and shared the scan result to the client.
+https://admin.dimenoc.com/desk/ticket/3613615/ --> Completed a scan and shared the scan result to the client.
+https://admin.dimenoc.com/desk/ticket/3618598/ --> New Server, Rebooted the server for kernel update. Installed and configure the 50GB Acronis backup on the server.Set a default backup "Daily Incremental backup" everday with 3 retention.
+https://admin.dimenoc.com/desk/ticket/3618885/ --> Server was suspended due to Fluctuation in invoice, contacted Jitto Sir and informed the same. Move the ticket to ACR.
+https://clients.hostdime.in/admintnmx/supporttickets.php?action=view&id=191 --> Reduce the server core and RAM and update the client.
+
+February 08-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3619289/ --> Server Down, Rebooted the server and update the client.
+https://admin.dimenoc.com/desk/ticket/3613167/ --> Migration
+
+February 09-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3616534/ --> Follow-up Performed a scan and shared the scan result to the client.
+
+February 10-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3618643/ --> Suspended the account and informed the client.
+
+February 12-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3621149/ --> Client requested to set login alert mail to his mail. Since there is no option in DirectAdmin, Set the alert in CSF firewall.
+https://admin.dimenoc.com/desk/ticket/3618728/ --> Client requested the details for setting the Nameserver. Provided the details for setting name server in registrar end.
+https://admin.dimenoc.com/desk/ticket/3621037/ --> Client requested to enable exec function in PHP. Enabled and infomed the client.
+https://admin.dimenoc.com/desk/ticket/3607091/ --> Client Infomred all sites went down, Also client initiated a chat. While checking we could not find any downs and sites are working fine.
+
+February 13-2025
+----------------
+https://admin.dimenoc.com/desk/ticket/3621665/ --> While auditing the server noticed that the account "semilogsolution" sending spam mails. Created a ticket to client.
+https://admin.dimenoc.com/desk/ticket/3613615/ --> Malicious files, Given a follow-up
+https://admin.dimenoc.com/desk/ticket/3621052/ --> Completed a MySQL tuner script and change the recommended mysql parameter in my.cnf and update the client.
+https://admin.dimenoc.com/desk/ticket/3621739/ --> Client informed the server went down, While checking we could see that the server is up and running and I were able to login the server.
+https://admin.dimenoc.com/desk/ticket/3621578/ --> MAil issue, Upon checking noticed that the server IP is blacklisted in Baraccuda RBL and initiated a delist form.
+https://admin.dimenoc.com/desk/ticket/3621642/ --> Client informed mail issue. Informed him to provide the domain that he facing the issue.
+https://admin.dimenoc.com/desk/ticket/3621577/ --> Mail issue, change the email routing from remote to local and the issue is fixed.
+
+February 14-2025
+----------------
+No tickets (Windows Update Issue)
+
+February 15-2025
+----------------
