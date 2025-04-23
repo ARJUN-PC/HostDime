@@ -114,7 +114,7 @@ csf -f {stop}
 csf -r [restart]
 csf -x /disable
 csf -e /enable
-csf -ra {reloaf firewall cofiguration}
+csf -ra {reload firewall cofiguration}
 csf -l {status check]
 grep -i tcp_in '/etc/csf/csf.conf'
 csf -ta <IP> --> temporary allow
@@ -752,3 +752,27 @@ ps -fp $(pgrep -u totalsec)
 PHP modules for a specific domain
 ---------------------------------
 /opt/cpanel/ea-php56/root/usr/bin/php-cgi -m
+
+Zimbra - orphan policy
+----------------------
+The Email account deletion orphan policy can be edited from Admin panel >> Config >> Domain Master >> Go to the particular domain >> Go to Update settings >> Orphan Policy > set it as Disabled and update.
+
+Interworx Backup
+----------------
+~iworx/bin/backup.pex --domain ruedaserver.com --backup-options all --output-dir /backup/ticket_3634569
+
+Modsecurity Block
+-----------------
+[root@server admin.surakshapay.com]# grep -irl 1600002 /etc/apache2/conf.d/
+/etc/apache2/conf.d/modsec_vendor_configs/HOSTDIME/rules/05_upload.conf
+
+Cron for deleting backup
+------------------------
+[root@rin7 ~]# crontab -l
+0 4 * * * find /backup/daily -mindepth 1 -maxdepth 1 -type d | sort -r | tail -n +6 | xargs rm -rf
+0 4 * * 0 find /backup/weekly -mindepth 1 -maxdepth 1 -type d | sort -r | tail -n +3 | xargs rm -rf
+
+To check the Ip blocked in Windows server
+~~~
+netsh advfirewall firewall show rule name=all | findstr 103.63.129.0/24
+~~~ 

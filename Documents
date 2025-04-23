@@ -1,87 +1,104 @@
 cPanel password change hd document :
-------------------------------------
+~~~
 https://www.hostdime.com/kb/hd/core/how-to-change-your-cpanel-password-through-core
+~~~
 
 Restricting Http Access :
--------------------------
+~~~
 https://kb.hostdime.com/pages/viewpage.action?spaceKey=ARTD&title=Restricting+HTTP+access
-
 https://hostdime.atlassian.net/wiki/spaces/ARTD/pages/51743298/Restricting+HTTP+access
+~~~
 
 common Email issues:
---------------------
+~~~
 https://kb.hostdime.com/display/USICT/Common+Email+Issues
+~~~
 
 suspend an email account outgoing mails:-
----------------------------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360052575874-Managing-email-restrictions-via-the-command-line
+~~~
 
 Mysql backups-with-mysqldump:-
------------------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360041291913-MySQL-backups-with-mysqldump
+~~~
 
 Mysql/Mariabd upgrade:-
-----------------------
+~~~
 https://docs.cpanel.net/whm/sql-services/mysql-or-mariadb-upgrade/
+~~~
 
 MySQL/MariaDB Upgrade Detailed Procedure:-
------------------------------------------
+~~~
 https://kb.hostdime.com/pages/viewpage.action?pageId=116138206
+~~~
 
 LOAD INVESTIGATION:-
--------------------
+~~~
 https://kb.hostdime.com/display/USICT/Processor+Load+Is+Too+High
 https://kb.hostdime.com/display/ARTD/Load+Investigations
+~~~
 
 TMPWATCH
----------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360052677654-How-to-clean-your-tmp-directory-with-tmpwatch
+~~~
 
 Precaution: /tmp full
------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360052156294-How-To-move-the-mysql-tmpdir-out-tmp-and-into-home
-
 https://support.cpanel.net/hc/en-us/articles/360053638153--tmp-partition-reported-as-full
+~~~
 
 TO CHANGE PRIMARY DOMIAN
---------------------------
+~~~
 https://www.liquidweb.com/kb/change-primary-domain-in-whm/
+~~~
 
 To clear SWAP memory
---------------------
+~~~
 https://www.redhat.com/sysadmin/clear-swap-linux
+~~~
 
 Roundcube DB rebulid
---------------------
+~~~
 https://docs.cpanel.net/knowledge-base/email/how-to-rebuild-the-roundcube-database/
+~~~
 
 Almalinux 8 to Cloudlinux 8
-----------------------------
+~~~
 https://docs.cloudlinux.com/legacy/cloudlinux_installation/#converting-existing-servers
+~~~
 
 CentOS 7 to Almalinux 8
------------------------
+~~~
 https://wiki.almalinux.org/elevate/ELevating-CentOS7-to-AlmaLinux-9.html#upgrade-centos-7-to-almalinux-8
 https://support.cpanel.net/hc/en-us/articles/5946421721623-How-to-upgrade-from-CentOS-7-to-AlmaLinux-8-or-CloudLinux-7-to-CloudLinux-8-with-cPanel-ELevate
+~~~
 
 Build DMARC Record
--------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360055638973-How-to-build-a-DMARC-record
+~~~
 
 Enable event_scheduler in cPanel
---------------------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/4404396945559-How-do-I-enable-event-scheduler-by-default-in-MySQL
+~~~
 
 Repair crashed database table
------------------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/16718402355863-How-to-repair-a-crashed-database-table-in-cPanel
+~~~
 
 Disable Wptoolkit email notification
-------------------------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360059457434-WP-Toolkit-Email-Notifications
+~~~
 
 cPanel Installation:
---------------------
+~~~
 https://docs.cpanel.net/installation-guide/install/
 
 While installing cPanel in Almalinux we got the following errors:
@@ -99,40 +116,100 @@ While installing cPanel in Almalinux we got the following errors:
 ++++
 
 then to fix it run: rpm --import https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux if any doubt collabed with anoop 
+https://www.veeble.com/kb/fix-almalinux-gpg-key-error/
+~~~
 
 Cloudlinux 7 to Cloudlinux 8
------------------------------
+~~~
 https://docs.cloudlinux.com/legacy/elevate/#elevate-scenario-cloudlinux-7-with-cpanel
 
 Ticket ID: https://admin.dimenoc.com/desk/ticket/3430663
 https://support.cpanel.net/hc/en-us/articles/5946421721623-How-to-upgrade-from-CentOS-7-to-AlmaLinux-8-or-CloudLinux-7-to-CloudLinux-8-with-cPanel-ELevate
+~~~
 
 NIC
----
+~~~
 https://hostdime.atlassian.net/wiki/spaces/DCOP/pages/66323279/CentOS+7+to+AlmaLinux8+AL8+or+CloudLinux8+CL8+OS+Elevate+Upgrade+-+DCO+Pre-Checks+and+Preparations
-
 https://hostdime.atlassian.net/wiki/spaces/DCOP/pages/66322954/How+to+Configure+Legacy+Device+Naming+on+CentOS+7#Update-Network-Scripts
+~~~
 
 Softaculos installation:
-------------------------
+~~~
 https://www.softaculous.com/docs/admin/installing-softaculous-in-cpanel/
 https://admin.dimenoc.com/desk/ticket/3574018
+~~~
+
 Litespeed Installation:
------------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360048479214-How-to-install-LiteSpeed
 https://admin.dimenoc.com/desk/ticket/3574018
-
 https://docs.litespeedtech.com/lsws/cp/cpanel/php-timezonedb/ --> Litespeed PHP,timezoneDB
 https://admin.dimenoc.com/desk/ticket/3592315 --> Webserver switch to litespeed
+~~~
 
 Bot Blocking- Modsecurity
--------------------------
+~~~
 https://www.myglobalhost.net/kb/stop-bad-bots-in-cpanel-whm-using-modsecurity-custom-rule-set-easiest-way/
 https://cloudlinux.zendesk.com/hc/en-us/articles/360013280480-How-to-block-a-specific-user-agent#h_01FBM9G3E4YKEAFPGKWS8ZZ7YB
 https://cloudlinux.zendesk.com/hc/en-us/articles/10184548893468-How-do-I-block-bots-with-a-list-using-custom-rule
+~~~
 
 Almalinux 8 to cloudlinux 8
----------------------------
+~~~
 https://support.cpanel.net/hc/en-us/articles/360060392994-How-to-convert-a-CentOS-or-AlmaLinux-server-to-CloudLinux
+https://docs.cloudlinux.com/cloudlinuxos/cloudlinux_installation/
+https://docs.cpanel.net/installation-guide/system-requirements-cloudlinux/
+~~~
+
+Interworx-Migration
+~~~
+https://appendix.interworx.com/current/nodeworx/account_management/siteworx/backup-restore/backup-restore-siteworx-nodeworx-accounts.html#to-create-a-siteworx-backup-via-the-cli
+~~~
+
+Mail Disk Issue
+~~~
+https://support.cpanel.net/hc/en-us/community/posts/19135839884951--CPANEL-26448-Default-Email-Account-Showing-Incorrect-
+~~~
+
+How to Boot to Rescue Mode
+~~~
+https://www.tecmint.com/boot-ubuntu-in-rescue-mode/
+https://www.linuxtechi.com/boot-centos-8-rhel-8-single-user-mode/
+~~~
+
+Server Boots to Grub rescue>
+~~~
+https://mellowhost.com/blog/server-boots-to-grub-ovh-servers-how-to-fix.html
+~~~
+
+How to create a bootable drive
+~~~
+https://www.instructables.com/How-to-Create-a-Bootable-USB-Drive-Without-Using-A/
+~~~
+
+Drive Partition
+~~~
+https://phoenixnap.com/kb/linux-create-partition
+~~~
+
+Lvm Creation and extend
+~~~
+https://www.tecmint.com/manage-and-create-lvm-parition-using-vgcreate-lvcreate-and-lvextend/
+~~~
+
+Install SSL for a domain in Plesk
+~~~
+https://www.plesk.com/kb/support/how-to-install-lets-encrypt-ssl-certificate-for-domain-in-plesk/
+~~~
+
+Acronis Installation:
+~~~
+https://www.acronis.com/en-us/support/documentation/WHMCPanel/#installation-update-uninstallation.html#top
+~~~
+
+Reseller Bandwidth 
+~~~
+https://support.cpanel.net/hc/en-us/requests/95430732
+~~~
 
 

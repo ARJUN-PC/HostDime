@@ -1,0 +1,270 @@
+LVM Creation, Extend and Mount
+------------------------------
+
+Iam checked the lvm in VMware 
+
+1. First of all I created 3 disk each with 5GB
+
+2. Created a physical volume 
+~~~
+root@server:~# pvcreate /dev/sda /dev/sdb /dev/sdc
+  Physical volume "/dev/sda" successfully created.
+  Physical volume "/dev/sdb" successfully created.
+  Physical volume "/dev/sdc" successfully created.
+~~~
+
+To display the physical volume using the command "pvdisplay" or "pvs"
+~~~
+root@server:~# pvs
+  PV         VG Fmt  Attr PSize   PFree
+  /dev/sda      lvm2 ---    5.00g 5.00g
+  /dev/sdb      lvm2 ---    5.00g 5.00g
+  /dev/sdc      lvm2 ---    5.00g 5.00g
+  /dev/sdd3  cs lvm2 a--  <29.00g    0 
+root@server:~# 
+root@server:~# 
+root@server:~# pvdisplay /dev/sda
+  "/dev/sda" is a new physical volume of "5.00 GiB"
+  --- NEW Physical volume ---
+  PV Name               /dev/sda
+  VG Name               
+  PV Size               5.00 GiB
+  Allocatable           NO
+  PE Size               0   
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               EPfd0D-thjI-qkP3-wGhS-66gV-BdGw-H1VpGW
+   
+root@server:~# pvdisplay /dev/sdb
+  "/dev/sdb" is a new physical volume of "5.00 GiB"
+  --- NEW Physical volume ---
+  PV Name               /dev/sdb
+  VG Name               
+  PV Size               5.00 GiB
+  Allocatable           NO
+  PE Size               0   
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               A7qXRb-zpbx-5Pjn-VQXG-aGFK-1AT2-FtvPI5
+   
+root@server:~# pvdisplay /dev/sdc
+  "/dev/sdc" is a new physical volume of "5.00 GiB"
+  --- NEW Physical volume ---
+  PV Name               /dev/sdc
+  VG Name               
+  PV Size               5.00 GiB
+  Allocatable           NO
+  PE Size               0   
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               Jr5ekz-Pfu1-pDqH-cdxP-2v2I-yOfX-QkJlK3
+   
+~~~
+
+3. Created the volumegroup(vg) using two drive "sda" and "sdb". Kept "sdc" for extend the volumegroup.
+~~~
+root@server:~# vgcreate myvolumegroup /dev/sda /dev/sdb
+  Volume group "myvolumegroup" successfully created
+~~~
+
+To display the volumegroup(vg) use "vgdisplay" and "vgs"
+~~~
+  --- Volume group ---
+  VG Name               myvolumegroup
+  System ID             
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               9.99 GiB
+  PE Size               4.00 MiB
+  Total PE              2558
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       2558 / 9.99 GiB
+  VG UUID               37KSSS-aRKN-uFUG-Wr2U-zuzi-5NBN-c9DQ4q
+   
+root@server:~# vgdisplay myvolumegroup
+  --- Volume group ---
+  VG Name               myvolumegroup
+  System ID             
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               9.99 GiB
+  PE Size               4.00 MiB
+  Total PE              2558
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       2558 / 9.99 GiB
+  VG UUID               37KSSS-aRKN-uFUG-Wr2U-zuzi-5NBN-c9DQ4q
+   
+root@server:~# 
+root@server:~# 
+root@server:~# vgs
+  VG            #PV #LV #SN Attr   VSize   VFree
+  cs              1   2   0 wz--n- <29.00g    0 
+  myvolumegroup   2   0   0 wz--n-   9.99g 9.99g
+~~~ 
+
+4. Created two logical volume, one for main and the other is backup. The main lv created with 5GB and the rest of the volumegroup size is used for backup lv. 
+~~~
+root@server:~# lvcreate -n volmain -L 5GB myvolumegroup
+  Logical volume "volmain" created.
+----
+root@server:~# lvcreate -n volbackup -l 100%FREE myvolumegroup
+  Logical volume "volbackup" created.
+~~~
+
+To display the both logical volume use "lvdisplay"
+~~~
+root@server:~# lvdisplay  myvolumegroup/volbackup
+  --- Logical volume ---
+  LV Path                /dev/myvolumegroup/volbackup
+  LV Name                volbackup
+  VG Name                myvolumegroup
+  LV UUID                bTVHtx-djKO-8oF7-GUoz-NQN6-HeLt-jydxnV
+  LV Write Access        read/write
+  LV Creation host, time server.arjun.com, 2025-03-31 05:20:51 +0530
+  LV Status              available
+  # open                 0
+  LV Size                4.99 GiB
+  Current LE             1278
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:3
+   
+root@server:~# lvdisplay  myvolumegroup/volmain
+  --- Logical volume ---
+  LV Path                /dev/myvolumegroup/volmain
+  LV Name                volmain
+  VG Name                myvolumegroup
+  LV UUID                uh1soT-E5e1-BeDh-MmHr-kv45-lAee-YjUQfJ
+  LV Write Access        read/write
+  LV Creation host, time server.arjun.com, 2025-03-31 05:19:41 +0530
+  LV Status              available
+  # open                 0
+  LV Size                5.00 GiB
+  Current LE             1280
+  Segments               2
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:2
+~~~
+
+5. Created the filesystem
+~~~
+root@server:~# mkfs.ext4 /dev/myvolumegroup/volmain
+mke2fs 1.47.1 (20-May-2024)
+Creating filesystem with 1310720 4k blocks and 327680 inodes
+Filesystem UUID: 52649cef-e1f4-42b9-9487-14ededf77196
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information: done 
+
+root@server:~# mkfs.ext4 /dev/myvolumegroup/volbackup
+mke2fs 1.47.1 (20-May-2024)
+Creating filesystem with 1308672 4k blocks and 327680 inodes
+Filesystem UUID: 6b607dbc-33cb-4a61-b0e6-364e8874ed1b
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information: done
+~~~
+
+6. Reduced 2.5GB from the main logical volume and added the reduced size in backup logical volume
+~~~
+root@server:~# lvreduce -L -2.5G -r /dev/myvolumegroup/volmain
+  File system ext4 found on myvolumegroup/volmain.
+  File system size (5.00 GiB) is larger than the requested size (2.50 GiB).
+  File system reduce is required using resize2fs.
+  File system fsck will be run before reduce.
+  Reducing file system ext4 to 2.50 GiB (2684354560 bytes) on myvolumegroup/volmain...
+e2fsck /dev/myvolumegroup/volmain
+/dev/myvolumegroup/volmain: 11/327680 files (0.0% non-contiguous), 42078/1310720 blocks
+e2fsck done
+resize2fs /dev/myvolumegroup/volmain 2621440k
+resize2fs 1.47.1 (20-May-2024)
+Resizing the filesystem on /dev/myvolumegroup/volmain to 655360 (4k) blocks.
+The filesystem on /dev/myvolumegroup/volmain is now 655360 (4k) blocks long.
+
+resize2fs done
+  Reduced file system ext4 on myvolumegroup/volmain.
+  Size of logical volume myvolumegroup/volmain changed from 5.00 GiB (1280 extents) to 2.50 GiB (640 extents).
+  Logical volume myvolumegroup/volmain successfully resized.
+~~~
+
+Added the size to backup logical volume
+~~~
+root@server:~# lvextend -l +100%FREE -r /dev/myvolumegroup/volbackup
+  File system ext4 found on myvolumegroup/volbackup.
+  File system fsck will be run before extend.
+  Size of logical volume myvolumegroup/volbackup changed from 4.99 GiB (1278 extents) to 7.49 GiB (1918 extents).
+  Extending file system ext4 to 7.49 GiB (8044675072 bytes) on myvolumegroup/volbackup...
+e2fsck /dev/myvolumegroup/volbackup
+/dev/myvolumegroup/volbackup: 11/327680 files (0.0% non-contiguous), 42070/1308672 blocks
+e2fsck done
+resize2fs /dev/myvolumegroup/volbackup
+resize2fs 1.47.1 (20-May-2024)
+Resizing the filesystem on /dev/myvolumegroup/volbackup to 1964032 (4k) blocks.
+The filesystem on /dev/myvolumegroup/volbackup is now 1964032 (4k) blocks long.
+
+resize2fs done
+  Extended file system ext4 on myvolumegroup/volbackup.
+  Logical volume myvolumegroup/volbackup successfully resized.
+~~~
+
+7. Extended the volumegroup by adding the "sdc" drive
+~~~
+root@server:~# vgextend myvolumegroup /dev/sdc
+  Volume group "myvolumegroup" successfully extended
+root@server:~# vgdisplay myvolumegroup
+  --- Volume group ---
+  VG Name               myvolumegroup
+  System ID             
+  Format                lvm2
+  Metadata Areas        3
+  Metadata Sequence No  6
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               0
+  Max PV                0
+  Cur PV                3
+  Act PV                3
+  VG Size               <14.99 GiB
+  PE Size               4.00 MiB
+  Total PE              3837
+  Alloc PE / Size       2558 / 9.99 GiB
+  Free  PE / Size       1279 / <5.00 GiB
+  VG UUID               37KSSS-aRKN-uFUG-Wr2U-zuzi-5NBN-c9DQ4q
+~~~
+
+8. Mounted the new logical volume permanently using the fstab entry.

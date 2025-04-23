@@ -29,6 +29,9 @@ To scan all accounts in a domian
 
 for i in `cat userlist.txt`; do maldet -a /home/$i/public_html >> /usr/local/src/scanresult.txt; done
 
+for i in $(cat users.txt); do maldet -a /home/$i; done
+for i in $(cat users.txt); do maldet -a /home/$i > /usr/local/src/ticket_3649327/${i}_scan.log; done
+
    
 BIVALVE SCAN:-
 -------------

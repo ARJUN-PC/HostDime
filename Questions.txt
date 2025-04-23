@@ -1,0 +1,429 @@
+Kernel & GRUB:
+
+1. Scenario: Your server suddenly fails to boot after a kernel update. How do you troubleshoot and recover the system?
+
+Expected Answer: Boot into GRUB, select the previous working kernel, analyze /var/log/dmesg and journalctl -xb, check /boot/grub/grub.cfg, reinstall kernel if necessary.
+
+2. Scenario: How would you modify the kernel parameters to optimize performance for a high-traffic web server?
+
+Expected Answer: Modify /etc/sysctl.conf for parameters like vm.swappiness=10, fs.file-max=2097152, net.core.somaxconn=1024, apply changes with sysctl -p.
+
+3. Scenario: Your server is running low on memory, and you suspect the kernel is overcommitting memory. How do you adjust it?
+
+Expected Answer: Set vm.overcommit_memory=2 in /etc/sysctl.conf and adjust vm.overcommit_ratio
+
+4. Scenario: You updated the kernel, but after a reboot, the server shows a kernel panic and won’t boot.
+
+How do you recover the server?
+
+Answer:
+
+Boot into GRUB, select an older kernel.
+
+Check logs with journalctl -xb.
+
+Reinstall kernel: dnf reinstall kernel (RHEL) or apt install --reinstall linux-image-generic (Debian/Ubuntu).
+
+If /boot is full, remove old kernels using dnf remove or apt autoremove.
+
+5. Scenario: Your server has high I/O wait, and you want to tweak the I/O scheduler.
+
+How do you change it persistently?
+
+Answer:
+
+Edit /etc/default/grub: GRUB_CMDLINE_LINUX="elevator=none"
+Update grub: grub2-mkconfig -o /boot/grub2/grub.cfg
+update-grub
+Reboot the server.
+
+
+Apache Performance Tuning:
+
+
+6. Scenario: A website hosted on Apache is loading very slowly. How would you analyze and fix the issue?
+
+Expected Answer: Check ab (Apache Bench), top, htop, iostat, vmstat, tweak MaxRequestWorkers, KeepAliveTimeout, enable caching via mod_cache, and optimize mpm_prefork or mpm_event.
+
+Enable gzip compression
+
+7. Scenario: Apache is crashing frequently under high load. What steps will you take?
+
+Expected Answer: Check logs (/var/log/httpd/error_log), analyze ulimit -n, increase MaxClients, Timeout, use mpm_event instead of mpm_prefork.
+
+8. Scenario: Apache is consuming too much CPU.
+
+How do you diagnose and optimize?
+
+Check load with top or htop.
+
+Analyze slow logs: tail -f /var/log/httpd/error_log.
+
+Optimize MPM module (mpm_event, mpm_prefork):
+<IfModule mpm_event_module>
+    StartServers 4
+    MinSpareThreads 25
+    MaxSpareThreads 75
+    ThreadsPerChild 25
+    MaxRequestWorkers 400
+    MaxConnectionsPerChild 10000
+</IfModule>
+
+Enable caching (mod_cache, mod_expires).
+
+9. Scenario: Apache is consuming excessive memory over time.
+
+What do you do?
+
+Use pmap <pid> to check memory usage.
+
+Reduce MaxConnectionsPerChild in mpm_prefork.
+
+Restart Apache periodically via cron.
+
+
+MySQL Optimization:
+
+
+10. Scenario: Your MySQL server is slow under heavy traffic. How do you optimize it?
+
+Expected Answer: Run MySQLTuner, adjust innodb_buffer_pool_size, query_cache_size, enable slow query log, check indexes with EXPLAIN.
+
+11. Scenario: MySQL crashes due to Too many connections. What will you do?
+
+Expected Answer: Increase max_connections in my.cnf, monitor with SHOW PROCESSLIST, optimize long queries.
+
+12. Scenario: Your MySQL queries are slow, and SHOW PROCESSLIST; shows "Waiting for table lock".
+
+How do you fix this?
+
+Optimize queries using EXPLAIN SELECT ....
+
+Convert tables to InnoDB (supports row-level locking):
+
+ALTER TABLE table_name ENGINE=InnoDB;
+
+Increase innodb_buffer_pool_size in my.cnf.
+
+13. Scenario: Your MySQL database is growing too fast, and disk space is filling up.
+
+How do you optimize storage?
+
+Identify large tables:
+
+Enable MySQL compression for large tables
+
+
+Security & Hardening:
+
+
+14. Scenario: Your server has been compromised. What steps do you take to investigate and secure it?
+
+Expected Answer: Check logs (/var/log/secure, auth.log), run chkrootkit, rkhunter, check user activity, isolate with iptables, scan with ClamAV.
+
+15. Scenario: A WordPress website is frequently getting hacked on your server. How do you secure it?
+
+Expected Answer: Harden file permissions (chmod 644 wp-config.php), disable unnecessary PHP functions, use mod_security, enable WAF, scan for malware.
+
+16. Scenario: Your SSH logs show repeated failed login attempts.
+
+How do you secure SSH?
+
+Change SSH port (/etc/ssh/sshd_config → Port 2222).
+
+Enable fail2ban:
+
+dnf install fail2ban -y  # RHEL
+systemctl enable --now fail2ban
+Disable root login: PermitRootLogin no
+
+17. Scenario: A client's website is defaced, and you suspect a security breach.
+
+What steps do you take?
+
+Check the logs
+scan the account
+Restore from backup
+update CMS
+
+18. Scenario: A website is showing a certificate error.
+
+Checked the SSL certificate using the SSL checker. If the SSL is expired, renew to new Free SSL certificate.
+
+
+19. Q: You restart Apache, but it fails to start. How do you troubleshoot?
+check logs - journalctl -xe
+check the syntax - httpd -t
+check the another service using port 80:443
+
+20. Q: Emails are not being sent from a cPanel server. How do you troubleshoot?
+Check the mail log
+restart the exim service if necessary
+
+21. Q: The server is stuck in GRUB rescue mode after a reboot. How do you recover it?
+find the boot partition and check
+ls
+set root=(hd0,1)
+linux /vmlinuz root=/dev/sda1 ro
+initrd /initrd.img
+boot
+
+Reinstall the grub
+grub2-install /dev/sda
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+----------------------------------------------------------------
+
+**1. Linux Basics**
+
+- **What are the differences between ext3 and ext4 filesystems?**
+  - ext4 is an improvement over ext3 with features like journaling, larger file support, and faster performance.
+
+- **How do you check disk usage and available space on a Linux server?**
+  - Use `df -h` for disk usage and `du -sh /path/to/directory` for specific folder sizes.
+
+- **Explain the purpose of /etc/fstab and how it is used.**
+  - `/etc/fstab` defines filesystem mounts, automating mounting at boot.
+
+- **What is the difference between cron and systemd timers?**
+  - `cron` schedules jobs based on fixed time, while `systemd` timers provide more flexibility and integration.
+
+- **How do you find and kill a running process by name?**
+  - Use `ps aux | grep process_name` and `kill PID` or `pkill process_name`.
+
+- **How do you manage file permissions and ownership in Linux?**
+  - Use `chmod` for permissions and `chown` for ownership.
+
+What is SNI?
+
+SNI or server name induction is an extension of TLS protocol that allow the client to specify the hostname on TLS handshake.
+
+What is MPM and type?
+
+Multi processing module is used for handling the apache traffic. It is 3 types, prefork, worker and event
+prefork - launch multiple child process, each process contain one connection at a time.
+worker - launch multiple child process same as prefork but each child have multiple threads.
+event - same as worker, used for heavy traffic
+
+- **What is the difference between hard link and soft link?**
+  - A hard link points to data directly; a soft link (symlink) points to another file.
+A hardlink points the filename to data on a storage device but the softlink points the filename to another filename.
+
+What is PHP -FPM
+Fast process manager is used to minimize the memory consumption and increase the performance during the traffic.
+
+What is the use of Virtualhost?
+It allow one single machine to run multiple websites.
+
+.htaccess --> The .htaccess file is a configuration file used on Apache web servers to set server configurations for a specific directory.
+
+**2. Web Hosting & cPanel/WHM**
+
+- **Key differences between shared hosting, VPS, and dedicated hosting?**
+  - Shared hosting: Multiple websites on one server. VPS: Virtualized resources. Dedicated: Full server control.
+
+- **How to migrate a website from one cPanel server to another?**
+  - Use the cPanel Transfer Tool or backup and restore methods.
+
+- **Purpose of EasyApache in WHM?**
+  - Configures Apache, PHP, and modules.
+
+- **How to enable SMTP authentication in cPanel?**
+  - Enable SMTP in Exim settings and configure authentication.(WHM >> Exim configuration Manager >> security >> SMTP authentication)
+
+- **How to set up a new domain and configure DNS in WHM?**
+  - Create an account in WHM and update DNS records.
+
+- **What is LiteSpeed, and how does it compare to Apache?**
+  - LiteSpeed is faster and uses fewer resources than Apache.
+5
+- **How to troubleshoot a 500 Internal Server Error?**
+  - Check Apache logs and `.htaccess` for issues.
+
+- **Common causes of high resource usage in shared hosting?**
+  - High traffic, inefficient scripts, and excessive plugins.
+
+**3. Web Servers (Apache, Nginx, LiteSpeed)**
+
+- **How to restart Apache and check configuration for errors?**
+  - Use `systemctl restart httpd` and `apachectl configtest`. httpd -t
+
+- **Difference between mod_rewrite and mod_security?**
+  - `mod_rewrite` handles URL rewriting; `mod_security` provides firewall protection.
+
+- **How to configure virtual hosts in Apache and Nginx?**
+  - Define `VirtualHost` blocks in Apache and `server` blocks in Nginx.
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    DocumentRoot /var/www/example.com/public_html
+    ServerName example.com
+    ServerAlias www.example.com
+
+    <Directory /var/www/example.com/public_html>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog /var/log/httpd/example.com_error.log
+    CustomLog /var/log/httpd/example.com_access.log combined
+</VirtualHost
+
+- **How to enable gzip compression for a website?**
+  - Use `mod_deflate` for Apache and `gzip` for Nginx.
+
+- **How to block an IP address in Nginx?**
+  - Use `deny IP;` in the configuration.
+
+- **Significance of .htaccess and when to use it?**
+  - `.htaccess` allows per-directory Apache configuration.
+
+- **How to optimize Apache for high traffic?**
+  - Tune `KeepAlive`, `MaxClients`, and use caching.
+
+KeepAlive is the parameter used in Apache allowing multiple request made over a single TCP connection.
+
+**4. MySQL & Databases**
+
+- **How to reset a MySQL root password?**
+  - Use `mysqld_safe --skip-grant-tables` and update the password.
+
+- **Common MySQL performance tuning techniques?**
+  - Optimize indexes, use query caching, and tune `my.cnf` settings.
+
+- **How to check for slow queries in MySQL?**
+  - Enable the slow query log.
+
+- **How does MySQLTuner help optimize a database?**
+  - Analyzes performance and suggests configuration changes.
+
+- **How to migrate a MySQL database to another server?**
+  - Use `mysqldump` and restore it on the new server.
+
+- **Difference between MyISAM and InnoDB storage engines?**
+  - MyISAM is fast but lacks transactions; InnoDB supports transactions.
+
+- **How to create and restore a MySQL database backup?**
+  - Use `mysqldump` for backups and `mysql` for restoring.
+
+**5. Security & Firewall**
+
+- **How to secure an SSH server?**
+  - Disable root login, use key authentication, and change the default port.
+
+- **Difference between CSF and iptables?**
+  - CSF is a frontend for iptables with advanced features.
+
+- **How to check and block malicious IPs?**
+  - Use `fail2ban`, CSF, cPhulk and block IPs in the firewall.
+
+- **How to enable and configure ModSecurity?**
+  - Install ModSecurity and define security rules.
+
+- **What is Fail2Ban and how does it work?**
+  - Monitors logs and blocks repeated failed login attempts.
+
+- **How to prevent DDoS attacks?**
+  - Use rate-limiting, firewalls, and CDN services.
+
+- **How to scan a Linux server for malware?**
+  - Use ClamAV or Maldet.
+
+**6. Email & DNS**
+
+- **How to configure DKIM, SPF, and DMARC?**
+  - Set up TXT records in DNS.
+
+- **Difference between an A record and an MX record?**
+  - A record points to an IP; MX directs email traffic.
+
+- **How to troubleshoot email delivery in cPanel?**
+  - Check Exim logs and SPF/DKIM settings.
+
+- **What is Greylisting?**
+  - Temporarily delays unknown email senders to prevent spam.
+
+- **Purpose of Exim in cPanel?**
+  - Exim is the mail transfer agent.
+
+**7. Troubleshooting & Logs**
+
+- **How to check logs for website downtime?**
+  - Check `/var/log/httpd/error_log` or `/var/log/nginx/error.log`.
+
+- **Important logs to monitor in a Linux hosting environment?**
+  - Apache, MySQL, mail, and system logs.
+
+- **How to debug a slow website on cPanel?**
+  - Analyze logs, optimize queries, and use caching.
+
+- **How to handle a full /var partition?**
+  - Delete unnecessary files and move logs.
+
+- **Difference between journalctl and syslog?**
+  - `journalctl` is for systemd logs; `syslog` logs system messages.
+
+- **How to recover a corrupted MySQL database?**
+  - Use `mysqlcheck --repair`.
+
+- **How to troubleshoot high CPU usage in web hosting?**
+  - Use `top` and analyze resource-heavy processes.
+
+
+>>>>> This article covers how to change root mysql password in Windows/Plesk. <<<<<
+
+Step 1.  Go to C:\Program Files\Parallels\Plesk\Databases\MySQL\Data\my.ini  and add the following line at the top:
+
+skip-grant-tables
+
+(this will let you access MySQL with no password)
+
+Step 2.  Restart MySQL
+
+Step 3.  Open CMD and change to the directory   C:\Program Files\Parallels\Plesk\Databases\MySQL\bin\
+
+Step 4. Go into the MySQL command utility, (notice you are not using a password):
+
+mysql -u root mysql
+
+Step 5. Change the password using these two  commands
+
+mysql>  UPDATE mysql.user SET Password=PASSWORD(‘New_Pass_Word’) WHERE User=’root’;
+
+mysql>   FLUSH PRIVILEGES;
+
+(New_Pass_Word  is the new password you would like to use )
+
+(if the root user doesn’t work when updating the password in Plesk try changing the user from ‘root’ to ‘admin’ in the command above)
+
+Step 6. Restart mysql
+
+Step 7. Go into Plesk and update the MySQL password to the changed
+
+Step 8. Remove the line ‘skip-grant-tables’ from the my.ini file and restart MySQL
+
+>>>> Database user password reset from command line <<<
+
+mysql -e ” DB.TABLE set user_pass=md5(‘<Password>’) where user_login=’user’;”;
+
+Eg: mysql -e ” update itcoreso_wp933.wp_users set user_pass=md5(‘RBKDsfOfGz7igdw’) where user_login=’admin’;”;
+
+>>>>> FFollowing article describes the steps to change storage engine of a MySQL database table. Assume that you want to change storage engine of database table demo from InnoDB to MyISAM.
+
+Method 1
+
+“““““““`
+
+1,Login to phpMyAdmin.
+2,Navigate to database table whose storage engine you wish to change.
+3,Click on SQL tab, paste following query in query box and click on Go button.
+
+“ALTER TABLE demo ENGINE = MyISAM;”
+
+Method 2
+
+““““““`
+
+1,Login to phpMyAdmin.
+2,Navigate to database table whose storage engine you wish to change.
+3,Click on Operations tab, under Table options you would find drop down called Storage Engine.
+4,Select storage engine of your choice from the Storage Engine drop down and click on Go button.

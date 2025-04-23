@@ -1,0 +1,121 @@
+RAID (Redundant Array of Independent Disks) -> RAID is a data storage virtualization technology. It combines multiple physical server to one or more logical unit. It improve performance, reliability and data redundancy.
+
+Disk mirroring involves copying identical data onto more than one drive, providing redundancy and data protection in case of a drive failure
+
+SNI (Server Name induction) -> It is an extension for TLS(Transport layer security) protocol. It allow the client to specify the hostname on TLS during handshake.
+
+VirtualHost -> It allow a single machine to run multiple websites.
+
+.htaccess -> It is configuration file used on Apache webserver to set server configuration for specific directory.
+Ip blocking:
+m 
+order deny,allow
+deny from <IP>
+deny from <IP>
+allow from all
+
+CDN (Content delivery Network) -> CDN is a geographical distributed network of server that caches and delivery the web content to users from the server closest to them, resulting faster website loading time and better user experience.(RocketDIME CDN) 
+
+PHP-FPM -> Fast process manager it used to minimize the memory consumption and increase the performance on high traffic.
+
+PHP Handler --> It is type of Apache module, containing libraries that the Apache web server uses to interpret and run PHP code.
+
+VPN -> Virtual private network is used to secure and encrypt the connection between the device and the internet. Masking the IP address and encrypting the data enhances the privacy and security
+
+Skeleton Directory --> Skeleton directory in Linux OS serve foundation of new users home directory when created using the command useradd. (/etc/skel)
+
+Webserver -->  A webserver is a software or hardware that uses HTTP or other protocols to respond to the client request made over the World Wide Web. 
+
+1.Which are the different Email solutions do we offer on our website?
+
+>> microsoft365 and Zimbra mail
+
+2.Name the different payment methods we have.
+
+>> BankTransfer, Paypal, CCavenue, UPI
+
+3.How do you handle a sales enquiry via chat/call during the Sales team’s off-peak
+hours? Kindly explain.
+
+>> Request for client requirements,  Details(Mob,mailID and Name) and informed the sales team via chat
+
+4.Why /etc/resolv.conf and /etc/hosts files are used?
+
+/etc/resolv.conf
+>> This file is used for DNS (Domain Name System) resolution. It tells the system which DNS servers to use when resolving domain names to IP addresses.
+Content: nameserver 8.8.8.8  # Google's DNS
+nameserver 1.1.1.1  # Cloudflare's DNS
+search example.com  # Default search domain
+options timeout:2   # Timeout for DNS queries
+
+Use Case
+When you type ping google.com, your system checks /etc/resolv.conf to find the DNS server to query for the IP address of google.com.
+
+/etc/hosts
+>> This file provides local static hostname-to-IP address mappings. It is used before DNS queries and helps resolve hostnames without querying external DNS servers.
+
+Use Case
+When you type ping server1, your system first checks /etc/hosts before querying a DNS server. If server1 is mapped to an IP in /etc/hosts, it will use that mapping directly.
+
+5.What do you mean by unmask?
+
+>> "unmask" typically refers to the process of removing a mask or restriction that prevents a service, file, or process from being accessed or executed. The term is most commonly used in systemd and file permission contexts.
+
+default value of unmask -022 (root)
+file 666-022 = 644
+folder 777-022 = 755
+
+unmask is a systemd service
+
+6.Name the first process that is started by the kernel in Linux and what is its process id?
+
+>> The first process started by the Linux kernel is init (or its modern replacement, systemd). It is responsible for initializing the user space and managing system processes. PID = 1
+
+7.How you escalate the tickets from jr systems engineerr to systems engineer?
+
+Checked the ticket and will do the troubleshooting. If the issue still persists, escalate the ticket to Seniors:
+Note Structure: 
+Initial Analysis:
+errors:
+Preliminary checks performed:
+Current status: 
+
+8.How to identify Indian DC network status from DNA ?
+
+DNS Dashboard>> front page we can see the graph session >> In the right corner of the graph session we can change the DC graph.
+
+9.How to submit and accept the Shift Swap requests?
+
+DNA >> HR >> personal scheduling >> Shift swap request >> request
+
+10.How do you troubleshoot database performance issues?
+
+Check Server Resources – Monitor CPU, RAM, disk I/O, and network usage to ensure the server isn’t overloaded.
+
+Analyze Slow Queries – Use MySQL’s slow_query_log or EXPLAIN to find inefficient queries and optimize them (e.g., adding indexes).
+
+Check Indexing – Ensure proper indexes exist to speed up queries. Over-indexing can also degrade performance.
+
+Monitor Locks & Contention – Use SHOW PROCESSLIST or INNODB STATUS to detect deadlocks and excessive row locking.
+
+Optimize Configuration – Tools like MySQLTuner (which you are familiar with) help adjust settings in my.cnf for better performance.
+
+Analyze Connections – Ensure connection pooling is used efficiently and avoid excessive open connections.
+
+Check Query Execution Plans – Use EXPLAIN ANALYZE to inspect how queries execute and identify inefficiencies.
+
+Monitor Database Growth – Large tables and fragmentation can slow down performance; consider archiving old data.
+
+Optimize Caching – Implement query caching, object caching (e.g., Redis), or database-level caching where applicable.
+
+Review Application Code – Poorly written application logic can generate unnecessary database load.
+
+
+>> How to set PTR record for a IPv6 in address  
+
+Navigate to DNA.
+Click on Infrastructure.
+Select IP Addressing. This will bring you to the IP Address Management page.
+On the bottom right, locate the Set IPv6 PTR option.
+Enter the IPv6 address and the corresponding rDNS value.
+Click on Set PTR Record to apply the changes.

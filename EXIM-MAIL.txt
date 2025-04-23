@@ -113,3 +113,7 @@ exim -bp | exiqsumm | more
 Find Spammers
 -------------
 bash <(curl -ks https://codex.hostdime.com/scripts/download/findspammers)
+
+Removing Entire mail Queue
+--------------------------
+ exim -bp | grep '' | awk {'print $3'} | xargs exim -Mrm

@@ -1,0 +1,60 @@
+NIC - Change
+------------
+
+1) # ip link show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enX0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 02:17:af:fd:14:6d brd ff:ff:ff:ff:ff:ff
+    altname eni-07454a6a5d98ad4b4
+    altname device-number-0.0
+
+2) # ip link show enX0
+2: enX0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 02:17:af:fd:14:6d brd ff:ff:ff:ff:ff:ff
+    altname eni-07454a6a5d98ad4b4
+    altname device-number-0.0
+
+3) Added MAC address and new NIC name in udev file
+
+# vim /etc/udev/rules.d/70-persistent-net.rules
+[root@ip-172-31-11-85 ~]#
+[root@ip-172-31-11-85 ~]#
+[root@ip-172-31-11-85 ~]# cat /etc/udev/rules.d/70-persistent-net.rules
+ SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="02:17:af:fd:14:6d", NAME="em1"
+
+4) Change the NIC name 
+pwd: /etc/sysconfig/network-scripts/
+# mv ifcfg-eth0 ifcfg-em1
+
+5) Changed the DEVICE and NAME inside the file "ifcfg-em1"
+
+6) Reload and trigger the udevadm
+# udevadm control --reload
+# udevadm trigger
+
+7) Rebooted the server
+
+8) Checked the Interface the name and it was changed successfully
+
+9) Modified the Grubfile(/etc/default/grub) 
+Added the line: GRUB_CMDLINE_LINUX="rhgb quiet net.ifnames=0 biosdevname=0"
+
+10) Update the GRUB
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+11) Reboot the server again.
+[root@ip-172-31-11-85 ~]# ifconfig
+em1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.11.85  netmask 255.255.240.0  broadcast 172.31.15.255
+        inet6 fe80::17:afff:fefd:146d  prefixlen 64  scopeid 0x20<link>
+        ether 02:17:af:fd:14:6d  txqueuelen 1000  (Ethernet)
+        RX packets 1185  bytes 752579 (734.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 784  bytes 93261 (91.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+
+

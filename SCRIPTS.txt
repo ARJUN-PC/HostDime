@@ -103,7 +103,7 @@ bash <(curl -ks https://codex.hostdime.com/scripts/download/DomainAccountOvervie
 
 ACCOUNT ABUSE CHECK:- 
 -------------------
-bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) tzozothemes
+bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) sipfriends
 
 QUICK SERVICE STATUS:-
 ----------------------
@@ -115,7 +115,7 @@ bash <(curl -ks https://codex.hostdime.com/scripts/download/topresourceconsumers
 	
 IP COUNT
 -----------
-cat access_log | awk '{print $1}' | sort | uniq -c | sort -n
+cat anbinmadal.org-ssl_log | awk '{print $1}' | sort | uniq -c | sort -n
 
 Server-wide domlogs Ips
 -----------------------
@@ -124,17 +124,18 @@ grep -r `date '+%d/%b/%Y'` /usr/local/apache/logs/access_log  | awk '{ print $1 
 grep -r `date '+%d/%b/%Y'` haileresorts.com-ssl_log | grep "wp-login.php" | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n
 
 cat /usr/local/cpanel/logs/access_log  | grep haileres | grep GET | awk {'print $1'} | cut -d ":" -f2 | sort | uniq -c | sort -n
+
 BOT COUNT
 ---------
-cat temasme.com-ssl_log | awk '{print $1}' | sort | uniq -c | sort -n
+cat voiceoforomoliberation.com-ssl_log | awk '{print $1}' | sort | uniq -c | sort -n
 
 cat temasme.com-ssl_log | grep "bot\|spider\|crawl" | awk {'print $6,$14'} | sort | uniq -c | sort -n | tail -25
 
 cat bombaysamachar.com.log | grep xmlrpc | awk {'print $1,$6,$7'} | sort | uniq -c | sort -n
 
-grep -r `date '+%d/%b/%Y'` /usr/local/apache/domlogs/ | grep "wp-login.php" | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n > /root/output.txt1
+grep -r `date '+%d/%b/%Y'` /usr/local/apache/logs/domlogs/ | grep "wp-login.php" | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n > /root/output.txt1
 
-grep -r `date '+%d/%b/%Y'`  /usr/local/apps/apache2/logs/bombaysamachar.com.log | grep -i "XMLRPC" | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n
+grep -r `date '+%d/%b/%Y'`  /usr/local/apps/apache2/logs/domlogs/ramgarhiaz.com-ssl_log | grep -i "XMLRPC" | awk '{ print $1 }' | cut -d : -f2 | sort | uniq -c | sort -n
 
 WP Version:
 ------------
@@ -199,3 +200,29 @@ grep kawdocoi /etc/trueuserowners | cut -d: -f1 | xargs -I {} grep -l "^SUSPENDE
 Server Audit Script
 -------------------
 echo "=== Dedicated Server Audit ==="; date; echo "=============================="; echo "=== Running Environment Check ==="; bash <(curl -ks https://codex.hostdime.com/scripts/download/envchk); echo "=== Quick Service Check ==="; eval "$(curl -k -s https://codex.hostdime.com/scripts/download/QuickServiceCheck)"; echo "=== Drive Health Check ==="; bash <(curl -ks https://codex.hostdime.com/scripts/download/CheckDriveHealth); echo "=== Disk Usage ==="; df -h | awk 'NR==1{print $0; print "=============================="; next} {print $0}'; echo "=== Swap Memory Usage ==="; free -h | awk '/Swap/ {print "Total Swap: " $2 ", Used: " $3 ", Free: " $4}'; echo "=== Exim Queue Count ==="; exim -bpc; echo "=== Total Messages in Exim Queue ==="; exim -bp | wc -l; echo -e "\n=== Top Resource Users ==="; OUT=$(/usr/local/cpanel/bin/dcpumonview | grep -v Top | sed -e 's#<[^>]*># #g' | while read i; do NF=`echo $i | awk {'print NF'}`; if [[ "$NF" == "5" ]]; then USER=`echo $i | awk '{print $1}'`; OWNER=`grep -e "^OWNER=" /var/cpanel/users/$USER | cut -d= -f2`; echo "$OWNER $i"; fi; done); echo "=== Top CPU Users ==="; echo "$OUT" | sort -nrk4 | awk '{print $2,$4}' | head -10 | column -t; echo -e "\n=== Top Memory Users ==="; echo "$OUT" | sort -nrk5 | awk '{print $2,$5}' | head -10 | column -t; echo -e "\n=== Established Connections ==="; PORTS=([80]=Apache [110]=POP3 [143]=IMAP [25]=SMTP [26]=SMTP [21]=FTP); netstat -plan > /root/stats.txt; for port in ${!PORTS[*]}; do echo "$(tput bold)${PORTS[$port]} ($port):$(tput sgr0)"; grep $port /root/stats.txt | awk {'print $5'} | grep -Po "\d{1,3}(?:\.\d{1,3}){3}" | sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4 | uniq -c | sort -nk 1 | grep -v "0.0.0.0" | tail -5 | awk '{ if ($1 > 35) { printf "\033[1;31m" } else if ($1 > 25) { printf "\033[1;33m" } else { printf "\033[1;32m" } ; print " ", $1, "\033[0;39m", $2 }'; done; rm -f /root/stats.txt; echo -e "\n=== OS Status Check ==="; if [[ -f /etc/os-release ]]; then . /etc/os-release; if [[ "$ID" == "centos" && "$VERSION_ID" -le 8 ]]; then echo "WARNING: Your OS ($PRETTY_NAME) is End of Life. Please elevate the server soon."; else echo "Your OS is supported: $PRETTY_NAME"; fi; fi; echo -e "\n=== Kernel Updates Check ==="; yum list kernel; if yum list kernel | grep -q updates; then echo "=== Kernel updates are available. ==="; else echo "=== Your kernel is up-to-date. ==="; fi; echo "=== Current Kernel Version ==="; uname -r; echo -e "\n=== Backup Progress Check ==="; cd /usr/local/cpanel/logs/cpbackup || exit; echo "=== Listing Backup Logs ==="; ll; latest_log=$(ls -Art | grep '\.log$' | tail -n 1); if [[ -n "$latest_log" ]]; then echo "=== Tailing Latest Backup Log: $latest_log ==="; tail -f "$latest_log"; else echo "No backup log files found."; fi; echo "=== Audit Completed ==="
+
+To block a list of IPs in the CSF firewall:
+-------------------------------------------
+awk '{print "csf -d "$1" \"Blocked by script\""}' blocked_ips.txt | bash
+
+Run this command to list all installed PHP versions along with their modules:
+-----------------------------------------------------------------------------
+for php_bin in $(find /opt/cpanel/ea-php*/root/usr/bin/php -type f 2>/dev/null); do
+    echo "PHP Version: $($php_bin -v | head -n 1)"
+    echo "Modules:"
+    $php_bin -m
+    echo "--------------------------"
+done
+
+Active connection to port 80
+----------------------------
+netstat -an | grep :80 | wc -l
+
+To check the IP address for the active connection
+-------------------------------------------------
+netstat -anp | grep :80 | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -20
+
+DNS DETAILS
+~~~
+bash <(curl -ks https://codex.hostdime.com/scripts/download/checkdns) domain_name
+~~~

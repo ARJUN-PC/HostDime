@@ -18,7 +18,7 @@ GMAIL: hostdimetestmail@gmail.com
 PASSWORD: Test@123456
 
 HOTMAIL: hdintechs@hotmail.com
-Password: Testmail@1234567
+Password: howyJmxvn28G0
 
 Yahoo: hostdimetestmail@yahoo.com
 Password: Testmail@123456
@@ -116,7 +116,7 @@ Logix
 ------
 https://supportdesk.logix.in
 user: admin51170
-password: Tech#2025!Z
+password: Tech#2025!Z , Tech#2025!A
 Customer ID : 51170
 -----
 Admin Panel URL : admin.hdinmail.in
@@ -162,7 +162,7 @@ CloudZor/Virtualizor Node Credentilas
 -------------------------------------
 http://103.13.242.105:4084/
 User: root
-Password: tpSU(boF2akG3yg
+Password: lazvUod#2xL3w4d
 
 Track Path: track.hostdime.com
 
@@ -177,7 +177,9 @@ https://www.directadmin.com/clients
 Call forward
 ------------
 https://125.22.13.94:8086/
-Password: Dimenoc@0918,Dimenoc@0919
+Password: Dimenoc@0918,Dimenoc@0919,Dimenoc@0920
+https://125.22.13.94:8086/IndexSa.html
+Newpass: Dimenoc@2025
               
 Spanel
 ------

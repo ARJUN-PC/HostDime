@@ -14,8 +14,8 @@ mysqladmin proc stat
 SQL Backup:
 ----------
 
-mysqldumb <database name> > <database_name>.sql
-mysqldumb -u username -p password <database name > > <database_name>.sql
+mysqldump <database name> > <database_name>.sql
+mysqldump -u username -p password <database name > > <database_name>.sql
 
 SQL Restore:
 ------------
@@ -30,6 +30,12 @@ for db in $(cat db_name.list) ; do echo "dumping $db" ; mysqldump $db > $db.sql 
                       or
 mysql <database name> < /home/<database_name>.sql
 
+Script for database restore:
+----------------------------
+for i in `cat /backup/db_list`; do mysql $i < /backup/mysql_backups/$i.sql; echo "$i" >> /backup/mysql_backups/Completed_dump.txt; done
+
+MySQL Version
+-------------
 mysql version:- mysql -V
 
 MySQL configuration file:

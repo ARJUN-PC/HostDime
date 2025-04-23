@@ -1,0 +1,1184 @@
+Interview questions
+
+Q. Q.- Can you explain the boot process of a Linux system?
+
+1. BIOS
+2. MBR
+3. GRUB
+4. Kernel
+5. Init
+6. Runlevel programs
+- BIOS (Basic Input/Output System)
+
+The BIOS initializes hardware and performs the Power-On Self-Test (POST).
+
+It searches for a bootable disk and loads the first sector into memory.
+
+- MBR (Master Boot Record)
+
+Located in the first 512 bytes of the bootable disk, the MBR contains the bootloader and partition table.
+
+It loads the bootloader (GRUB, LILO, etc.).
+
+- GRUB (Grand Unified Bootloader)
+
+GRUB allows the user to select a kernel version.
+
+It loads the selected Linux kernel into memory.
+
+- Kernel
+
+The kernel initializes hardware, mounts the root filesystem, and starts the first process (init or systemd).
+
+- Init/Systemd
+
+This is the parent process that manages system initialization and services. Initializing the user space and managing system process.
+
+It determines the run level (SysVinit) or target (systemd).
+
+Runlevel Programs
+
+- Services and background processes are started according to the defined runlevel or systemd target.
+
+The system is now ready for user login.
+
+0	Halt (shutdown the system)
+1	Single-user mode (maintenance mode, no networking)
+2	Multi-user mode (without network services)
+3	Full multi-user mode (with networking, but no GUI)
+4	Unused (can be customized by the user)
+5	Multi-user mode with GUI (graphical interface)
+6	Reboot
+
+
+Q. What is Swap Space?
+
+Swap Space is the extra space utilized by Linux to temporarily keep concurrently running processes when RAM space is insufficient. it is a virtual memory.
+
+
+When you start a program, it is stored in RAM so that the CPU can quickly retrieve data. If you have more running programs than RAM can accommodate, the Swap Space is used to store these programs. The processor will now search the RAM and Swap Space for data.
+
+
+
+Q What is the configuration file for SSH client?
+
+Ans : The configuration file for SSH client is “/etc/ssh/ssh_config.”
+
+
+
+
+Q. Is it possible to change the default SSH port number?
+
+Ans : Yeah, everyone knows the default port number of SSH and which is port 22. As a security measure, you have to change the port number from 22 to some other open ports. Yeh!! It is possible. /etc/ssh/sshd_conf
+
+
+Please see the steps pasted below to change the default SSH port from 22:
+
+
+
+1. Open the SSH Configuration File
+ 
+Vi /etc/ssh/ssh_config.
+
+2. Locate and Modify the Port Setting 
+
+
+
+
+
+
+Q: What is the difference between a soft link and a hard link? which command is use to create a soft and hardlink in linux system. 
+
+
+#ln sfile1file link1file  (hard link)
+#ln -s sfile1file link1file
+
+
+ A soft link (or symbolic link) is a pointer to a file or directory that is stored in a separate location, while a hard link is a direct link to the actual file or directory.
+
+
+
+Soft Link (Symbolic Link)
+
+=========================
+
+
+-A soft link (or symbolic link) is like a shortcut.
+
+-It points to another file or directory but does not contain the actual data.
+
+-If the original file is deleted, the soft link breaks (becomes useless).
+
+📌 Example:
+
+ln -s /path/to/original.txt softlink.txt
+
+Now, softlink.txt points to original.txt. If original.txt is deleted, softlink.txt won't work.
+
+Hard Link
+=============
+
+-A hard link is a direct reference to the original file.
+
+-It shares the same inode (data reference) as the original file, meaning the file actually exists in both locations.
+
+-Even if the original file is deleted, the hard link still works because the data remains.
+
+
+
+
+
+
+Q: How do you check the version of your Linux distribution?
+
+You can check the version of your Linux distribution by running the 'lsb_release -a' command.
+
+#cat /etc/os-release
+
+
+
+
+
+
+Q. which command is used to find the kernel version?
+
+#uname -r 
+
+
+
+Q: What is the difference between 'ps' and 'top' commands?
+
+
+The 'ps' command shows all processes running on the system, while 'top' command shows the processes that are currently using the most system resources.
+
+
+
+
+
+Q: What is the purpose of the /etc/passwd file?
+
+A: The /etc/passwd file is a text file that stores information about user accounts on a Linux system, including the username, user ID (UID), group ID (GID), and home directory.
+
+
+
+
+
+
+Q: What is the purpose of the /etc/shadow file?
+
+A: The /etc/shadow file is a text file that stores password information for user accounts on a Linux system. It is used to store 'hashed passwords 'and' password' aging information, and is only accessible by the root user.
+
+
+
+
+Q: How do you check for open ports on a Linux system?
+
+
+To check for open ports on a Linux system, you can use the command "netstat -an"
+
+
+
+
+
+
+Q: How do you check the current users logged into a Linux system?
+
+To check the current users logged into a Linux system, you can use the command "w"
+
+
+
+
+Q. what is DNS working ? 
+
+
+
+
+
+Q. - How do you secure a Linux server?
+
+
+There are multiple methods to secure the Linux server and protect it from data breaches, security threats, and unauthorized access. Here are some of these methods:
+
+-Create a strong password
+
+-Update the server and apply security patches.
+
+-Use secured protocols like SSH and configure it to use key-based authentication for higher security.
+
+-Use the intrusion detection system (IDS) to monitor network traffic and prevent malicious activities.
+
+-Configure the firewall to limit the inbound and outbound traffic on the server.
+
+-Disable all unused network services.
+
+-Create regular backups.
+
+Review logs and perform regular security audits.
+
+Encrypt network traffic and enable monitoring.
+
+1. Protect your files with passwords
+2. Don't leave e-mail addresses and password or login details anywhere.
+3. Secure your source code.
+4. Check the permissions you may have set for your uploaded files. Please make sure that none other than extremely required folders have write permissions for users.
+5. Use antivirus in the local machine and keep your anti virus software's up to date.
+6. Make your own backups regularly.
+7. Kindly change the passwords for your cPanel and FTP accounts after a period of time and do not grant full FTP access to all your users. Use strong passwords for any account.
+
+-Avoid using unnecessary plugins and themes in your sites as, they might be vulnerable.
+
+-Do not download scripts/plugins/themes etc from unauthorized sites as they mostly contains the loop holes.
+
+-Update your CMS application versions/plugins/addons if any with the latest security patches provided by their developers.
+
+-Do scan the site files periodically and remove the infected files or contents.
+
+
+
+Q How to check memory stats and CPU stats as a Linux Admin?
+
+Using the free and vmstat commands, we can display the physical and virtual memory statistics, respectively.
+
+ With the help of the sar command, we can see the CPU utilization and other stats.
+
+
+
+
+Q. What are the different run levels in Linux?
+
+In Linux, run levels represent different operating states of a system, each serving a specific purpose. The commonly used run levels are
+
+
+ 0 (halt),
+
+ 1 (single-user mode), 
+2 (multi-user mode without networking), 
+3 (multi-user mode with networking),
+ 4 (reserved for user-defined purposes),
+ 5 (multi-user mode with networking and graphical user interface),
+6 (reboot).
+
+
+
+
+
+Q. What is the rsync command, and how do you use this command for synchronization?
+
+
+The rsync (Remote Synchronization) command is a fast and efficient tool for copying and synchronizing files and directories between local and remote systems
+
+#rsync -ravz -e "ssh -p 1291" root@67.23.232.130:/usr/local/src/cpmove-designve.tar.gz  /usr/local/src/
+
+
+Q. How do you format a disk in Linux?
+
+The mkfs or make file system command helps format the disk in the Linux system. All you need to do is use the following method to format the disk:
+
+mkfs.ext4 <partition>
+
+
+
+Q. What is the find command, and how do you use it?
+
+
+
+The find command searches for files based on different factors such as name, size, permissions, etc. Here is the basic command:
+
+find <directory> <file>
+
+For example, let’s find a Linux.txt file located in the Downloads directory through the below command:
+
+find ~/Downloads -name Linux.txt
+
+Once you run the above command, the find command will start finding the Linux.txt in the Downloads directory and subdirectories.
+
+
+
+
+
+Q. What is RAID in Linux?
+
+The full form of RAID is the Redundant Array of Independent Disk that allows the system to combine the different physical disk drives into a logical unit
+
+
+. RAID is used to improve the system’s disk performance and data integrity. There are different RAID levels you can configure according to the requirements. Here is the detailed information about the RAID levels:
+
+RAID 0
+
+It is called striping, which allows you to split the data into multiple disks without redundancy.
+
+RAID 1
+
+It is called mirroring, which allows you to create a complete copy of data on multiple disks.
+Mirroring: Data is duplicated on two drives. Provides high fault tolerance.
+
+RAID 5
+
+It distributes the parity information and data on multiple disks.
+
+RAID 6
+
+It is the improved version of RAID 5 as it uses two sets of parity information to provide higher data redundancy.
+
+RAID 10
+
+It combines RAID 0 and RAID 1 to generate the set of mirror disks to improve performance and redundancy.
+
+
+
+
+
+Q. How do you optimize Linux system performance?
+
+
+
+-Updates the system as per the latest one available.
+
+-Optimize the disk, enable the caching, and optimize the access pattern.
+
+-Reduce Manage memory and CPU usage.
+
+-Disable the necessary services and use lightweight alternatives of the tools.
+
+-Monitor the system resources regularly.
+
+-Perform the Kernel parameter tune-up.
+
+-Use tools like Performance Co-Pilot (PCP) to monitor system-level performance.
+
+
+
+
+
+
+Q.How do you schedule tasks in Linux?
+
+We can use `crontab` command for performing recurring tasks in Linux. By adding entries to the crontab file, we can specify when and how frequently a command or script should be executed
+
+For Example: If we want to execute a script name “geeks.sh” every day at 3:30 AM. We use the following command.
+
+crontab -e
+This command opens the crontab file in an editor.
+
+30 3 * * * /path/to/geeks.sh
+
+
+
+
+
+Q.What is the sed command used for in Linux?
+
+The sed command is used to perform text transformations on files. It can search for specific patterns and replace them with desired text.
+
+For Example:
+
+sed `s/foo/bar/g` file.txt
+This command replaces all occurrences of “foo” with “bar” in the file name “file.txt”
+
+
+
+
+Q.Explain how you would search  in the  directory to find all files that have been modified in the last 30 minutes? 
+
+
+ 
+To do this, you can use the find command coupled with the -mmin command. 
+
+#find /path/to/directory -type f -mmin -30
+
+
+Q. How to access your server over SSH without the actual root password? Is it possible?
+
+
+
+Ans : Of-course, it is possible. In the remote server, there is a file called “authorized_keys” under the users’ home directory to add our public keys. For root, this file is located under “/root/.ssh” directory.
+
+
+
+Generate keys from your local machine and upload it this file. You can create your own key pair using the command “ssh-keygen” from your Linux machine. For windows, you can use puttygen for private public keys.
+
+
+
+
+Q. How to Set Up Key-Based Authentication in SSH? 
+
+
+
+# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+d4:47:78:cf:41:75:eb:59:cc:67:b2:6d:1a:20:c0:2d root@vps.crybit.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|       ... .....o|
+|        Eoo.. .oo|
+|        ..o.oo.o*|
+|       .   o .+=+|
+|        S     ooo|
+|               + |
+|              .  |
+|                 |
+|                 |
++-----------------+
+
+
+Add the public key into authorized_keys file and restart SSH daemon. That’s it!
+
+
+
+
+
+Q. For some security reason, you need to disable the direct root login to your server? What would you do?
+
+Ans : If you are continuously facing any root level login attack, and you want to disable complete root login to your server. Yeah, it is possible. There is a directive in SSH configuration file to manage it. The configuration file is pasted below:
+
+#/etc/ssh/sshd_config
+PermitRootLogin no
+
+
+
+
+
+
+
+Q. Consider the scenario, I want to disable direct root login and only enable access for my user only to server shell. How would you tweak SSH conf for this?
+
+
+
+
+Ans : Simply open the SSH configuration with your favorite text editor and disable root login. This can be achieved by following the Question 7.
+
+Then search for the directive “AllowUsers” in configuration file. If it is not there, add it and specify the username there.
+
+AllowUsers user1 user2
+
+That’s it! Don’t forget to restart the SSH daemon 
+
+
+
+Q. What purpose is assigned for “LoginGraceTime?”
+
+Ans : By default, its value is 2 minutes. Which means when you access the server using SSH, you have 2 minutes to complete the connection with exact credentials.
+
+Syntax
+
+LoginGraceTime 2m
+
+
+
+
+
+
+Q. What purpose is assigned for “MaxAuthTries?” in ssh configartion file?
+
+Ans : Which defines the maximum number of allowed failed login attempt from a n/w.
+
+
+
+Q: how to find current myqlversion on the Linux system and how you find the current MySQL running process? 
+
+#mysqladmin --version
+#mysqladmin proc
+
+
+
+
+Q.What is the difference between SSH and Telnet? What you prefer? And why?
+
+
+
+Ans : Both SSH and Telnet are network protocol to connect and communicate with another machine over n/w. I prefer SSH.
+
+SSH
+	     					
+Port 22	
+						
+Encrypted – all data transferred between client and server is encrypted,
+ 
+SSH uses a public key for authentication.
+
+
+Telnet
+
+Unencrypted – sends data (including passwords) in plain text, making it vulnerable to interception.
+
+Default port is 23.
+
+Password-based authentication only,		
+
+
+
+						
+
+
+
+Q. What do the chmod +t and chmod +x commands do? How do they differ from each other? 
+
+
+The chmod +t command is used to set the sticky bit on a directory, which means that only the owner of files within the directory can delete or rename these files.
+
+
+The chmod +x command, on the other hand, is used to grant execute permission to a file so you can run it as a program or script. 
+
+
+
+
+
+Q, How would you change the priority of running processes in Linux? Provide an example of what this would look like.
+
+You can adjust the priority of running processes in Linux using the nice and renice commands. These enable you to adjust the niceness value of a process, which determines its priority. The lower the niceness value, the higher the priority of the process.
+
+
+ 
+Changing the Priority of a Running Process Using renice
+
+To change the priority of an already running process, use the renice command.
+
+
+#renice -n [value] -p [pid]
+
+
+Q. Explain how you would find the five largest files in a directory and all its subdirectories. 
+
+
+You can use the find and du commands alongside the sort and head commands to find the largest five files in a directory and its subdirectories. For example, you might use the following code: 
+
+find /path/to/directory -type f -exec du -h {} + | sort -rh | head -n 5
+
+
+
+
+
+Q.  can you identify and terminate a process that is using a lot of CPU in Linux?
+
+The ‘top’ or ‘htop’ command can display the processes using the most CPU. To terminate a process, the ‘kill’ command followed by the process ID (PID) can be used
+
+
+
+
+
+Q.How can you determine if a specific port is open and reachable on a remote Linux server?
+
+
+To determine if a specific port is open and reachable on a remote Linux server, you'd use tools like telnet, nc (netcat), or nmap. You can check if the port is reachable by running commands like telnet hostname portnumber or nc -zv hostname portnumber. 
+
+For a more comprehensive scan, you can use nmap to find extensive details about open ports and their corresponding services.
+
+Be sure you have proper authorization, as scanning without permission might be considered hostile. 
+
+
+
+
+
+Q. What’s the difference between the grep and awk commands?
+Answer:
+
+Both grep and awk can be used for text processing in Linux, but they serve different purposes. While grep is mainly used to search for a pattern or string in a file, awk is a more powerful tool that can manipulate and format the text within files. 
+
+The awk command allows you to define actions based on patterns and perform arithmetic operations on text. 
+
+The grep command focuses on searching and displaying lines matching specific criteria.
+
+Grep specialzing in searching and filtering text,awk excels at extracting and manipulating structured data.
+
+
+Q, How to block specific Country  Access to Your Server in firewall ? 
+
+CC_DENY = “”
+CC_ALLOW = “”
+
+With these options, you can block or allow entire countries from accessing your server. To do so, enter the country codes in a comma separated list.
+
+CC_ALLOW_FILTER = “”
+Alternatively, you can set your server to exclusively accept traffic from a list of country codes. All other countries not listed will have their traffic dropped.
+
+
+
+
+=Entry in fstab in Linux
+
+#/etc/fstab.
+
+Field	Description
+First	It describes the device or partition's name we want to mount.
+Second	It describes the mount point's name.
+Third	It describes the file system of the partition.
+Fourth	It describes the mount options.
+Fifth	The dump command uses it to determine whether it should dump the mounted partition at the boot time.
+Sixth	The fsck command uses it to determine whether it should check and repair the mounted partition at the boot time
+
+UUID=500e9029-5c8f-4181-9f1e-684ff0ac11b5               /backup                 ext4    defaults,nofail     1 1
+
+
+
+
+
+Q.Definition of Prefork and Worker MPMs in Apache
+
+
+When it comes to configuring Apache on a Linux server, there are two main Multi-Processing Modules (MPMs) that can be used: Prefork and Worker. 
+
+Both MPMs determine how Apache handles incoming requests and how it utilizes system resources. In this article, we’ll explore the key differences between Prefork and Worker MPMs to help you determine which one is best suited for your needs.
+
+
+
+The Prefork MPM is the traditional MPM that has been around since the early days of Apache. It is a preforking server that creates a number of child processes, each of which can handle a single request at a time. This allows Apache to handle multiple requests simultaneously without having to create a new process for each request. However, this also means that each child process uses a significant amount of memory, which can be a problem for large, busy sites.
+
+
+How it works:
+
+The Prefork MPM uses multiple child processes, each handling a single request at a time. It creates a pool of child processes, and each process handles one client request.
+
+Characteristics:
+
+Each child process handles one connection at a time.
+
+New child processes are created as needed to handle additional requests.
+
+All child processes are isolated, meaning that if one process crashes, it doesn’t affect the others.
+
+
+The Worker MPM, on the other hand, uses a threaded approach, with each child process handling multiple requests simultaneously using multiple threads. This reduces the amount of memory used by Apache, as each child process can handle many requests with only one set of memory overhead. However, this also means that Apache must be configured to use thread-safe modules and that each request is processed in a separate thread, which can result in a slight performance overhead.
+
+
+How it works:
+
+
+The Worker MPM uses multiple child processes, but within each child process, there are multiple threads that can each handle a separate request. This enables better scalability as multiple threads share memory within the same process.
+
+Characteristics:
+
+Each child process contains multiple threads.
+
+Each thread handles a single connection, allowing better use of server resources.
+============================================
+
+
+Q.How do you troubleshoot a Linux system that cannot connect to a remote server?
+
+Possible troubleshooting steps: 
+
+
+-Will checking network connectivity to remote server  using tools like ‘ping’, 
+
+-Will check any firewall rules block in remote server
+
+-Will checking DNS Resolution (If you're trying to connect using a hostname instead of an IP address, verify that the system can resolve the domain name:
+
+#nslookup <hostname>
+
+-Will check and examining relevant log files for error messages.
+
+
+
+
+
+
+
+
+
+-What steps would you will take to fix a network connectivity issue in Linux?
+
+
+
+Steps:
+ww2
+-Will checking physical connections, 
+
+- will Check if the network interface is up:etho  (Make sure the network interface (e.g., eth0, ens33, wlan0) has an IP address assigned. If not, you may need to configure it.)
+
+#ip a
+
+-will Check Connectivity to Local Gateway
+
+#ping <gateway_ip>
+
+
+-will Check DNS Configuration
+
+Verify DNS resolution: If you're unable to reach external websites by hostname (e.g., ping google.com), check if DNS is configured correctly.
+
+#cat /etc/resolv.conf
+
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+
+
+- will Check for Firewall or Security Settings
+
+- Restart Network Services
+
+
+
+Q. What are the possible reasons for a Linux system running out of memory?
+
+
+-Insufficient Physical RAM  ( If the system doesn't have enough physical RAM to handle all the processes and applications running, the system can run out of memory.)
+
+-Excessive Memory Usage by Running Processes  (some processes, especially resource-intensive applications like databases, web servers, or virtual machines, can use large amounts of memory. )
+
+-High Memory Demands from Large Datasets (When applications process large datasets (e.g., databases, big data applications, machine learning models), the memory demand can be very high)
+
+
+
+
+Q.How would you troubleshoot a slow-performing Linux server?
+
+Troubleshooting steps might involve checking system resource usage with tools like ‘top’ or ‘htop’, monitoring disk I/O, analyzing network traffic, identifying memory or CPU bottlenecks, and reviewing application logs
+
+- Check System Resource Usage
+  #free -m 
+  #df -h 
+
+-Monitor Disk I/O Performance
+ 
+    -High latency indicates that disk I/O is slow and could be causing the performance bottleneck.
+
+- will check server load 
+
+- will check mysqldatabase processs list 
+
+-Check for Network Performance Issues
+
+     will  Look for unusual or excessive network connections that might be consuming bandwidth and taking slow performance.
+
+- Will Check for High Latency or Packet Loss:
+
+  #ping <domain name>
+  #traceroute
+
+
+
+Q.What are common causes of a Linux system running out of disk space?
+
+Common causes include large log files, excessive data storage, uncontrolled growth of temporary files, improper cleanup of old files, or runaway processes generating excessive output.
+
+
+
+
+
+Q.Describe how you would approach resolving a “disk full” error on a Linux system.
+
+
+Resolving a “disk full” error on a Linux system involves identifying what’s taking up space and freeing that space up. Here's how you could approach it:
+
+>>Identify the disk usage: Use the df command to check overall disk space and du to find the directories consuming most of the space.
+
+>>Locate unnecessary files: Use commands like find to locate old or unnecessary files, such as logs or temporary files.
+
+>>Clear cache and temporary files using appropriate commands or tools.
+
+>>Evaluate log files and consider implementing log rotation if it’s not already in place.
+
+>>Uninstall unneeded packages or software. .
+
+>>Verify trash: Empty the user's trash bin if necessary.
+
+>> Consider upgrading the drive.
+
+
+
+Q, Describe how you'd troubleshoot a situation where a user cannot log in to a Linux system.
+
+
+-Verify the User’s Credentials
+        Ensure that the user is entering the correct username and password.
+
+        If they are using an SSH key for authentication, verify that the correct key is being used.
+
+
+-Check if the User Account is Locked
+ Use the following command to check the user's account status:
+ #passwd -S username
+
+
+-Inspect File and Directory Permissions
+  The user's home directory (/home/username) should have the correct ownership and permissions.
+   #ls -ld /home/username
+
+
+-Examine System Logs for Errors
+   #cat /var/log/auth.log | grep "username"
+
+
+- Check SSH Configuration (If Logging in Remotely)
+
+If the user is trying to log in via SSH, ensure that the SSH daemon is running:
+
+#sudo systemctl status sshd
+
+-Will  check the Ip block in firewall. 
+
+
+
+
+Q. Describe the steps you'd take to troubleshoot a situation where a user can't access a specific website from a Linux machine.
+
+
+Troubleshooting access to a website on a Linux machine requires several steps: 
+
+ 
+
+-Will check Ip is pointed to particular Ip or not 
+
+- Use the ping command to check network connectivity from client side to server
+ 
+-Will check any NS, A record issue.  
+
+-If the DNS isn’t the problem, wil check any firewall block 
+   
+
+-Examine browser-related issues by checking for error messages or trying a different browser. 
+
+- Will check the error log of the domain
+
+-Will check specific error mentioned in website
+
+
+
+
+
+# how to find spammimg activities ? how  we can stop? 
+
+
+  -Check Mail Server Logs
+  -Monitor Mail Queue
+
+  -Check for Suspicious Processes
+  #ps aux | grep exim
+
+-Inspect Outgoing Connections
+ #netstat -tupan | grep :25
+
+
+Actions:
+
+-Identify and Kill the Spamming Process
+- Clear the Mail Queue
+-Block the Spammer’s IP
+-Restrict Mail Sending for Users
+-Scan for Malware
+-Password of the email account
+-Limit Email Sending Rate
+
+
+
+
+# how do you check Database Connection Error",?
+
+
+-Check Database Service(MySQL, MariaDB) Status
+-Verify Database Credentials
+-Verify Disk Space
+
+
+#how you do migration process ? 
+
+#how you fix forbiden error?
+ 
+  - Check File and Directory Permissions
+  - Check .htaccess File
+  - Firewall or ModSecurity Blocking Access
+  -Verify the Index File Exists
+  - Clear Browser Cache
+  -Restart Services
+
+
+#how do fix 500 internal error ?
+
+-Check Apache Error Logs
+- Fix PHP Errors
+-memory_limit check 
+
+-Fix .htaccess File
+- Check for Missing PHP Modules
+-Plugin compatibly issue. 
+
+
+#how you check load in the server ? 
+
+
+# how to reset wp-admin login password? 
+
+#What action you will take if you mysqladmin process is high 
+
+
+ kill all sleep queries
+ will find  ip that make connection to db 
+ optimize db 
+
+
+
+
+
+
+
+
+
+
+Q
+
+cPanel access logs and user actions	/usr/local/cpanel/logs/access_log
+cPanel account transfers and other logs	/var/cpanel/logs
+Audit logs for account creation, deletion, etc.	/var/cpanel/accounting.log
+cPanel backup logs	/usr/local/cpanel/logs/cpbackup
+Brute force protection (cphulkd) logs	/usr/local/cpanel/logs/cphulkd.log
+EasyApache build logs	/usr/local/cpanel/logs/easy/apache/
+cPanel error logs	/usr/local/cpanel/logs/error_log
+Installation logs	/var/log/cpanel
+cPanel license update and error logs	/usr/local/cpanel/logs/license_log
+cPanel login errors	/usr/local/cpanel/logs/login_log
+Horde logs	/var/cpanel/horde/log/
+RoundCube logs	/var/cpanel/roundcube/log/
+SquirrelMail logs	/var/cpanel/squirrelmail/
+cPanel panic logs	/usr/local/cpanel/logs/panic_log
+Bandwidth history per cPanel account (Cached)	/var/cpanel/bandwidth.cache/{USERNAME}
+Bandwidth history per cPanel account (Human Readable)	/var/cpanel/bandwidth/{USERNAME}
+Service status logs	/var/log/chkservd.log
+Tailwatch driver tailwatchd logs	/usr/local/cpanel/logs/tailwatch_log
+Update (UPCP) logs	/var/cpanel/updatelogs/updated.{TIMESTAMP}.log
+Website statistics logs	/usr/local/cpanel/logs/stats_log
+Apache domlog: /usr/local/apache/logs/domlogs/domainname
+
+
+
+Port number
+
+Port No	Port	
+21	FTP	
+22	SSH
+23	TELNET	
+25	SMTP
+53	DNS	
+67,68	DHCP	
+80	HTTP	
+110	POP3
+111	Portmapper
+123	NTP	
+137	NetBIOS	
+143	IMAP
+161,162	SNMP	
+443	HTTPS
+
+
+
+
+
+
+
+
+
+
+
+========================
+
+
+Knowledge in DNS  [Bind]
+
+============================================
+
+#What command do you use to check the syntax of a BIND configuration file? 
+
+#named-checkconf /etc/named.conf
+
+
+How do you restart the BIND service on an AlmaLinux system?
+
+
+#sudo systemctl restart named
+
+
+What logs would you check if a DNS query fails? 
+  # tail -f /var/log/messages
+
+
+How do you enable logging in BIND for troubleshooting?
+
+#/etc/named.conf
+ 
+
+  logging {
+    channel default_log {
+        file "/var/log/named.log" versions 3 size 5m; <<<<<<<<<<<<<<<<<<
+        severity info;
+        print-time yes;
+        print-category yes;
+        print-severity yes;
+    };
+
+How do you check if your DNS server is being used for a DDoS attack?
+
+-Analyze Network Traffic  to  port:53
+
+#netstat -anu | grep :53 | wc -l  # Count UDP connections on port 53
+
+-Disable Open Recursion (Prevent Abuse)
+
+#named.conf
+
+options {
+    recursion no;
+
+
+What is the significance of the named-checkconf and named-checkzone commands? 
+
+
+-Ensures there are no syntax errors in the main BIND configuration file (named.conf).
+  #named-checkconf /etc/named.conf
+
+
+
+-Ensures the syntax and structure of zone files are correct.
+
+ named-checkzone - Verify DNS Zone Files
+
+#named-checkzone example.com /var/named/example.com.zone
+
+===============================================
+
+
+	
+Knowledge in FTP Server	
+
+
+======================
+
+
+Q, How do you secure an FTP server against brute force attacks?
+
+
+-Use Strong Password Policies
+-Limit Login Attempts in vsftpd
+- Restrict FTP Access to Allowed Users
+
+
+Q. How do you restrict FTP access to specific users or IPs?
+
+#/etc/proftpd/proftpd.conf1
+
+<Limit LOGIN>
+    AllowUser ftpuser1 ftpuser2
+    DenyAll
+</Limit>
+
+Q. How do you troubleshoot if an FTP client cannot connect to the server?
+
+-will Check if the FTP Server is Running
+-FTP uses port 21 for control and passive ports for data. Check if port 21 is open:
+-Check Firewall Rules
+-Check SELinux (If Enabled) it will block
+-Verify Passive Mode and port range
+
+Q- How do you test FTP connectivity using the command line?
+
+
+#ftp FTP_SERVER_IP
+
+
+
+What would you check if an FTP user gets a 530 Login incorrect error? 
+
+
+-will Check if the FTP Server is Running
+-FTP uses port 21 for control and passive ports for data. Check if port 21 is open:
+-Check Firewall Rules
+-Check SELinux (If Enabled) it will block
+-Verify Passive Mode  and port range
+- Check File and Directory Permissions
+
+  
+
+
+Knowledge in Database server
+
+
+=============================
+
+
+
+
+	
+
+Knowledge in CPanel 	
+
+Knowledge in Plesk Panel  
+
+
+Security Knowledge
+
+
+Data Center Knowledge
+	
+Virtualization and Clustering	
+
+Routing and Networking	
+
+Cloud Experience
+
+
+
+
+
+=====================================================================================
+
+Q. What Linux commands would you use to diagnose a slow server response time?
+
+Diagnosing a slow server response time on a Linux system involves using several commands to identify the bottleneck. Here's a step-by-step guide:
+
+>>Monitor system resources. Use top or htop to monitor CPU and memory usage.
+
+>>Analyze disk input/output (I/O). Use iostat to check if disk input/output is a bottleneck.
+
+>>Inspect network traffic. Use iftop or nethogs to examine network traffic and look for unusual activities.
+
+>>Check server load. Use uptime to review the server load and compare it with the number of available CPU cores.
+
+>>Evaluate running processes. Use ps with proper flags to view and analyze the running processes.
+
+>>Review logs. Inspect log files in /var/log for error messages or warnings.
+
+>>Profile application. If an application is slow, use profiling tools specific to the application or language.
+
+
+Q. What could cause intermittent SSH connection failures, and how would you investigate them?
+
+Intermittent SSH connection failures can be a complex issue to diagnose. They may stem from various causes, like network issues, server overload, or configuration errors. Here's how you'd investigate: 
+
+>>Check the network. Verify the network connection between the client and server is stable. Use ping to check if the server is reachable.
+
+>>Examine the server load. If the server is overloaded, it might refuse new connections. Use commands like top to monitor the server's performance.
+
+>>Look at the SSH configuration. Check the SSH configuration file /etc/ssh/sshd_config for any incorrect settings that might be causing the failure.
+
+>>Review the logs. Inspect the server's SSH log files, usually found in /var/log/auth.log, for specific error messages.
+
+>>Test with different clients. If possible, attempt to connect from a different client machine to isolate the issue.
+
+Q. What steps would you take to identify and resolve the issue in which a Linux system fails to boot?
+
+
+You can diagnose a non-booting Linux system by employing these steps:
+
+>>Check the boot loader. Start by ensuring the boot loader (such as GRUB) is properly configured.
+
+>>Access recovery mode. Reboot the system into recovery mode to access command-line tools.
+
+>>Examine the log files. Check logs like /var/log/syslog to find error messages.
+
+>>Inspect the kernel messages. Use the dmesg command to see kernel-related issues.
+
+>>Test the hardware. Check for hardware failure using tools like smartctl.
+
+>>Perform a file system check. Run fsck on disk partitions to repair corrupted file systems.
+
+>>Reinstall packages. Reinstall necessary packages or update them if they're causing the issue.
+
+
+
+
+

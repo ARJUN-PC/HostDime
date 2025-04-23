@@ -86,7 +86,7 @@ find /usr/local/apache/domlogs/*/ -type f -mtime -1| grep -v -E 'ftp.|bytes_log|
 4 times --> 52.167.144.142 /
 6 times --> 207.46.13.209 /
 
-TO REMOVE BOTS:- (robot.txt)
+TO REMOVE BOTS:- (robots.txt)
 ----------------
 User-agent: MJ12bot
 Disallow: /
