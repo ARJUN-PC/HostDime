@@ -1,20 +1,28 @@
 https://admin.dimenoc.com/desk/ticket/3309882   >>>>  Possibility of email compromise for an account krystalvision.co.in
 https://admin.dimenoc.com/desk/ticket/3310172/  >>>>  Domain issues
 https://admin.dimenoc.com/desk/ticket/3289734   >>>>  FTP issues
-https://admin.dimenoc.com/desk/ticket/3307839   >>>>  CPU s
+https://admin.dimenoc.com/desk/ticket/3307839   >>>>  CPU 
 https://admin.dimenoc.com/desk/ticket/3305817   >>>>  server backup is not working 
 https://admin.dimenoc.com/desk/ticket/3310208   >>>>  Vulnerabilities on WordPress site usadispatch365.com
 https://admin.dimenoc.com/desk/ticket/3296448   >>>>  Mount Point “/tmp” (64.37.63.2): 2.56 GB/2.69 GB - 95.959973%
 https://admin.dimenoc.com/desk/ticket/3306419   >>>>  Insecure contact and Request form : grandsouthernpac 
+https://admin.dimenoc.com/desk/ticket/3731469   >>>>  Kernel issue in Acronis
 https://admin.dimenoc.com/desk/ticket/3302666   >>>>  server down: Issue
+https://admin.dimenoc.com/desk/ticket/3733611   >>>>  DirectAdmin database creation error
 https://admin.dimenoc.com/desk/ticket/3310798   >>>>  PHP extension
 https://admin.dimenoc.com/desk/ticket/3310868   >>>>  Enable opcache and memcache 
+https://admin.dimenoc.com/desk/ticket/3729874   >>>>  postgreSQL
 https://admin.dimenoc.com/desk/ticket/3565933   >>>>  Deployment in progres
 https://admin.dimenoc.com/desk/ticket/3307753   >>>>  BOTS
+https://admin.dimenoc.com/desk/ticket/3773980   >>>>  domains were offline Server hostname (bidimg.gabs.biz.64-37-63-2.cpanel.site)
 https://admin.dimenoc.com/desk/ticket/3304313   >>>>  Malware detected  https://admin.dimenoc.com/desk/ticket/3321896  
 https://admin.dimenoc.com/desk/ticket/3014645   >>>>  VPS backup system not present
 https://admin.dimenoc.com/desk/ticket/3310739/  >>>>  Disk warns block
 https://admin.dimenoc.com/desk/ticket/3307924   >>>>  Backup full
+https://admin.dimenoc.com/desk/ticket/3751339   >>>>  Mailman issue
+https://admin.dimenoc.com/desk/ticket/3667502   >>>>  Directadmin MPM configuration tweak
+https://admin.dimenoc.com/desk/ticket/3750278   >>>>  Mail training, reputation.
+https://admin.dimenoc.com/desk/ticket/3750064   >>>>  RAID replacement
 https://admin.dimenoc.com/desk/ticket/3312579   >>>>  Account compromised
 https://admin.dimenoc.com/desk/ticket/3211127   >>>>  Compromised Email Account: prakash@duraent.in (3211127) (3446176- Zabbix alert exim queue over 8000)
 https://admin.dimenoc.com/desk/ticket/3314576   >>>>  Unable to Login via SFTP (3314576)
@@ -26,19 +34,25 @@ https://admin.dimenoc.com/desk/ticket/3319436   >>>>  MySQl max_user_connection 
 https://admin.dimenoc.com/desk/ticket/3318968   >>>>  ssh2_connect allow the function
 https://admin.dimenoc.com/desk/ticket/3320843   >>>>  site is not working (Name server issues)
 https://admin.dimenoc.com/desk/ticket/3320898/  >>>>  PDO extension
+https://admin.dimenoc.com/desk/ticket/2610415   >>>>  cloudflare error 526
+https://admin.dimenoc.com/desk/ticket/3681041   >>>>  Website preview before switching DNS
 https://admin.dimenoc.com/desk/ticket/3322374   >>>>  Need to know google email hosting
 https://admin.dimenoc.com/desk/ticket/3322153   >>>>  Inode count "PLESK"
 https://admin.dimenoc.com/desk/ticket/3322377   >>>>  Invalid SSL certificate
 https://admin.dimenoc.com/desk/ticket/3199190   >>>>  .htaccess file issue (403) code realted issue
 https://admin.dimenoc.com/desk/ticket/3327366   >>>>  Mysql issue
+https://admin.dimenoc.com/desk/ticket/3699805   >>>>  Package issue (Bandwidth and Disk)
 https://admin.dimenoc.com/desk/ticket/3326336   >>>>  created a addon domain
 https://admin.dimenoc.com/desk/ticket/3327379   >>>>  VPS backup monitoring
 https://admin.dimenoc.com/desk/ticket/3329406   >>>>  Mariadb upgrade
 https://admin.dimenoc.com/desk/ticket/3330157   >>>>  Site slow
+https://admin.dimenoc.com/addons/view/id/168706#notes >>> cloud details
 https://admin.dimenoc.com/desk/ticket/3294014   >>>>  SATA cable
+https://admin.dimenoc.com/desk/ticket/3743132   >>>>  Disk Upgrade VPS
 https://admin.dimenoc.com/desk/ticket/3334425   >>>>  site not working (.htaccess issue) rename
 https://admin.dimenoc.com/desk/ticket/3298676   >>>>  Spam mails from stjohnsedn.org 
 https://admin.dimenoc.com/desk/ticket/3337769   >>>>  INode count
+https://admin.dimenoc.com/desk/ticket/3762170   >>>>  Modsecurity - IP block  
 https://admin.dimenoc.com/desk/ticket/3633887   >>>>  server suspended due to unpaid invoice
 https://admin.dimenoc.com/desk/ticket/3305796   >>>>  transfer backup to remote FTP
 https://admin.dimenoc.com/desk/ticket/3348875   >>>>  Traffic analysis
@@ -47,7 +61,7 @@ https://admin.dimenoc.com/desk/ticket/3351119/  >>>>  Mail Delivery Report Issue
 https://admin.dimenoc.com/desk/ticket/3353016/  >>>>  Install latest PHP versions on the server.```
 https://admin.dimenoc.com/desk/ticket/3351735   >>>>  Server Down
 https://admin.dimenoc.com/desk/ticket/3353580   >>>>  Mail reached the limit
-https://admin.dimenoc.com/desk/ticket/3353367   >>>>  Spammingu
+https://admin.dimenoc.com/desk/ticket/3353367   >>>>  Spamming
 https://admin.dimenoc.com/desk/ticket/3356046   >>>>  Mail is not receiving
 https://admin.dimenoc.com/desk/ticket/3352224   >>>>  VPS DOWM - MySqL and /tmp issue
 https://admin.dimenoc.com/desk/ticket/3355974   >>>>  Backup to S3 bucket
@@ -57,6 +71,7 @@ https://admin.dimenoc.com/desk/ticket/3305921   >>>>  Roundcube disable edit ide
 https://admin.dimenoc.com/desk/ticket/3365905   >>>>  Deceptive site
 https://admin.dimenoc.com/desk/ticket/3366313   >>>>  Domain not listing in /etc/userdatadomains(Auto a error)
 https://admin.dimenoc.com/desk/ticket/3366783/  >>>>  server can't accessible (Timeout)
+https://admin.dimenoc.com/desk/ticket/3770687   >>>>  php-cgi timeout error (PHP-FPM)
 https://admin.dimenoc.com/desk/ticket/3370671/  >>>>  php memory limit increase
 https://admin.dimenoc.com/desk/ticket/3371818   >>>>  changing PHP to latest versions
 https://admin.dimenoc.com/desk/ticket/3380390   >>>>  Request to update cPanel version to the latest version 
@@ -66,17 +81,21 @@ https://admin.dimenoc.com/desk/ticket/3371546   >>>>  MySQl tuner
 https://admin.dimenoc.com/desk/ticket/3356040   >>>>  https://<ip>/folder mod_userdir
 https://admin.dimenoc.com/desk/ticket/3389134   >>>>  bulk mail spammming
 https://admin.dimenoc.com/desk/ticket/3245130   >>>>  SSL for hostname
+https://admin.dimenoc.com/desk/ticket/3771135   >>>>  Email password resetting through mail
 https://admin.dimenoc.com/desk/ticket/3404385   >>>>  mails are not shown in thunderbird
 https://admin.dimenoc.com/desk/ticket/3431876   >>>>  mail issue with spamassassin
 https://admin.dimenoc.com/desk/ticket/3432379   >>>>  RDNS IPv6
 https://admin.dimenoc.com/desk/ticket/3411470   >>>>  WordPress installation
 https://admin.dimenoc.com/desk/ticket/3451297   >>>>  MySQl Down
+https://admin.dimenoc.com/desk/ticket/3677780   >>>>  Roundcube issue
+https://admin.dimenoc.com/desk/ticket/3684844   >>>>  Mail issue "/etc/trustedmailhosts"
 https://admin.dimenoc.com/desk/ticket/3417643   >>>>  SSH2 extension installation
 https://admin.dimenoc.com/desk/ticket/3437942   >>>>  DC power failure(Storm)
 https://admin.dimenoc.com/desk/ticket/3437255   >>>>  IP blocking due to failed login.
 https://admin.dimenoc.com/desk/ticket/3438812   >>>>  Virus attack
 https://admin.dimenoc.com/desk/ticket/3444975   >>>>  Roundcube dispaly format changed because of deprecated theme.
 https://admin.dimenoc.com/desk/ticket/3440120   >>>>  monitoring tool
+https://admin.dimenoc.com/desk/ticket/3701180   >>>>  Zimbra details  ----> https://admin.dimenoc.com/desk/ticket/3706647
 https://admin.dimenoc.com/desk/ticket/3445429   >>>>  Prevent spoofing
 https://admin.dimenoc.com/desk/ticket/3456199   >>>>  CloudLinux VS AlmaLinux
 https://admin.dimenoc.com/desk/ticket/3633746   >>>>  Divr upgrade(Resize)
@@ -85,31 +104,55 @@ https://admin.dimenoc.com/desk/ticket/3451121   >>>>  (upload_tmp_dir) upload fi
 https://admin.dimenoc.com/desk/ticket/3456662   >>>>  Add a Subdomain under a Subdomain
 https://admin.dimenoc.com/desk/ticket/3461892   >>>>  Backup issue(Techno) event_scheduler
 https://admin.dimenoc.com/desk/ticket/3462784   >>>>  Remove Subdomain 
+https://admin.dimenoc.com/desk/ticket/3782325   >>>>  SSL plesk
+https://admin.dimenoc.com/desk/ticket/3715387   >>>>  mail issue /etc/manualmx
 https://admin.dimenoc.com/desk/ticket/3445429   >>>>  Steps tp prevent email spoofing
 https://admin.dimenoc.com/desk/ticket/3460712   >>>>  Delete files older than 9 months
 https://admin.dimenoc.com/desk/ticket/3430663   >>>>  CloudLinux 7 to CloudLinux 8 Upgrade
-https://admin.dimenoc.com/desk/ticket/3464607   >>>>  OS reinstallation.
-https://admin.dimenoc.com/desk/ticket/3461848   >>>>  HostDime IPs
+https://admin.dimenoc.com/desk/ticket/3464607   >>>>  OS reinstallation. https://admin.dimenoc.com/desk/ticket/3737587/
+https://admin.dimenoc.com/desk/ticket/3461848   >>>>  HostDime 
+https://admin.dimenoc.com/desk/ticket/3759795   >>>>  SYN attack block in CSF
+https://admin.dimenoc.com/desk/ticket/3770635#note_5945519 >>> rsync for drive upgrade.
+https://admin.dimenoc.com/desk/ticket/3782301   >>>>  Task Sheduler password
+https://admin.dimenoc.com/desk/ticket/3767944   >>>>  XMLRPC attack block in .htaccess
+https://admin.dimenoc.com/desk/ticket/3780935   >>>>  Switch port configuration.
+https://admin.dimenoc.com/desk/ticket/3760805   >>>>  Imunify360 Cron 
 https://admin.dimenoc.com/desk/ticket/2637108   >>>>  RAID 
+https://admin.dimenoc.com/desk/ticket/3754231   >>>>  softaculous
+https://admin.dimenoc.com/desk/ticket/3754731   >>>>  No package associated with Hostdime
+https://admin.dimenoc.com/desk/ticket/3753648   >>>>  Vulnerability, Windows + PLESK
+https://admin.dimenoc.com/desk/ticket/3628131   >>>>  Mail, Best practices to help ensure your emails are delivered to the inbox:
 https://admin.dimenoc.com/desk/ticket/3649451   >>>>  CNAME record issue(Invaild Recors in DNS Zone)
-https://admin.dimenoc.com/desk/ticket/3602287   >>>>  Bloced Ips in CSF instead of Host Access Control
+https://admin.dimenoc.com/desk/ticket/3602287   >>>>  Blocked Ips in CSF instead of Host Access Control https://admin.dimenoc.com/desk/ticket/3765500/
 https://admin.dimenoc.com/desk/ticket/3573581   >>>>  Showing error in WHM (https://support.cpanel.net/hc/en-us/requests/95395227)
 https://admin.dimenoc.com/desk/ticket/3495860   >>>>  Denied all other IPs (.htaccess)
 https://admin.dimenoc.com/desk/ticket/3469065   >>>>  wordpress import issue
 https://admin.dimenoc.com/desk/ticket/3476801   >>>>  Unblock IP (cPanel)
 https://admin.dimenoc.com/desk/ticket/3565183   >>>>  Bandwidth throttling litespeed
+https://admin.dimenoc.com/desk/ticket/3730891   >>>>  Database timezone
+https://admin.dimenoc.com/desk/ticket/3593101   >>>>  Zimbra account creation.
+https://admin.dimenoc.com/desk/ticket/3730891   >>>>  Database timezone
 https://admin.dimenoc.com/desk/ticket/3585341   >>>>  Enabling mfilter(ICT)
+https://admin.dimenoc.com/desk/ticket/3763405   >>>>  Domain redirecting issue.
 https://admin.dimenoc.com/desk/ticket/3613167   >>>>  DirectAdmin Installation
+https://admin.dimenoc.com/desk/ticket/3716920   >>>>  sysstat issue (sar -q) https://admin.dimenoc.com/desk/ticket/3727079
+https://admin.dimenoc.com/desk/ticket/3679557   >>>>  IP assignment
+https://admin.dimenoc.com/desk/ticket/3673360   >>>>  WHMCS profile reply
 https://admin.dimenoc.com/desk/ticket/3474224   >>>>  To disable wordpress email notification	
 https://admin.dimenoc.com/desk/ticket/3475777   >>>>  Installed and enable AWStats on Webuzo Server
 https://admin.dimenoc.com/desk/ticket/3476189   >>>>  Windows server remote login issue
 https://admin.dimenoc.com/desk/ticket/3613117   >>>>  Bank details for payment
-https://admin.dimenoc.com/desk/ticket/3589486   >>>> MySQL Governer Installation in MariaDB 11.4
+https://admin.dimenoc.com/desk/ticket/3716450   >>>>  Google Ads blocking by modSecurity
+https://admin.dimenoc.com/desk/ticket/3589486   >>>>  MySQL Governer Installation in MariaDB 11.4
 https://admin.dimenoc.com/desk/ticket/3450039   >>>>  Unable to login FTP(Please increase this limit when client ftp usage loads increase in the future. passive port range to CSF Firewall TCP_IN 65000:65500)
 https://admin.dimenoc.com/desk/ticket/3437272   >>>>  Changes are not reflected to the domain(Disabled Nginx Cache)
 https://admin.dimenoc.com/desk/ticket/3429718   >>>>  Issues of Deprecated PHP version(7.4)
 https://support.cpanel.net/hc/en-us/articles/360058567934-How-do-I-install-ssh2-for-php
 '''/opt/cpanel/ea-php72/root/usr/bin/pecl install ssh2-1.2
+
+https://admin.dimenoc.com/desk/ticket/3737555/ --> mailbox permission issue
+https://support.cpanel.net/hc/en-us/articles/360052736334-How-to-Fix-Mailbox-Permissions-using-WHM
+https://support.cpanel.net/hc/en-us/requests/95785135?page=1
 
 
 https://admin.dimenoc.com/desk/ticket/3403368 --> move to closed status

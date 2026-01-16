@@ -153,4 +153,12 @@ Reference:-
 https://forums.cpanel.net/threads/mod_remoteip-and-correct-ip-in-vhost-access-logs.466331/
 https://docs.cpanel.net/knowledge-base/web-services/nginx-with-reverse-proxy/?_ga=2.47542887.1312763927.1687838567-777610223.1680843146#requirements
 
+check running apache process:
+~~~
+ps -ef | grep -E 'httpd|apache2'
+~~~
 
+check working:
+~~~
+curl -A "AdsBot-Google" -I https://mediprro.com/
+~~~

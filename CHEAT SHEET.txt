@@ -57,6 +57,9 @@ rsync:
 ------
 rsync -avzp root@103.50.163.50:/home/magzoqtj/public_html -e "ssh -i /root/.ssh/id_rsa" /home4/magzosoc/public_html
 
+rsync -avhz --progress -e "ssh -p 1157" /backup/ticket_3634569/mysql_backup/. root@109.73.161.226:/backup/mysql_backups/
+
+rsync -avp --progress -e "ssh -p 1157" root@138.128.180.146:/usr/local/src/ticket_3714972/sgcskollam_db1.sql /usr/local/src/
 
 
 crontab:
@@ -695,8 +698,13 @@ megacli -PDList -aALL
 
 Slot(Always check the Slot device ID(4))
 ----
-smartctl -a -d megaraid,4 /dev/sda
+smartctl -a -d megaraid,8 /dev/sda
 https://admin.dimenoc.com/desk/ticket/2637108#note_5402817
+
+RAID Detailed check
+~~~
+/opt/MegaRAID/storcli/storcli64 /c0 show all
+~~~
 
 Speed Test- Download link
 ----------------------------
@@ -735,7 +743,7 @@ pkill -9 -u eappsin
 
 How to check superblock in a drive:;
 -----------------------------------
-smartctl -t long /dev/sda
+smartctl -t long /dev/sdb
 
 DNS zone-checker
 ----------------
@@ -757,6 +765,11 @@ Zimbra - orphan policy
 ----------------------
 The Email account deletion orphan policy can be edited from Admin panel >> Config >> Domain Master >> Go to the particular domain >> Go to Update settings >> Orphan Policy > set it as Disabled and update.
 
+Zimbra account URL:
+~~~
+URL: https://webmail.hdinmail.in/
+~~~
+
 Interworx Backup
 ----------------
 ~iworx/bin/backup.pex --domain ruedaserver.com --backup-options all --output-dir /backup/ticket_3634569
@@ -776,3 +789,45 @@ To check the Ip blocked in Windows server
 ~~~
 netsh advfirewall firewall show rule name=all | findstr 103.63.129.0/24
 ~~~ 
+
+To check the Webuzo License
+~~~
+/usr/local/emps/bin/php /usr/local/webuzo/cli.php --license
+~~~
+
+ModSecurity - HOSTDIME RULE
+~~~
+/etc/apache2/conf.d/modsec_vendor_configs/HOSTDIME/rules/04_vulnerabilities.conf
+~~~
+
+Webuzo-mail-URL
+~~~
+https://109.73.164.82:2003/mail/
+~~~
+
+Acronis Backup Stuck:
+~~~
+https://clients.hostdime.in/admintnmx/supporttickets.php?action=view&id=685
+
+[root@server ~]# systemctl list-units --type=service | grep acronis
+  acronis_mms.service                loaded active running Acronis machine management service
+  acronis_schedule.service           loaded active running Acronis schedule service
+
+Restarted the both services
+
+- systemctl restart acronis_mms.service
+- systemctl restart acronis_schedule.service
+~~~
+
+TOP 10 CPU usage process
+~~~
+ps -aux --sort=-%cpu |grep head -n 11
+~~~
+
+Zimbra Admin Previlage:
+~~~
+Admin email ID assign >>> User Domain >> Click on the plus symbol >> email ID >> Customer >> Hostdime >> Add
+~~~
+
+
+

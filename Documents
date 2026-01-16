@@ -212,4 +212,69 @@ Reseller Bandwidth
 https://support.cpanel.net/hc/en-us/requests/95430732
 ~~~
 
+Grub Rescue
+~~~
+https://phoenixnap.com/kb/grub-rescue
+~~~
 
+Copy of incoming and outgoing emails
+~~~
+https://support.cpanel.net/hc/en-us/community/posts/21730908503575-Copy-all-incoming-and-outgoing-emails-of-a-domain-to-a-Gmail-account
+cPanel: /etc/cpanel_exim_system_filter1
+DirectAdmin: /etc/system_filter.exim
+
+Ticket: https://admin.dimenoc.com/desk/ticket/3643160
+~~~
+Changing MySQL root password:
+~~~
+Method 2: If You Forgot the Root Password
+Step-by-Step:
+Stop MySQL/MariaDB:
+
+systemctl stop mariadb
+# or
+systemctl stop mysql
+
+Start MySQL in Safe Mode (skip grant tables):
+
+mysqld_safe --skip-grant-tables &
+Let it run in the background. Open a new terminal or use another tab.
+
+Log in to MySQL without a password:
+
+mysql -u root
+Update the root password:
+
+USE mysql;
+UPDATE user SET password=PASSWORD('NewStrongPassword') WHERE User='root';
+FLUSH PRIVILEGES;
+EXIT;
+
+Kill the safe mode process:
+
+pkill -f -- '--skip-grant-tables'
+
+Restart MySQL normally:
+
+systemctl start mariadb
+# or
+systemctl start mysql
+
+Webuzo MySQL password:
+~~~
+https://webuzo.com/docs/developers/reset-mysql-password/
+~~~
+Almalinux 8 to Almalinux 9 upgrade
+~~~
+https://www.veeble.com/kb/how-to-upgrade-almalinux-8-to-almalinux-9/
+~~~
+
+How to install imagick PHP extension for a PHP version.
+~~~
+https://support.cpanel.net/hc/en-us/articles/360037048673-How-to-Install-ImageMagick-for-EA-PHP
+~~~
+
+PHP-FPM error: (proxy-cgi)
+~~~
+https://support.cpanel.net/hc/en-us/articles/360057903134-proxy-fcgi-error-errors-when-using-PHP-FPM
+~~~

@@ -1,6 +1,7 @@
 CHECK DRIVE HEALTH
 ------------------
 bash <(curl -ks https://codex.hostdime.com/scripts/download/CheckDriveHealth)
+bash <(curl -ks https://codesilo.dimenoc.com/codex/check-drive-health/-/raw/main/check-drive-health)
 
 SPAM CHECKING
 -------------
@@ -42,6 +43,16 @@ bash <(curl -ks https://codex.hostdime.com/scripts/download/cleanmail)
 TO CHECK SPF,DKIM IN A SERVER
 -----------------------------
 /scripts/enable_spf_dkim_globally -x
+
+TOP CPU usage - sales
+~~~
+top -bn1 | grep "Cpu(s)" | awk '{print "CPU Usage: " $2 + $4 "%"}'
+~~~
+
+Application responsive
+~~~
+curl -o /dev/null -s -w "HTTP %{http_code} | Total Time: %{time_total}s\n" https://bethzatha.com/
+~~~
 
 USERS - CPU , MEMORY DETAILS
 ----------------------------
@@ -99,11 +110,12 @@ bash <(curl -s https://codesilo.dimenoc.com/thomasb/findspammers/-/raw/master/fi
 
 Domain Overview
 ---------------
-bash <(curl -ks https://codex.hostdime.com/scripts/download/DomainAccountOverview) maxpayss
+bash <(curl -ks https://codex.hostdime.com/scripts/download/DomainAccountOverview) zabazioc
+bash <(curl -ks https://codesilo.dimenoc.com/emmae/abuse_account_check/-/raw/master/abuse_check_2.0.sh) zabazioc
 
 ACCOUNT ABUSE CHECK:- 
 -------------------
-bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) sipfriends
+bash <(curl -ks https://codex.hostdime.com/scripts/download/accountabusecheck) tzozothemes
 
 QUICK SERVICE STATUS:-
 ----------------------
@@ -112,10 +124,11 @@ eval "$(curl -k -s https://codex.hostdime.com/scripts/download/QuickServiceCheck
 TOP 5 RESOURCE CONSUMERS:-
 --------------------------
 bash <(curl -ks https://codex.hostdime.com/scripts/download/topresourceconsumers)
+bash <(curl -ks https://codesilo.dimenoc.com/codex/find-top-five-domains/-/raw/main/top-five-domains.sh)
 	
 IP COUNT
 -----------
-cat anbinmadal.org-ssl_log | awk '{print $1}' | sort | uniq -c | sort -n
+cat access_log | awk '{print $1}' | sort | uniq -c | sort -n
 
 Server-wide domlogs Ips
 -----------------------
@@ -127,9 +140,9 @@ cat /usr/local/cpanel/logs/access_log  | grep haileres | grep GET | awk {'print 
 
 BOT COUNT
 ---------
-cat voiceoforomoliberation.com-ssl_log | awk '{print $1}' | sort | uniq -c | sort -n
+cat hostrunway.com-ssl_log | awk '{print $1}' | sort | uniq -c | sort -n
 
-cat temasme.com-ssl_log | grep "bot\|spider\|crawl" | awk {'print $6,$14'} | sort | uniq -c | sort -n | tail -25
+cat zozothemes.com-ssl_log | grep "bot\|spider\|crawl" | awk {'print $6,$14'} | sort | uniq -c | sort -n | tail -25
 
 cat bombaysamachar.com.log | grep xmlrpc | awk {'print $1,$6,$7'} | sort | uniq -c | sort -n
 
@@ -162,6 +175,7 @@ bash <(curl -ks https://codex.hostdime.com/scripts/download/clear_tmp)
 Env Check
 ---------
 bash <(curl -ks https://codex.hostdime.com/scripts/download/envchk)
+	bash <(curl -ks https://codesilo.dimenoc.com/codex/envchk/-/raw/master/envchk)	
 
 To check the reseller disk usage
 --------------------------------
@@ -225,4 +239,15 @@ netstat -anp | grep :80 | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort
 DNS DETAILS
 ~~~
 bash <(curl -ks https://codex.hostdime.com/scripts/download/checkdns) domain_name
+~~~
+
+To find the total size of delete file is still running:
+
+~~~
+lsof -nP | grep '(deleted)' | awk '{print $7}' | paste -sd+ - | bc | awk '{printf "%.2f GB\n", $1/1024/1024/1024}'
+~~~
+
+Inode files and size:
+~~~
+for dir in /home/lhnybbow/*; do [ -d "$dir" ] || continue; size=$(du -smx "$dir" 2>/dev/null | awk '{print $1" MB"}'); read files inodes < <(find "$dir" -xdev -printf '%y\n' 2>/dev/null | awk '{if($1=="f") f++; i++} END{print f, i}'); echo "$dir - $size - $files files - $inodes inodes"; done
 ~~~

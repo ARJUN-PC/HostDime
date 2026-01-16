@@ -36,8 +36,11 @@ for i in $(cat users.txt); do maldet -a /home/$i > /usr/local/src/ticket_3649327
 BIVALVE SCAN:-
 -------------
 alias bivalve='bash <(curl -ks https://codex.hostdime.com/scripts/download/bivalve)'
-bivalve -u tzozothemes
+bivalve -u sipfriends
 
+bash <(curl -ks https://codex.hostdime.com/scripts/download/bivalve) $1 $2 $3 $4 $5 $6 $7 $8
+alias bivalve='bash <(curl -ks https://codesilo.dimenoc.com/codex/bivalve/-/raw/master/bivalve.sh)' 
+bivalve -u sipfriends
 
 AI-Bolit:-
 ---------
@@ -82,4 +85,9 @@ PYSCAN
 ------
 python2 <(curl -k -s "https://codesilo.dimenoc.com/abuse/pyscan/raw/master/pyscan.py")
 
-python <(curl -k -s "https://codesilo.dimenoc.com/abuse/pyscan/raw/master/pyscan.py") "$@" --exclude .trash/ --exclude etc/ --exclude logs/ --exclude tmp/ --exclude mail/
+python2 <(curl -k -s "https://codesilo.dimenoc.com/abuse/pyscan/raw/master/pyscan.py") "$@" --exclude .trash/ --exclude etc/ --exclude logs/ --exclude tmp/ --exclude mail/
+
+python2 <(curl -k -s "https://codesilo.dimenoc.com/abuse/pyscan/raw/master/pyscan.py") "$@" --exclude /home/sipfriends/public_html/companybrochure-20250427075302/
+
+python2 <(curl -k -s "https://codesilo.dimenoc.com/abuse/pyscan/raw/master/pyscan.py") "$@" > /tmp/scan_agrisearchindia 2>&1
+	

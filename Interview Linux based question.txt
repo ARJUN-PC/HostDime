@@ -609,8 +609,8 @@ First	It describes the device or partition's name we want to mount.
 Second	It describes the mount point's name.
 Third	It describes the file system of the partition.
 Fourth	It describes the mount options.
-Fifth	The dump command uses it to determine whether it should dump the mounted partition at the boot time.
-Sixth	The fsck command uses it to determine whether it should check and repair the mounted partition at the boot time
+Fifth	The dump command uses it to determine whether it should dump the mounted partition at the boot time.(used by dump backup utility)
+Sixth	The fsck command uses it to determine whether it should check and repair the mounted partition at the boot time(Determine the order of filesystem checks)
 
 UUID=500e9029-5c8f-4181-9f1e-684ff0ac11b5               /backup                 ext4    defaults,nofail     1 1
 
@@ -824,20 +824,20 @@ Troubleshooting access to a website on a Linux machine requires several steps:
 
  
 
--Will check Ip is pointed to particular Ip or not 
+- Will check Ip is pointed to particular Ip or not 
 
 - Use the ping command to check network connectivity from client side to server
  
--Will check any NS, A record issue.  
+- Will check any NS, A record issue.  
 
--If the DNS isn’t the problem, wil check any firewall block 
+- If the DNS isn’t the problem, wil check any firewall block 
    
 
--Examine browser-related issues by checking for error messages or trying a different browser. 
+- Examine browser-related issues by checking for error messages or trying a different browser. 
 
 - Will check the error log of the domain
 
--Will check specific error mentioned in website
+- Will check specific error mentioned in website
 
 
 

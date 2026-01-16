@@ -1,0 +1,37 @@
+Hello Team,
+
+Greetings…
+
+For Indian-DC servers, you can contact the Netmagic Team regarding server downtime by sending an email using the details below.
+
+It is essential to include the common CUST ID and PIN in the email body for authentication; otherwise, the Netmagic Team will not process the request.
+
+
+CUST ID: 38178
+PIN: 2694
+
+
+Here is a sample email format:
+
+To: support@netmagicsolutions.com
+Subject: CUST ID: 38178: Unable to access server HDU942
+CC: hdintechs@hostdime.in, praveen.m@hostdime.in
+
+Hello Support Team,
+
+CUST ID: 38178
+PIN: 2694
+
+The server HDU942 is still down. We are currently unable to ping or SSH into the server. Please check the console for server HDU942 and provide a status update. This issue requires urgent attention.
+““““`
+Server ID: HDU942
+Rack: 90 (12B)
+Slot: 37
+
+““““
+
+======================================================================================
+
+FYI:Please ensure the sender includes their WhatsApp number in the email for further communication with the NTT team. After sending the email, you will receive an acknowledgment with Case ID: CS8596250, which can be used for future correspondence.
+
+In-addition we can contact directly to Netmagic team (contact info :+91 7304546052) for any assistance.

@@ -117,3 +117,8 @@ bash <(curl -ks https://codex.hostdime.com/scripts/download/findspammers)
 Removing Entire mail Queue
 --------------------------
  exim -bp | grep '' | awk {'print $3'} | xargs exim -Mrm
+ 
+clean up old entries from Exim's retry database
+~~~
+exim_tidydb -t 1h /var/spool/exim retry
+~~~  

@@ -13,7 +13,7 @@ mysqladmin proc stat
 
 SQL Backup:
 ----------
-
+		
 mysqldump <database name> > <database_name>.sql
 mysqldump -u username -p password <database name > > <database_name>.sql
 

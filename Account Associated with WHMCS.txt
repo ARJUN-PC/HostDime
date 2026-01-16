@@ -1,0 +1,7 @@
+Hello,
+
+Upon checking, we found that the IPs mentioned are associated with your WHMCS Cloudzor profile.
+
+For proper documentation and to proceed further, we kindly request you to create a support ticket from the WHMCS profile linked to these IPs.
+
+Thank you for your understanding.

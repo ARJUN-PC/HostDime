@@ -1,0 +1,432 @@
+**Server Audit**
+
+`Hostname`: cloud.technobros.net.au
+`Date`: Sun 2025-11-23 05:48:03 AEDT
+`OS Info`: CloudLinux release 8.10 (Vladimir Aksyonov)
+`Kernel`: 4.18.0-553.79.1.lve.el8.x86_64
+
+- Environment Check
+
+~~~
+                                                envchk v1.13.0
+--------------------------------------------------------------------------------------------------------------
+ Hostname:  cloud.technobros.net.au                    Load:          1.02 1.22 1.54
+ IP:        67.23.237.58                               CPU:           Intel Xeon E3-1270 v5 @ 4.00GHz [48°C]
+ OS:        CloudLinux 8.10 x86_64                       Threads:     8
+ Kernel:    Linux 4.18.0-553.79.1.lve.el8.x86_64         Cores:       4 w/ HT
+ Time:      05:51 AEDT (+1100)                         Memory:        92%,   28.79G / 30.97G
+ Uptime:    17 days, 15:31                               Real:        56%,   17.46G / 30.97G
+                                                         Swap:         2%,   50.00M / 1.86G
+                                                         Swappiness:  10
+                                                           WARN:      Low swappiness
+                                                       RAM:           32G @ 2133 MT/s DDR4
+
+ File Systems:
+   /dev/sda4    /        ext4   18%,   74.85G / 433.54G
+   /dev/sdc1    /backup  ext4   60%,    4.09T / 7.22T
+   /dev/sdb1    /home    ext4   84%,    1.49T / 1.79T
+   /dev/sdd1    /home3   ext4   57%,    1.93T / 3.58T
+   /dev/sda2    /tmp     ext4    1%,    1.13M / 2.68G
+
+                                                   envchk v1.13.0 cPanel
+----------------------------------------------------------------------------------------------------------------------------
+ Version:    11.130.0.16       PowerDNS:         4.9.5                               PHP:
+ Accounts:   81                Apache:           2.4.65                                Default:  ea-php74
+ Domains:    128               LiteSpeed:        6.3.4                                 ea-php51  cgi         alt-php56  cgi
+ Resellers:  4                   WARN:           No litespeed process running.         ea-php52  cgi         alt-php70  cgi
+ Python 2:   2.7.18            MySQL:            8.0.43                                ea-php53  cgi         alt-php71  cgi
+ Python 3:   3.6.8             Exim:             4.98.2                                ea-php54  cgi         alt-php72  cgi
+ Perl:       5.36.0            Dovecot:          2.3.21.1                              ea-php55  cgi         alt-php73  cgi
+                               Pure-FTPd:        1.0.52                                ea-php56  cgi         alt-php74  cgi
+                                 Bind:           21                                    ea-php70  cgi         alt-php80  cgi
+                                 Passive Ports:  30000:32000                           ea-php71  cgi         alt-php81  cgi
+                                                                                       ea-php72  cgi         alt-php82  cgi
+                                                                                       ea-php73  cgi         alt-php83  cgi
+                                                                                       ea-php74  cgi         alt-php84  cgi
+                                                                                       ea-php80  cgi
+                                                                                       ea-php81  cgi
+                                                                                       ea-php82  cgi
+                                                                                       ea-php83  cgi
+~~~
+- Control Panel Detection
+~~~
+Control Panel Detected: DirectAdmin
+~~~
+- Only one reseller account: https://prnt.sc/QWJosRX-_hKp
+- Checked services all are running fine: https://prnt.sc/Ctn-u7eCRknS
+- CSF Firewall Status
+
+~~~
+[root@rin7 ~]# service csf status
+Redirecting to /bin/systemctl status csf.service
+● csf.service - ConfigServer Firewall & Security - csf
+   Loaded: loaded (/usr/lib/systemd/system/csf.service; enabled; vendor preset: disabled)
+   Active: active (exited) since Sat 2025-10-18 07:02:40 IST; 1 weeks 1 days ago
+ Main PID: 786 (code=exited, status=0/SUCCESS)
+    Tasks: 0 (limit: 204373)
+   Memory: 0B
+   CGroup: /system.slice/csf.service
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+[root@rin7 ~]#
+[root@rin7 ~]#
+[root@rin7 ~]# service lfd status
+Redirecting to /bin/systemctl status lfd.service
+● lfd.service - ConfigServer Firewall & Security - lfd
+   Loaded: loaded (/usr/lib/systemd/system/lfd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2025-10-26 00:00:01 IST; 17h ago
+  Process: 3037055 ExecStart=/usr/sbin/lfd (code=exited, status=0/SUCCESS)
+ Main PID: 3037068 (lfd - sleeping)
+    Tasks: 1 (limit: 204373)
+   Memory: 449.9M
+   CGroup: /system.slice/lfd.service
+           └─3037068 lfd - sleeping
+
+Oct 26 00:00:01 rin7.dizinc.com systemd[1]: Starting ConfigServer Firewall & Security - lfd...
+Oct 26 00:00:01 rin7.dizinc.com systemd[1]: Started ConfigServer Firewall & Security - lfd.
+~~~
+- RAID Status Check
+~~~
+Hardware RAID 10 available
+~~~
+- Drive Health Check
+- Command Timeout count `33` for the backup drive `sdb`, Need to monitor.
+- Noticed that the RAID is not detecting and in `degraded` state and `BBU` is absent
+
+~~~
+Oct 26
+Drive Health History:
+
+The server has a MegaRAID card
+The RAID status is: Optimal
+
+p0:
+Drive Status: Online, Spun Up
+Serial Number: 50026B7272034F2A
+Drive is healthy.
+Active: 30 days
+
+p1:
+Drive Status: Online, Spun Up
+Serial Number: 50026B726901BB78
+Drive is healthy.
+Active: 1 year and 45 days
+
+p2:
+Drive Status: Online, Spun Up
+Serial Number: 50026B726901BCFC
+Drive is healthy.
+Active: 343 days
+
+p3:
+Drive Status: Online, Spun Up
+Serial Number: 50026B726706E5FA
+Reallocated Sectors - 27
+Active: 72 days
+
+sdb:
+Serial Number: 1727190FFBA7
+Drive is healthy.
+Command Timeout (SATA Cable) - 33
+Active: 3 years and 21 days
+~~~
+- BBU unit is failed/absent
+
+s~~~
+[root@rin7 ~]# /opt/MegaRAID/storcli/storcli64 /c0/bbu show status
+CLI Version = 007.1211.0000.0000 Nov 07, 2019
+Operating system = Linux 4.18.0-553.79.1.el8_10.x86_64
+Controller = 0
+Status = Failure
+Description = None
+
+Detailed Status :
+===============
+
+----------------------------------------------
+Ctrl Status Property ErrMsg             ErrCd
+----------------------------------------------
+   0 Failed -        Battery is absent!    34
+----------------------------------------------
+s~~~
+- RAID checks
+~~~
+[root@rin7 ~]# /opt/MegaRAID/storcli/storcli64 /c0 show
+Generating detailed summary of the adapter, it may take a while to complete.
+
+CLI Version = 007.1211.0000.0000 Nov 07, 2019
+Operating system = Linux 4.18.0-553.79.1.el8_10.x86_64
+Controller = 0
+Status = Success
+Description = None
+
+Product Name = LSI MegaRAID SAS 9260-4i
+Serial Number = SV15000752
+SAS Address =  500605b004194e70
+PCI Address = 00:01:00:00
+System Time = 10/26/2025 18:09:53
+Mfg. Date = 12/04/11
+Controller Time = 10/26/2025 12:39:23
+FW Package Build = 12.15.0-0205
+FW Version = 2.130.403-3835
+BIOS Version = 3.30.02.2_4.16.08.00_0x06060A05
+Driver Name = megaraid_sas
+Driver Version = 07.727.03.00-rc1
+Vendor Id = 0x1000
+Device Id = 0x79
+SubVendor Id = 0x1000
+SubDevice Id = 0x9260
+Host Interface = PCI-E
+Device Interface = SAS-6G
+Bus Number = 1
+Device Number = 0
+Function Number = 0
+Drive Groups = 1
+
+TOPOLOGY :
+========
+
+------------------------------------------------------------------------------
+DG Arr Row EID:Slot DID Type   State BT       Size PDC  PI SED DS3  FSpace TR
+------------------------------------------------------------------------------
+ 0 -   -   -        -   RAID10 Optl  N    1.745 TB enbl N  N   none N      N
+ 0 0   -   -        -   RAID1  Optl  N  893.750 GB enbl N  N   none N      N
+ 0 0   0   252:0    8   DRIVE  Onln  N  893.750 GB enbl N  N   none -      N
+ 0 0   1   252:1    7   DRIVE  Onln  N  893.750 GB enbl N  N   none -      N
+ 0 1   -   -        -   RAID1  Optl  N  893.750 GB enbl N  N   none N      N
+ 0 1   0   252:2    9   DRIVE  Onln  N  893.750 GB enbl N  N   none -      N
+ 0 1   1   252:3    6   DRIVE  Onln  N  893.750 GB enbl N  N   none -      N
+------------------------------------------------------------------------------
+
+DG=Disk Group Index|Arr=Array Index|Row=Row Index|EID=Enclosure Device ID
+DID=Device ID|Type=Drive Type|Onln=Online|Rbld=Rebuild|Dgrd=Degraded
+Pdgd=Partially degraded|Offln=Offline|BT=Background Task Active
+PDC=PD Cache|PI=Protection Info|SED=Self Encrypting Drive|Frgn=Foreign
+DS3=Dimmer Switch 3|dflt=Default|Msng=Missing|FSpace=Free Space Present
+TR=Transport Ready
+
+Virtual Drives = 1
+
+VD LIST :
+=======
+
+--------------------------------------------------------------
+DG/VD TYPE   State Access Consist Cache Cac sCC     Size Name
+--------------------------------------------------------------
+0/0   RAID10 Optl  RW     Yes     RWTD  -   ON  1.745 TB
+--------------------------------------------------------------
+
+EID=Enclosure Device ID| VD=Virtual Drive| DG=Drive Group|Rec=Recovery
+Cac=CacheCade|OfLn=OffLine|Pdgd=Partially Degraded|Dgrd=Degraded
+Optl=Optimal|RO=Read Only|RW=Read Write|HD=Hidden|TRANS=TransportReady|B=Blocked|
+Consist=Consistent|R=Read Ahead Always|NR=No Read Ahead|WB=WriteBack|
+AWB=Always WriteBack|WT=WriteThrough|C=Cached IO|D=Direct IO|sCC=Scheduled
+Check Consistency
+
+Physical Drives = 4
+
+PD LIST :
+=======
+
+-------------------------------------------------------------------------------------
+EID:Slt DID State DG       Size Intf Med SED PI SeSz Model                   Sp Type
+-------------------------------------------------------------------------------------
+252:0     8 Onln   0 893.750 GB SATA SSD N   N  512B KINGSTON SEDC400S37960G U  -
+252:1     7 Onln   0 893.750 GB SATA SSD N   N  512B KINGSTON SEDC400S37960G U  -
+252:2     9 Onln   0 893.750 GB SATA SSD N   N  512B KINGSTON SEDC400S37960G U  -
+252:3     6 Onln   0 893.750 GB SATA SSD N   N  512B KINGSTON SEDC400S37960G U  -
+-------------------------------------------------------------------------------------
+
+EID=Enclosure Device ID|Slt=Slot No.|DID=Device ID|DG=DriveGroup
+DHS=Dedicated Hot Spare|UGood=Unconfigured Good|GHS=Global Hotspare
+UBad=Unconfigured Bad|Onln=Online|Offln=Offline|Intf=Interface
+Med=Media Type|SED=Self Encryptive Drive|PI=Protection Info
+SeSz=Sector Size|Sp=Spun|U=Up|D=Down|T=Transition|F=Foreign
+UGUnsp=UGood Unsupported|UGShld=UnConfigured shielded|HSPShld=Hotspare shielded
+CFShld=Configured shielded|Cpybck=CopyBack|CBShld=Copyback Shielded
+UBUnsp=UBad Unsupported|Rbld=Rebuild
+
+Enclosures = 1
+
+Enclosure LIST :
+==============
+
+--------------------------------------------------------------------
+EID State Slots PD PS Fans TSs Alms SIM Port# ProdID VendorSpecific
+--------------------------------------------------------------------
+252 OK        8  4  0    0   0    0   1 -     SGPIO
+--------------------------------------------------------------------
+
+EID=Enclosure Device ID |PD=Physical drive count |PS=Power Supply count|
+TSs=Temperature sensor count |Alms=Alarm count |SIM=SIM Count
+~~~
+- IP Blacklist Check - Server IP is not listed in any of the RBLs https://prnt.sc/xaeoJaR8_aEm
+- DirectAdmin Version
+~~~
+[root@rin7 ~]# /usr/local/directadmin/directadmin v
+DirectAdmin 1.687 6870c202bc99cb405006e9e9d55b274baa8f60d4
+~~~
+- MariaDB / MySQL Health
+
+~~~
+[root@rin7 ~]# service mysqld status
+Redirecting to /bin/systemctl status mysqld.service
+● mariadb.service - MariaDB database server
+   Loaded: loaded (/etc/systemd/system/mariadb.service; enabled; vendor preset: disabled)
+  Drop-In: /etc/systemd/system/mariadb.service.d
+           └─migrated-from-my.cnf-settings.conf
+   Active: active (running) since Sat 2025-10-18 07:02:39 IST; 1 weeks 1 days ago
+ Main PID: 839 (mysqld)
+   Status: "Taking your SQL requests now..."
+    Tasks: 84 (limit: 204373)
+   Memory: 1.9G
+   CGroup: /system.slice/mariadb.service
+           └─839 /usr/sbin/mysqld
+~~~
+- Kernel Update Check, `kernel updates available`
+~~~
+[root@rin7 ~]# yum list kernel
+Last metadata expiration check: 1:18:04 ago on Sun 26 Oct 2025 04:55:05 PM IST.
+Installed Packages
+kernel.x86_64                                               4.18.0-553.50.1.el8_10                                               @baseos
+kernel.x86_64                                               4.18.0-553.53.1.el8_10                                               @baseos
+kernel.x86_64                                               4.18.0-553.79.1.el8_10                                               @baseos
+Available Packages
+kernel.x86_64                                               4.18.0-553.80.1.el8_10                                               baseos
+~~~
+- System Load & Performance
+
+s~~~
+04:00:00 PM   runq-sz  plist-sz   ldavg-1   ldavg-5  ldavg-15   blocked
+04:10:01 PM         2       675      0.80      1.26      1.18         0
+04:20:01 PM        28       866     12.58      3.79      2.02         0
+04:30:01 PM         7       820      3.65      3.98      3.68         1
+04:40:01 PM         3       801      1.50      1.97      2.77         1
+04:50:01 PM         2       805      1.01      1.41      2.10         0
+05:00:01 PM         3       808      1.07      1.14      1.60         0
+05:10:00 PM         0       834      0.30      0.66      1.14         0
+05:20:01 PM         2       842      1.31      1.27      1.27         0
+05:30:01 PM         2       834      1.33      1.21      1.20         0
+05:40:00 PM         2       870      1.31      1.23      1.17         0
+05:50:01 PM         7       835      0.60      1.09      1.20         0
+06:00:00 PM         3       679      1.52      1.33      1.21         1
+06:10:00 PM         1       672      1.35      1.44      1.30         2
+Average:            2       767      1.35      1.39      1.42         0
+[root@rin7 ~]# w
+ 18:14:06 up 8 days, 11:11,  1 user,  load average: 0.63, 0.94, 1.12
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+root     pts/0    72.29.91.30      17:31    0.00s  0.03s  0.00s w
+s~~~
+- Disk Usage
+~~~
+[root@rin7 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs         16G     0   16G   0% /dev
+tmpfs            16G     0   16G   0% /dev/shm
+tmpfs            16G  1.7G   14G  11% /run
+/dev/sda4       1.8T  315G  1.5T  18% /
+/dev/sda2       2.7G   61M  2.7G   3% /tmp
+/dev/sda1       928M  239M  674M  27% /boot
+/dev/sdb1       1.8T  725G  1.1T  42% /backup
+tmpfs           3.2G     0  3.2G   0% /run/user/0
+~~~
+~~~
+[root@rin7 ~]# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   1.8T  0 disk
+├─sda1   8:1    0 953.7M  0 part /boot
+├─sda2   8:2    0   2.8G  0 part /tmp
+├─sda3   8:3    0   1.9G  0 part [SWAP]
+├─sda4   8:4    0   1.8T  0 part /
+└─sda5   8:5    0     1M  0 part
+sdb      8:16   0   1.8T  0 disk
+├─sdb1   8:17   0   1.8T  0 part /backup
+└─sdb2   8:18   0     1M  0 part
+~~~
+- Memory Usage
+- The memory usage is high
+~~~
+[root@rin7 ~]# free -gh
+              total        used        free      shared  buff/cache   available
+Mem:           31Gi       4.1Gi       3.0Gi       2.0Gi        24Gi        24Gi
+Swap:         1.9Gi       112Mi       1.8Gi
+~~~
+
+s~~~
+04:00:00 PM kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+04:10:01 PM   1839504  25771924  30896188     94.38   1533632  22270784   8267912     23.83   5936188  21768612       416
+04:20:01 PM    305548  23553368  32430144     99.07   1534712  21585744  12595256     36.31   5851888  23325904       540
+04:30:01 PM   2674004  25409652  30061688     91.83   1536568  21070392   9794228     28.23   5889460  20967760       440
+04:40:01 PM   2926740  25660504  29808952     91.06   1539136  21074116   9356564     26.97   5899452  20713656       328
+04:50:01 PM   2850100  25563496  29885592     91.29   1542616  21051320   9461380     27.28   5901704  20787348       508
+05:00:01 PM   2772260  25466188  29963432     91.53   1544800  21029756   9551864     27.54   5906792  20858036       312
+05:10:00 PM   2690688  25352984  30045004     91.78   1547204  21004392   9887188     28.50   5924548  20923640       432
+05:20:01 PM   2641936  25271124  30093756     91.93   1548448  20970104   9972072     28.75   5920540  20974260       352
+05:30:01 PM   2985816  25606212  29749876     90.88   1550460  20967716   9553184     27.54   5926016  20630660       584
+05:40:00 PM   2711256  25345504  30024436     91.72   1553628  20978096   9979608     28.77   6179376  20643820       884
+05:50:01 PM   2931680  25562440  29804012     91.04   1556888  20971904   9581956     27.62   6188788  20419368       372
+06:00:00 PM   3029260  25691992  29706432     90.75   1558704  21001920   8360316     24.10   6226672  20286328       544
+06:10:00 PM   3205132  25875268  29530560     90.21   1561124  21006728   8102460     23.36   6209692  20133380       460
+Average:      1615263  25797001  31120429     95.07   1566473  22160117   9095019     26.22   6080388  21532709     32987
+s~~~
+- CPU Utilization (mpstat), idle time is low
+
+~~~
+[root@rin7 ~]# mpstat
+Linux 4.18.0-553.79.1.el8_10.x86_64 (rin7.dizinc.com)   10/26/2025      _x86_64_        (8 CPU)
+
+06:17:02 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+06:17:02 PM  all    8.16    0.92    4.56    4.79    0.20    0.27    0.00    0.00    0.00   81.08
+~~~
+- Top 10 CPU Consuming Processes
+
+~~~
+[root@rin7 ~]# ps -aux --sort=-%cpu | head -n 11
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+eetryar  3370802 26.6  0.3 607260 117984 ?       S    18:19   0:05 php-fpm: pool eetryar
+eetryar  3370859 26.4  0.2 512688 98128 ?        R    18:19   0:01 php-fpm: pool eetryar
+mysql        839 18.2  5.4 4924188 1790964 ?     Ssl  Oct18 2221:41 /usr/sbin/mysqld
+magnolia 3370712  5.0  0.3 547860 110824 ?       S    18:18   0:02 php-fpm: pool magnolia
+magnolia 3370717  3.0  0.3 468968 104224 ?       S    18:18   0:01 php-fpm: pool magnolia
+leadspla 3370854  2.5  0.2 530364 80080 ?        S    18:19   0:00 php-fpm: pool leadspla
+yenztime 3370742  2.3  0.2 457844 72252 ?        S    18:18   0:00 php-fpm: pool yenztime
+yenztime 3370798  1.9  0.2 455600 69012 ?        S    18:19   0:00 php-fpm: pool yenztime
+yenztime 3370686  1.8  0.2 457648 71192 ?        S    18:18   0:01 php-fpm: pool yenztime
+apache   3339847  0.8  0.7 5621744 260704 ?      Sl   16:19   1:02 /usr/sbin/httpd -DFOREGROUND
+~~~
+- Top 10 Memory consuming process
+~~~
+[root@rin7 ~]# ps -aux --sort=-%mem | head -n 11
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+mysql        839 18.2  5.4 4899600 1790924 ?     Ssl  Oct18 2221:45 /usr/sbin/mysqld
+named       2675  0.1  1.1 1367464 371932 ?      Ssl  Oct18  16:42 /usr/sbin/named -u named -c /etc/named.conf
+apache   3339847  0.8  0.7 5621744 259036 ?      Sl   16:19   1:03 /usr/sbin/httpd -DFOREGROUND
+root     1587952  0.0  0.6 4462532 215860 ?      Ssl  Oct22   3:38 /usr/local/directadmin/directadmin server --syslog
+root         552  0.0  0.5 334080 184044 ?       Ss   Oct18   6:02 /usr/lib/systemd/systemd-journald
+root         936  0.0  0.5 274916 166256 ?       Ss   Oct18   0:47 /usr/sbin/httpd -DFOREGROUND
+root     3147565  0.0  0.4 267596 150072 ?       S    03:26   0:20 spamd child
+root     3147566  0.0  0.4 248936 131404 ?       S    03:26   0:00 spamd child
+unicorne 3370889 15.5  0.3 617256 125680 ?       S    18:19   0:05 php-fpm: pool unicorne
+unicorne 3370977 27.2  0.3 541212 124128 ?       R    18:20   0:03 php-fpm: pool unicorne
+~~~
+- Backup was completed successfully
+
+~~~
+[root@rin7 backup]# ll daily
+total 8658424
+drwx--x--x 2 admin admin         12288 Oct  8 03:59 2025-10-08
+drwx--x--x 2 admin admin         12288 Oct  9 03:59 2025-10-09
+drwx--x--x 2 admin admin         12288 Oct 10 03:58 2025-10-10
+drwx--x--x 2 admin admin         12288 Oct 11 04:04 2025-10-11
+drwx--x--x 2 admin admin         12288 Oct 13 04:00 2025-10-13
+-rw-r----- 1 admin cameopro 8866159006 May 19 20:57 user.webhosti.cameopro.tar.gz
+[root@rin7 backup]# ll weekly
+total 24
+drwx--x--x 2 admin admin 12288 Oct  5 03:59 2025-10-05
+drwx--x--x 2 admin admin 12288 Oct 12 04:03 2025-10-12
+~~~
+
+**Audit Completed**
+
+
+

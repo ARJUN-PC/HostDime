@@ -50,7 +50,7 @@ cpanel.config-------------------------------------------------> /var/cpanel/cpan
 Apache configuration file:
 ---------------------------
 
-httpd.conf----------------------------------------------------> /etc/httpd/conf/httpd.conf OR usr/local/apache/conf/httpd.conf
+httpd.conf----------------------------------------------------> /etc/httpd/conf/httpd.conf OR /usr/local/apache/conf/httpd.conf
 
 Bind configuration file:
 -------------------------
